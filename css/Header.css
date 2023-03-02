@@ -52,3 +52,29 @@ body {
 h1 {
     font-size: 4vw;
 }
+
+/* text eff */
+
+h3{
+    color: #0e005c;
+    z-index: 5;
+    /* font-size: clamp(3rem, 8vw, 8rem); */
+    font-size: 5vh;
+    translate: -50% -50%;
+    padding: 0rem clamp(1rem, 2vw, 3rem);
+    font-family: 'Arial Rounded MT Bold', Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: 0rem;
+}
+  
+
+#cntr {
+    width: fit-content;
+    display: flex;
+    align-items: 1 2 1;
+    justify-items: center;
+    margin: auto;
+    z-index: 999;
+}
