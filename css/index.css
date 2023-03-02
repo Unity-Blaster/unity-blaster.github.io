@@ -1,6 +1,6 @@
+/* Colors for site. */
 :root {
   --clr-neon: #000061;
-  --clr-bgs: #000021;
 }
 
 *,
@@ -14,7 +14,7 @@ body {
   min-height: 100vh;
   display:grid;
   place-items: center;
-  background: var(--clr-bgs);
+  background: linear-gradient(180deg, #fffb00,#2e3100,#000000,#000000,#2e3100,#fffb00);
   font-family: 'Arial Rounded MT Bold', Arial, Helvetica, sans-serif;
   color: var(--clr-neon);
 }
@@ -39,51 +39,25 @@ body {
 }
 
 div.UC {
-  background-color: #00000000;
+  background-color: black;
+  border-radius: 50px;
   height: 10vh;
-  width: 100vw;
-  opacity: 100%;
-  display:flex;
+  width: 80vw;
+  display: felx;
   align-items: center;
   justify-items: center;
-  font-size: 5vh;
-  color: #2121F0;
-}
-/* 
-#TopUC {
-  background-position: top;
-}
-
-#BotUC {
-  background-position: bottom;
+  text-align: center;
+  font-size: 500%;
+  font-family: 'Times New Roman', Times, serif;
+  color: #fffb00;
+  box-shadow: inset 5em #00ff40;
+  border: currentColor 0.4vw solid;
+  margin: 0%;
 }
 
-div.UCMain {
-  display:grid;
-  align-items: center;
-  height: 10%;
-  width: 100%;
-  z-index: 5;
+#UCTop {
+  justify-self: top;
 }
-
-div.UCColor {
-  display:grid;
-  align-items: center;
-  height:2%;
-  width:100%;
-  z-index: 10;
+#UCBot {
+  justify-self: bottom;
 }
-
-div.UCBlack {
-  display:grid;
-  align-items: center;
-  background-color: black;
-  z-index: 15;
-}
-
-div.UCYellow {
-  display:grid;
-  align-items: center;
-  background-color: yellow;
-  z-index: 15;
-} */
