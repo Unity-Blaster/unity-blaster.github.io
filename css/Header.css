@@ -1,0 +1,17 @@
+div.headerHead {
+    
+    height: 100px;
+    width: 100vw;
+    color: blueviolet;
+    background-color: #212169;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+}
