@@ -1,1 +1,1 @@
-print('Hello & Welcome!')
+MessageEvent('Hello & Welcome!')
