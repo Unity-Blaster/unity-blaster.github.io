@@ -17,6 +17,7 @@ body {
   background: linear-gradient(180deg, #fffb00,#2e3100,#000000,#000000,#2e3100,#fffb00);
   font-family: 'Arial Rounded MT Bold', Arial, Helvetica, sans-serif;
   color: var(--clr-neon);
+  margin: 0;
 }
 
 .neon {
@@ -47,7 +48,7 @@ div.UC {
   align-items: center;
   justify-items: center;
   text-align: center;
-  font-size: 500%;
+  font-size: 8vh;
   font-family: 'Times New Roman', Times, serif;
   color: #fffb00;
   box-shadow: inset 5em #00ff40;

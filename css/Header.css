@@ -6,7 +6,6 @@
 #he2 {
     height: 15vh;
     width: 100vw;
-    /* color: blueviolet; */
     color: #0e005c;
     background-color: #ff000000;
     position: absolute;
@@ -24,9 +23,9 @@ body {
 }
 
 #he1 {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #23d573, #11ff11, #00923d, #070069);
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	animation: gradient 40s ease infinite;
 	height: 15vh;
     z-index: 1;
     position: relative;
@@ -36,11 +35,20 @@ body {
 	0% {
 		background-position: 0% 50%;
 	}
+    25% {
+        background-position: 25% 75%;
+    }
 	50% {
 		background-position: 100% 50%;
 	}
+    75% {
+        background-position: 75% 25%;
+    }
 	100% {
 		background-position: 0% 50%;
 	}
 }
 
+h1 {
+    font-size: 4vw;
+}
