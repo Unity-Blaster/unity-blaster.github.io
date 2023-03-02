@@ -1,17 +1,45 @@
-div.headerHead {
-    
-    height: 100px;
+:root {
+    --var1: #1e00ca;
+    --var2: #120061;
+}
+
+#he2 {
+    height: 15vh;
     width: 100vw;
-    color: blueviolet;
-    background-color: #212169;
-    position: fixed;
+    /* color: blueviolet; */
+    color: #0e005c;
+    background-color: #ff000000;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 48px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 7vh;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    font-weight: 1000;
+    z-index: 5;
 }
 
 body {
-    margin: 0;
+	margin: 0%;
+}
+
+#he1 {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 15vh;
+    z-index: 1;
+    position: relative;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
