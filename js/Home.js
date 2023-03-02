@@ -1,1 +1,1 @@
-MessageEvent('Hello & Welcome!')
+window.alert('Hello & Welcome!');
