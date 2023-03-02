@@ -16,5 +16,8 @@ Please note that I won't be able to accept pull requests all the time (most of t
 .    |<br>
 .    |- /[Home](https://unity-blaster.github.io/TestSite/Home.html)
 
+# Licencing
+The licencing Info is provided [here](https://github.com/Unity-Blaster/TestSite/blob/master/LICENSE).
+
 # Misc
 [I'll add more to Read-Me Later. Cuz it's not That important.]
