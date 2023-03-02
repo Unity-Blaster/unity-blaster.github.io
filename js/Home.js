@@ -1,1 +1,1 @@
-prompt('Hello & Welcome!')
+print('Hello & Welcome!')
