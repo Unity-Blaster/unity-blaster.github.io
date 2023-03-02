@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: black;
+  background-image: url("/assets/UC.png");
   min-height: 100vh;
   display:grid;
   place-items: center;
@@ -38,42 +38,52 @@ body {
   (--clr-neon);
 }
 
-/* 
-
-
-#headr {
-  height: 10vh;
-  width: 25vw;
-  border-radius: 20px;
-  /* color-scheme: #00003d #000000; */
-  /* background: linear-gradient(
-    to bottom,
-    #00000000,
-    #00003dbd,
-    #00003d,
-    #00003dbd,
-    #00000000
-    
-  );
-  display: flex;  
-  align-items: center;
-  justify-content: center; */
-  /* padding: 6% 20vw; */
-  /* position: fixed; */
-/* } */
-
-/* #hedr {
-  height: 100vh;
-  width: 100vw;
+div.UC {
   background-color: #00000000;
-  display: flex;
-  position: fixed;
-  justify-content: center; */
-  /* align-items: 20%;
-  padding: 0% 18%; */
-/* } */
+  height: 10vh;
+  width: 100vw;
+  opacity: 100%;
+  display:flex;
+  align-items: center;
+  justify-items: center;
+  font-size: 5vh;
+  color: #2121F0;
+}
+/* 
+#TopUC {
+  background-position: top;
+}
 
-/* .link div{
-  text-decoration: double;
-  text-decoration-color: aqua; */
-/* } */ 
+#BotUC {
+  background-position: bottom;
+}
+
+div.UCMain {
+  display:grid;
+  align-items: center;
+  height: 10%;
+  width: 100%;
+  z-index: 5;
+}
+
+div.UCColor {
+  display:grid;
+  align-items: center;
+  height:2%;
+  width:100%;
+  z-index: 10;
+}
+
+div.UCBlack {
+  display:grid;
+  align-items: center;
+  background-color: black;
+  z-index: 15;
+}
+
+div.UCYellow {
+  display:grid;
+  align-items: center;
+  background-color: yellow;
+  z-index: 15;
+} */
