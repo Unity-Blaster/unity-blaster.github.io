@@ -1,31 +1,31 @@
 /* Colors for site. */
 :root {
-  --clr-neon: #0000ff;
+  --neon: #0000ff;
 }
 
-*,
+/* *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
+} */
 
 body {
   background-image: url("/assets/UC.png");
   min-height: 100vh;
   display:grid;
   place-items: center;
-  background: linear-gradient(180deg, #fffb00,#2e3100,#000000,#000000,#2e3100,#fffb00);
+  background: linear-gradient(180deg, #ffff00,#708a00,#254b00,#000418,#000418,#254b00,#708a00,#ffff00);
   font-family: 'Arial Rounded MT Bold', Arial, Helvetica, sans-serif;
   color: var(--clr-neon);
   margin: 0;
 }
 
-.neon {
+.texta {
   font-size: 4rem;
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
-  color: var(--clr-neon);
+  color: var(--neon);
   border: currentColor 0.125em solid;
   padding: 0.25em 1em;
   border-radius: 0.25em;
@@ -35,8 +35,8 @@ body {
     0 0 1.55em currentColor;
 
   box-shadow: inset 0 0 0.5em 0 var
-  (--clr-neon), 0 0 0.5em 0 var
-  (--clr-neon);
+  (--neon), 0 0 0.5em 0 var
+  (--neon);
 }
 
 div.UC {
