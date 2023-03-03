@@ -58,21 +58,11 @@ h1 {
     align-items: center;
     justify-items: left;
 }
-  
-/* #cntr {
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    justify-items: left;
-    margin: auto;
-    z-index: 999;
-} */
 
 .WebImg {
     height: var(--HeadHeight);
     aspect-ratio: 0.1 0.1;
     margin: 0;
-    /* background-image: url(/assets/Unity_Blaster_Big.jpg); */
     position: relative;
     border-radius: 20%;
     display: flex;
