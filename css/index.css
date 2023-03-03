@@ -1,6 +1,6 @@
 /* Colors for site. */
 :root {
-  --clr-neon: #000061;
+  --clr-neon: #0000ff;
 }
 
 *,
@@ -31,8 +31,8 @@ body {
   border-radius: 0.25em;
 
   text-shadow: 
-    0 0 0.125em #ffffff85,
-    0 0 0.55em currentColor;
+    0 0 0.225em #3988ff,
+    0 0 1.55em currentColor;
 
   box-shadow: inset 0 0 0.5em 0 var
   (--clr-neon), 0 0 0.5em 0 var
@@ -42,18 +42,20 @@ body {
 div.UC {
   background-color: black;
   border-radius: 50px;
-  height: 10vh;
-  width: 80vw;
-  display: felx;
-  align-items: center;
-  justify-items: center;
+  height: fit-content;
+  width: fit-content;
+  display: grid;
   text-align: center;
   font-size: 8vh;
   font-family: 'Times New Roman', Times, serif;
   color: #fffb00;
-  box-shadow: inset 5em #00ff40;
+  box-shadow: 5% #00ff40;
   border: currentColor 0.4vw solid;
   margin: 0%;
+}
+
+div {
+  justify-items: stretch;
 }
 
 #UCTop {
