@@ -1,3 +1,7 @@
+* {
+    font-family: url(/assets/Arial_Rounded_MT_Bold.ttf);
+}
+
 :root {
     --var1: #1e00ca;
     --var2: #120061;
@@ -6,16 +10,13 @@
     --bg:  linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #23d573, #11ff11, #00923d, #070069);
 }
 @font-face {
-    font-family: RoundMT;
-    src:url("/assets/Arial_Rounded_MT_Bold.ttf");
-}
-@font-face {
     font-family: 'CustomHeading';
-    src: url("/assets/Arial_Rounded_MT_Bold.ttf") format('embedded-opentype'), /* Internet Explorer */
-         url("/assets/Arial_Rounded_MT_Bold.ttf") format('woff2'),             /* Super Modern Browsers */
-         url("/assets/Arial_Rounded_MT_Bold.ttf") format('woff'),              /* Pretty Modern Browsers */
-         url("/assets/Arial_Rounded_MT_Bold.ttf") format('truetype'),          /* Safari, Android, iOS */
-         url("/assets/Arial_Rounded_MT_Bold.ttf") format('svg');               /* Legacy iOS */
+    src: url(assets/Arial_Rounded_MT_Bold.eot?) format('embedded-opentype'), /* Internet Explorer */
+         url(assets/Arial_Rounded_MT_Bold.woff2) format('woff2'),             /* Super Modern Browsers */
+         url(assets/Arial_Rounded_MT_Bold.woff) format('woff'),              /* Pretty Modern Browsers */
+         url(assets/Arial_Rounded_MT_Bold.ttf) format('truetype'),          /* Safari, Android, iOS */
+         url(assets/Arial_Rounded_MT_Bold.svg) format('svg'),               /* Legacy iOS */
+         url(assets/Arial_Rounded_MT_Bold.ttf);
 }
 body {
 	margin: 0%;
