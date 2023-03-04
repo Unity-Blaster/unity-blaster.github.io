@@ -1,4 +1,9 @@
 # For index.css
 
-1. [by Baba] while transitioning b/w pages, make each transition like:
+1. [by Baba] While transitioning b/w pages, make each transition like:
         Prev.Page --> Gets Smaller --> Next.Page appears --> Gets Normal size.  
+
+# For Home.css
+
+1. [by me] Add a pre-loader.
+2. [by me & m^3] Add a diff style to the Name entered than the res of the text.

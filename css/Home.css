@@ -8,3 +8,60 @@ div.StartingText {
     justify-content: center;
     font-family: sans-serif;
 }
+
+div.ST1 {
+    color:aqua;
+    display:flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+div.ST2 {
+    color: aquamarine;
+    display:flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+/* Pre-loader */
+/* #LoaderWrapper.LoaderSec {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100px;
+    background: #222222;
+    z-index: 10000;
+}
+#LoaderWrapper.LoaderSec.SecRight {
+    right: 0;
+}
+#LoaderWrapper.LoaderSec.SecLeft {
+    left: 0;
+}
+
+#Loader { */
+    /* min-width: 100px;
+    min-height: 100px;
+    width: 10%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-items: center; */
+    /* z-index: 10001;
+} */
+/* h1 {} */
+/* #MainBody {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+} */
+
+/* loaded */
+
+/* .Loaded #LoadedWrapper .LoaderSec.Sec-Right {
+    width: auto;
+}
+.Loaded #LoadedWrapper .LoaderSec.Sec-Left {
+    width: auto;
+} */
+
+/* https://ihatetomatoes.net/create-custom-preloading-screen/ <--link to webpage used as ref */
