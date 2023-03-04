@@ -1,6 +1,7 @@
 /* Colors for site. */
 :root {
   --neon: #0000ff;
+  --neon2: #0f3bff;
 }
 
 /* *,
@@ -31,7 +32,7 @@ body {
   border-radius: 0.25em;
 
   text-shadow: 
-    0 0 0.225em #3988ff,
+    0 0 0.225em var(--neon2),
     0 0 1.55em currentColor;
 
   box-shadow: inset 0 0 0.5em 0 var

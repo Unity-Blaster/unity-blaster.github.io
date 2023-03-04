@@ -18,13 +18,19 @@ div.StartingText {
 }
 
 div.ST1 {
-    color:aqua;
+    color:#00bdbd;
     display:flex;
     justify-content: center;
     font-family: sans-serif;
 }
 div.ST2 {
-    color: aquamarine;
+    color: #c4ffff;
+    display:flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+div.ST3 {
+    color: #3700ff;
     display:flex;
     justify-content: center;
     font-family: sans-serif;
