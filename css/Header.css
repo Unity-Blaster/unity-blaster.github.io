@@ -9,15 +9,6 @@
     --FontSize: 3.75vw;
     --bg:  linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #23d573, #11ff11, #00923d, #070069);
 }
-@font-face {
-    font-family: 'CustomHeading';
-    src: url(assets/Arial_Rounded_MT_Bold.eot?) format('embedded-opentype'), /* Internet Explorer */
-         url(assets/Arial_Rounded_MT_Bold.woff2) format('woff2'),             /* Super Modern Browsers */
-         url(assets/Arial_Rounded_MT_Bold.woff) format('woff'),              /* Pretty Modern Browsers */
-         url(assets/Arial_Rounded_MT_Bold.ttf) format('truetype'),          /* Safari, Android, iOS */
-         url(assets/Arial_Rounded_MT_Bold.svg) format('svg'),               /* Legacy iOS */
-         url(assets/Arial_Rounded_MT_Bold.ttf);
-}
 body {
 	margin: 0%;
 }
@@ -64,7 +55,7 @@ h1 {
     padding: 0rem clamp(1rem, 2vw, 3rem);
     /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     position: absolute;
-    font-family: CustomHeading;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     left: 50%;
     top: 50%;
     margin: 0rem;
