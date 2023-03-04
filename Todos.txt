@@ -6,4 +6,9 @@
 # For Home.css
 
 1. [by me] Add a pre-loader.
-2. [by me & m^3] Add a diff style to the Name entered than the res of the text.
+2. [by me & m^3] Add a diff style to the Name entered than the rest of the text.
+3. Fix.problem("Hi null!");
+
+# For Header.css + .js
+
+1. add a sys to limit the amount of times the header text can be "hacker animated', or rather, put a cap on it.

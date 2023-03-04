@@ -26,6 +26,14 @@ div.ST3 {
     justify-content: center;
     font-family: sans-serif;
 }
+div#dName {
+    color: #000dc0;
+    font-family: cursive;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 85%;
+}
 
 /* Pre-loader */
 /* #LoaderWrapper.LoaderSec {
