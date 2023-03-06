@@ -12,3 +12,5 @@
 # For Header.css + .js
 
 1. add a sys to limit the amount of times the header text can be "hacker animated', or rather, put a cap on it.
+2. take the value of header colors and then pick a random from that and put it as text color.
+3. add a toggle for the above.

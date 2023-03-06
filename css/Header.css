@@ -21,6 +21,7 @@ body {
 	height: var(--HeadHeight);
     z-index: 1;
     position: relative;
+    padding: 0%;
 }
 
 @keyframes gradient {
@@ -64,7 +65,9 @@ h1 {
     align-items: center;
     justify-items: left;
 }
-
+div#he2.head {
+    padding: 0%;
+}
 .WebImg {
     height: var(--HeadHeight);
     aspect-ratio: 0.1 0.1;
