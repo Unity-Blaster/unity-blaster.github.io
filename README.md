@@ -20,7 +20,7 @@ Please note that I won't be able to accept pull requests all the time (most of t
 .    |- /[Home](https://unity-blaster.github.io/TestSite/Home.html)
 
 # Licencing
-The distro has to follow the [Unlicence Licence](https://github.com/Unity-Blaster/TestSite/blob/master/LICENSE) and the folowing guidelines:--
+The distro has to follow the [Unlicence Licence](https://github.com/Unity-Blaster/TestSite/blob/master/LICENSE) and the following guidelines:--
 
 1. The project must be free to download (accepting donations is fine), and the source code must be available publicaly and should not be hard to reach to (shouldn't be hidden in directories).
 2. There should be some indication, in the distribution, that it's not the official version.
