@@ -102,6 +102,11 @@ ul li a.card {
     background-repeat: no-repeat;
 }
 
+a.card:hover {
+    box-shadow: #0004ffb6 0px 0.35rem 1.175rem, #00c3ffdc 0px 0.175rem 0.5rem;
+    transform: translateY(-3px) scale(1.1);
+}
+
 h1 {
     margin: 0%;
 }
