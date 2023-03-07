@@ -64,11 +64,11 @@ ul.grid {
     row-gap: 1rem;
     list-style: none;
     padding: 0%;
-    /* margin-top: 1%;
+    margin-top: 1%;
     margin-left: 5%;
     margin-bottom: 1%;
-    margin-right: 5%; */
-    margin: 0%;
+    margin-right: 5%;
+    /* margin: 0%; */
     font-size: 4rem;
 }
 ul li a.card {
