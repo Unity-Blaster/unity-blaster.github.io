@@ -1,14 +1,16 @@
 function Welcome() {
     window.alert('Hello & Welcome!');
 
-    var nName = " " + prompt("What's Your Name?");
+    var nName = prompt("What's Your Name?");
     document.getElementById("dName").innerText = " " + nName;
     document.getElementById("Hii").innerText = "Hi";
 
 };
 
 Welcome();
-
+// ? 
+// *
+// !
 // if (nName=null){ 
 //     var nName = "!";
 //     document.getElementById("Name").innerText = "Hi" + nName;
