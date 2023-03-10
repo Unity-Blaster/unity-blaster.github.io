@@ -22,7 +22,6 @@ body {
 }
 
 .texta {
-  font-size: 4rem;
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
@@ -47,7 +46,6 @@ div.UC {
   width: fit-content;
   display: grid;
   text-align: center;
-  font-size: 8vh;
   font-family: 'Times New Roman', Times, serif;
   color: #fffb00;
   box-shadow: 5% #00ff40;

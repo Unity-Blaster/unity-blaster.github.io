@@ -8,7 +8,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 7vh;
     font-family: 'Verdana', Geneva, Tahoma, sans-serif;
     font-weight: 1000;
     z-index: 5;
@@ -27,30 +26,7 @@ body {
     position: relative;
 }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-    25% {
-        background-position: 25% 75%;
-    }
-	50% {
-		background-position: 100% 50%;
-	}
-    75% {
-        background-position: 75% 25%;
-    }
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-h1 {
-    font-size: 4vw;
-}
-
 h2 {
-    font-size: 1vw;
     color: #FFFFFF;
 }
 

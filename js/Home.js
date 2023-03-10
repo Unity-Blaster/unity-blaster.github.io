@@ -7,7 +7,7 @@ function Welcome() {
 
 };
 
-Welcome();
+// Welcome();
 // ? 
 // *
 // !
