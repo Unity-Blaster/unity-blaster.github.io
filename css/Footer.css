@@ -1,5 +1,5 @@
 #ModeToggle {
-    height: 4vh;
+    height: var(--HeadHeight);
     width: 100vw;
     /* color: blueviolet; */
     color: #0e005c;
@@ -11,6 +11,7 @@
     font-family: 'Verdana', Geneva, Tahoma, sans-serif;
     font-weight: 1000;
     z-index: 5;
+    font-size: var(--HFontHeight);
 }
 
 body {
@@ -22,8 +23,11 @@ body {
 	background-size: 400% 400%;
 	animation: gradient 40s ease infinite;
 	height: 15vh;
+    /* height: fit-content; */
     z-index: 1;
     position: relative;
+    display: grid;
+    align-self: start;
 }
 
 h2 {

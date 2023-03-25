@@ -37,7 +37,8 @@ body {
     background: var(--bg);
 	background-size: 400% 400%;
 	animation: gradient 40s ease infinite;
-	height: var(--HeadHeight);
+	/* height: var(--HeadHeight); */
+    height: fit-content;
     z-index: 1;
     position: relative;
     padding: 0%;
@@ -51,14 +52,16 @@ body {
 
 #he2{
     display: flex;
-    height:100%;
+    height: fit-content;
 }
 div#he1.head div h3 {
     font-size: var(--HFontSize);
+    height: var(--HeadHeight);
     color: #0e005c;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display: flex;
     align-items: center;
+    margin: 0%;
 }
 div#ftbg div#ft h1 div#ModeToggle {
     font-size: var(--HFontSize);
