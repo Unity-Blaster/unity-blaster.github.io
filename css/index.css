@@ -29,6 +29,7 @@ body {
   border: currentColor 0.125em solid;
   padding: 0.25em 1em;
   border-radius: 0.25em;
+  margin: 0%;
 
   text-shadow: 
     0 0 0.225em var(--neon2),
@@ -38,12 +39,12 @@ body {
   (--neon), 0 0 0.5em 0 var
   (--neon);
 }
-
+/* 
 div.UC {
   background-color: black;
-  border-radius: 50px;
+  border-radius: 20px 0px 20px 0px;
   height: fit-content;
-  width: fit-content;
+  width: 730px;
   display: grid;
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
@@ -52,10 +53,85 @@ div.UC {
   border: currentColor 0.4vw solid;
   margin: 0%;
   font-size: 500%;
+} */
+
+
+div#TopUC {
+  background-color: black;
+  border-radius: 20px 20px 0px 0px;
+  height: fit-content;
+  width: 730px;
+  display: grid;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: #fffb00;
+  box-shadow: 5% #00ff40;
+  border: currentColor 0.4vw solid;
+  /* margin: 5%; */
+  font-size: 500%;
+}
+div#BotUC {
+  background-color: black;
+  border-radius: 0px 0px 20px 20px;
+  height: fit-content;
+  width: 730px;
+  display: grid;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: #fffb00;
+  box-shadow: 5% #00ff40;
+  border: currentColor 0.4vw solid;
+  /* margin: 5%; */
+  font-size: 500%;
+}
+
+
+div.MainUC {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 40px;
+  height: fit-content;
+  width: fit-content;
+  display: grid;
+  align-items: center;
+  color: #283a006a;
+  border: 0.8vw solid currentColor;
+  margin: 0%;
+}
+div.SubUC {
+  
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 30px;
+  height: fit-content;
+  width: fit-content;
+  display: grid;
+  align-items: center;
+  color: #b3bc0069;
+  border: currentColor 1vw solid;
+  margin: 0%;
+
+}
+div.MidUC {
+  width: 100%;
+  height: 1vw;
+  background-color: #b3bc0069;  
+}
+#hedr {
+  display: grid;
+  justify-self: center;
+  /* border: #fffb00 1vw solid; */
+  height: fit-content;
+  width: fit-content;
+}
+div.MinUC {
+  height: fit-content;
+  width: 700px;
+  border: #708a00 1vw solid;
+  display: grid;
+  justify-content: center;
 }
 
 div {
-  justify-items: stretch;
+  justify-items: center;
 }
 
 #UCTop {
