@@ -1,0 +1,63 @@
+body {
+    background-color: #000020;
+    color: #00dbf8;
+    font-family: "Arial Rounded MT";
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 105vh;
+}
+
+.mid {
+    transition-delay: 200ms;
+}
+
+.kids {
+    display: flex;
+}
+
+.kid {
+    font-size: 500%;
+}
+
+.kid:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.kid:nth-child(3) {
+    transition-delay: 300ms;
+}
+
+.kid:nth-child(4) {
+    transition-delay: 400ms;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.hidden2 {
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateX(-100%);
+    transition: all 1.1s;
+}
+
+.show2 {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}

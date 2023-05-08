@@ -4,18 +4,12 @@
   --neon2: #0f3bff;
 }
 
-/* *,
-*::before,
-*::after {
-  box-sizing: border-box;
-} */
-
 body {
   background-image: url("/assets/UC.png");
   min-height: 100vh;
   display:grid;
   place-items: center;
-  background: linear-gradient(180deg, #ffff00,#708a00,#254b00,#000418,#000418,#254b00,#708a00,#ffff00);
+  background: linear-gradient(180deg, #ffff00,#708a00,#254b00,#000418,#000418,#254b00,#708a00,#ffff00), var(--neon);
   font-family: 'Arial Rounded MT Bold', Arial, Helvetica, sans-serif;
   color: var(--clr-neon);
   margin: 0;
@@ -39,22 +33,6 @@ body {
   (--neon), 0 0 0.5em 0 var
   (--neon);
 }
-/* 
-div.UC {
-  background-color: black;
-  border-radius: 20px 0px 20px 0px;
-  height: fit-content;
-  width: 730px;
-  display: grid;
-  text-align: center;
-  font-family: 'Times New Roman', Times, serif;
-  color: #fffb00;
-  box-shadow: 5% #00ff40;
-  border: currentColor 0.4vw solid;
-  margin: 0%;
-  font-size: 500%;
-} */
-
 
 div#TopUC {
   background-color: black;

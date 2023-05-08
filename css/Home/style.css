@@ -2,6 +2,10 @@ body {
     background-color: black;
 }
 
+he1, he2, h3 {
+    height: fit-content;
+}
+
 div.ST1 {
     color:#00bdbd;
     display:flex;
