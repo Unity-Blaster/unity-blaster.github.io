@@ -1,17 +1,17 @@
 function Welcome() {
-    window.alert('Hello & Welcome!');
+	window.alert('Hello & Welcome!');
 
-    var nName = prompt("What's Your Name?");
-    document.getElementById("dName").innerText = " " + nName;
-    document.getElementById("Hii").innerText = "Hi";
+	var nName = prompt("What's Your Name?");
+	document.getElementById("dName").innerText = " " + nName;
+	document.getElementById("Hii").innerText = "Hi";
 
 };
 
 // Welcome();
-// ? 
+// ?
 // *
 // !
-// if (nName=null){ 
+// if (nName=null){
 //     var nName = "!";
 //     document.getElementById("Name").innerText = "Hi" + nName;
 // } else {
@@ -35,3 +35,11 @@ function Welcome() {
 //     }, 3000);
 //     Welcome();
 // });
+
+// const hamburgerMenu = document.querySelector(".hamburger-menu");
+// const sidebar = hamburgerMenu.querySelector(".sidebar");
+// const input = hamburgerMenu.querySelector("input");
+
+// if (input.checked) {
+//   sidebar.style.transform = "translate(0)";
+// }
