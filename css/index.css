@@ -34,7 +34,8 @@ body {
   (--neon);
 }
 
-div#TopUC {
+div{
+#TopUC {
   background-color: black;
   border-radius: 20px 20px 0px 0px;
   height: fit-content;
@@ -48,7 +49,7 @@ div#TopUC {
   /* margin: 5%; */
   font-size: 500%;
 }
-div#BotUC {
+#BotUC {
   background-color: black;
   border-radius: 0px 0px 20px 20px;
   height: fit-content;
@@ -62,9 +63,10 @@ div#BotUC {
   /* margin: 5%; */
   font-size: 500%;
 }
+} 
 
-
-div.MainUC {
+div{
+.MainUC {
   background-color: rgba(0, 0, 0, 0);
   border-radius: 40px;
   height: fit-content;
@@ -75,7 +77,7 @@ div.MainUC {
   border: 0.8vw solid currentColor;
   margin: 0%;
 }
-div.SubUC {
+.SubUC {
   
   background-color: rgba(0, 0, 0, 0);
   border-radius: 30px;
@@ -88,11 +90,12 @@ div.SubUC {
   margin: 0%;
 
 }
-div.MidUC {
+.MidUC {
   width: 100%;
   height: 1vw;
   background-color: #b3bc0069;  
 }
+ } 
 #hedr {
   display: grid;
   justify-self: center;
