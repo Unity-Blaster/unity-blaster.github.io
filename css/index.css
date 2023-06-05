@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
   display:grid;
   place-items: center;
-  background: linear-gradient(180deg, #ffff00,#708a00,#254b00,#000418,#000418,#254b00,#708a00,#ffff00), var(--neon);
+  background: linear-gradient(180deg, #0000ff,#708a00,#254b00,#000418,#000418,#254b00,#708a00,#0000ff), var(--neon);
   font-family: 'Arial Rounded MT Bold', Arial, Helvetica, sans-serif;
   color: var(--clr-neon);
   margin: 0;
