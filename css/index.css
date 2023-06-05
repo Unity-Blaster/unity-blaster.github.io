@@ -123,10 +123,42 @@ div {
 }
 
 /* ! Landing page main stuff */
+.mfill {
+  Width: 100vw;
+  Height: 8vh;
+  Background-image: linear-gradient(90deg, #000020);
+} 
+.nfill {
+  Width: 100vw;
+  Height: 2vh;
+  Background-image: linear-gradient(90deg, #000020);
+  
+} 
 
+.cool:hover {
+  animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+} /*
+.cool:onload {
+  Animation: main-text-animi 2s ease-in-out repeat;
+  } 
+*/
+/* Move the background and make it smaller. */
+
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes main-next-animi {
+  0% {
+    background-size: 98%;
+    background-position: 0;
+  }
+  100% {
+    background-size: 200%;
+    background-position: -100%;
+  }
+}
+@keyframes rainbow-text-simple-animation-rev {
 .MainHead {
   background-image: linear-gradient(45deg, #000050, #000040, #000020, #000020, #000040, #000050);
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
   margin: 0;
   border: 0;
@@ -136,7 +168,7 @@ div {
   align-items: center;
 }
 .lo {
-  
+
   cursor: none;
   text-decoration: none;
   color: cyan;
