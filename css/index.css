@@ -134,7 +134,27 @@ div {
   Background-image: linear-gradient(90deg, #000020);
   
 } 
+.lo {
 
+  cursor: none;
+
+  text-decoration: none;
+
+  color: cyan;
+
+  border: currentColor 0em solid;
+
+  padding: 0.05em 0.05em;
+
+  border-radius: 0.25em;
+
+  margin: 0%;
+
+  text-shadow: 0 0 0.225em cyan, 0 0 0.55em currentColor;
+
+  box-shadow: inset 0 0 0 0 cyan , 0 0 0 0 cyan;
+
+}  
 .cool:hover {
   animation: rainbow-text-simple-animation 0.5s ease-in forwards;
 } /*
