@@ -11,5 +11,8 @@
   "editor.wordWrap": "on",
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 10,
-  "editor.minimap.autohide": true
+  "editor.minimap.autohide": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
 }
