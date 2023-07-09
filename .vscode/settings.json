@@ -1,4 +1,15 @@
 {
-  "githubPullRequests.ignoredPullRequestBranches": ["Unity"],
-  "editor.renderWhitespace": "all"
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.columnSelection": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "terminal.integrated.tabs.defaultColor": "terminal.ansiBlue",
+  "editor.renderWhitespace": "all",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "block-outline",
+  "editor.cursorBlinking": "phase",
+  "debug.confirmOnExit": "always",
+  "editor.wordWrap": "on",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 10,
+  "editor.minimap.autohide": true
 }

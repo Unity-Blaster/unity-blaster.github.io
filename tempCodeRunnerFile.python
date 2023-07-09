@@ -1,4 +1,0 @@
-print("Hi! Welcome to ze screen aspect ratio calculator.")
-
-XVal = eval(input("Please enter the x value/horizontal pixel count: "))
-YVal = eval(input("Please enter the y value/vertical pixel count: "))
