@@ -14,17 +14,11 @@
 <body>
 	<div class="mfill"></div>
 	<div class="nfill"></div>
-	<div class="MainHead">
 
-		<div class="blur blur1">
-			<div class="shapeBlurred sB1"></div>
-			<div class="shapeBlurred sB2"></div>
-			<div class="shapeBlurred sB3"></div>
-			<div class="shapeBlurred sB4"></div>
-		</div>
+	<div class="MainHead" id="he1">
 
-		<h1>
-			<div class="blur blur2">
+		<div class="blur blur2">
+			<h1>
 				<center>
 					<b>
 						<div class="lo ool">Spreading</div>
@@ -35,15 +29,19 @@
 						<div class="lo ool">(Launcher)</div>
 					</b>
 				</center>
-			</div>
-		</h1>
+			</h1>
+		</div>
+		<div class="arrow" onclick="nextPage()">
+			<div id="arrowSide1" class="arrowSide"></div>
+			<div id="arrowSide2" class="arrowSide"></div>
+		</div>
 	</div>
 	<div class="nfill"></div>
 	<div class="mfill"></div>
 
 
-	<div class="texta">
-		<a href="Home/">
+	<div class="subHead">
+		<a href="Home/" class="texta">
 			Home Page
 		</a>
 	</div>
@@ -57,7 +55,17 @@
 		//     $(location).attr('href',url);
 
 		// }
+
+		var winX = window.innerHeight;
+
+		function nextPage() {
+			window.scrollTo({
+				top: winX,
+				behavior: "smooth",
+			});
+		};
 	</script>
+	<script src="/js/Header.js"></script>
 </body>
 
 </html>

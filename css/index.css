@@ -2,6 +2,9 @@
 :root {
 	--neon: #000061FF;
 	--neon2: #0f3bff;
+
+	--HeadHeight: 100vh;
+	--bg: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #23d573, #11ff11, #00923d, #070069);
 }
 
 html {
@@ -94,7 +97,7 @@ div {
 	margin: 0%;
 	/* text-shadow: 0 0 0.025em rgb(255, 60, 0), 0 0 0.15em currentColor; */
 	box-shadow: inset 0 0 0 0 rgb(51, 255, 0), 0 0 0 0 rgb(255, 230, 0);
-
+	text-shadow: 0 .1em .25em rgba(255, 255, 255, 0.295);
 }
 
 /* make a part of the text's bg translucent and blurred and add shapes on behind that... */
@@ -112,9 +115,9 @@ div {
 
 	background-image: linear-gradient(45deg, #000050, #000040, #000020, #000020, #000040, #000050);
 
-	-webkit-box-shadow: inset 0px 0px 89px -4px #1900ff;
+	/* -webkit-box-shadow: inset 0px 0px 89px -4px #1900ff;
 	-moz-box-shadow: inset 0px 0px 89px -4px #1900ff;
-	box-shadow: inset 0px 0px 89px -4px #1900ff;
+	box-shadow: inset 0px 0px 89px -4px #1900ff; */
 
 	height: 100vh;
 	width: 100vw;
@@ -126,6 +129,51 @@ div {
 	align-items: center;
 }
 
+.subHead {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.arrow {
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 3%;
+
+	background: none;
+	height: 40px;
+	width: 40px;
+
+	z-index: 999;
+
+	display: flex;
+	align-items: center;
+}
+
+.arrow:hover,
+.arrow:active,
+.arrow:focus {
+	cursor: pointer;
+	
+}
+#arrowSide1 {
+	Rotate: 45deg;
+	translate: 14%;
+}
+
+#arrowSide2 {
+	translate: -14%;
+	Rotate: -45deg;
+}
+
+.arrowSide {
+	background: white;
+	width: 60%;
+	height: 10%;
+}
+
 h1 {
 	height: 100%;
 	width: 100%;
@@ -135,15 +183,10 @@ h1 {
 }
 
 .blur {
-	/* background: red; */
-
-	/* filter: blur(.5rem); */
-
-	/* add blur only to bg */
-
-	height: 60%;
-	width: 60%;
+	height: fit-content;
+	width: fit-content;
 	border-radius: 5%;
+	padding: 7rem;
 
 	overflow: hidden;
 	position: absolute;
@@ -151,12 +194,13 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	backdrop-filter: blur(23rem);
+
+	box-shadow: 0 8px 20px 0 #ffffff21;
+	background: #ffffff33;
 }
-.blur2 {
-	backdrop-filter: blur(8rem);
-	min-width: fit-content;
-	min-height: fit-content;
-}
+
+
 .shapeBlurred {
 	position: absolute;
 
@@ -287,4 +331,37 @@ h1 {
 	100% {
 		background-size: 98%;
 	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	25% {
+		background-position: 25% 75%;
+	}
+
+	50% {
+		background-position: 50% 100%;
+	}
+
+	75% {
+		background-position: 25% 75%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+#he1 {
+	/* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #23d573, #11ff11, #00923d, #070069); */
+	background: var(--bg);
+	background-size: 400% 400%;
+	animation: gradient 40s ease infinite;
+	z-index: 1;
+	position: relative;
+	padding: 0%;
 }
