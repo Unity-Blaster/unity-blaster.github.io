@@ -156,7 +156,7 @@ div {
 .arrow:active,
 .arrow:focus {
 	cursor: pointer;
-	
+
 }
 #arrowSide1 {
 	Rotate: 45deg;
@@ -194,7 +194,7 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	backdrop-filter: blur(23rem);
+	backdrop-filter: blur(12rem);
 
 	box-shadow: 0 8px 20px 0 #ffffff21;
 	background: #ffffff33;

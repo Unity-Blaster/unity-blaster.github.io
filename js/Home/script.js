@@ -1,11 +1,10 @@
 function Welcome() {
-	window.alert('Hello & Welcome!');
+  window.alert("Hello & Welcome!");
 
-	var nName = prompt("What's Your Name?");
-	document.getElementById("dName").innerText = " " + nName;
-	document.getElementById("Hii").innerText = "Hi";
-
-};
+  var nName = prompt("What's Your Name?");
+  document.getElementById("dName").innerText = " " + nName;
+  document.getElementById("Hii").innerText = "Hi";
+}
 
 // Welcome();
 // ?
@@ -43,3 +42,19 @@ function Welcome() {
 // if (input.checked) {
 //   sidebar.style.transform = "translate(0)";
 // }
+var sidebar = document.querySelector(".sidebar");
+var hamToggleIn = document.querySelector(".hamToggleIn");
+var hamToggleOut = document.querySelector(".hamToggleOut");
+
+function menuSlideIn() {
+	sidebar.style.translate = '0%';
+	hamToggleOut.style.zIndex = '1';
+	hamToggleIn.style.zIndex = "-1";
+	sidebar.style.zIndex = '1';
+};
+function menuSlideOut() {
+	sidebar.style.translate = "100%";
+  hamToggleOut.style.zIndex = "-1";
+  hamToggleIn.style.zIndex = "1";
+	sidebar.style.zIndex = '1';
+};
