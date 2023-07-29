@@ -21,3 +21,12 @@ document.querySelector("h3").onmouseover = event => {
     iterations += 1/2;
   }, 24);
 }
+
+// declare a var and generate random no between 0.2 and 0.8
+// var random = Math.random() * (0.8 - 0.2) + 0.2;
+
+// make a function that retuns the val 10-10
+// function randomA() {
+//   return Math.floor(Math.random() * 256)
+// }
+
