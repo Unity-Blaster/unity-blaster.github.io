@@ -39,4 +39,6 @@
 1. use profiles feature in vs cde to be used while writing diff. codes.
 
 
-# 
+# Overall
+
+1. Add css, js, assets to /public/
