@@ -42,8 +42,7 @@ var b8 = randomA();
 // var hex1 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`, hex2 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`, hex3 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`, hex4 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`, hex5 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`, hex6 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`, hex7 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`, hex8 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`;
 
 // Set the background gradient of the div to the random values
-he1.style.background =
-  "linear-gradient(-90deg, rgb(" +
+he1.style.background ="linear-gradient(-90deg, rgb(" +
   r1 +
   "," +
   g1 +
@@ -99,8 +98,7 @@ he1.style.animation = "gradient 40s ease infinite";
 he1.style.height = "var(--HeadHeight)";
 he1.style.zIndex = "1";
 he1.style.position = "relative";
-ft.style.background =
-  "linear-gradient(-90deg, rgb(" +
+ft.style.background ="linear-gradient(-90deg, rgb(" +
   r1 +
   "," +
   g1 +
