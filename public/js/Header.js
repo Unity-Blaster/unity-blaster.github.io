@@ -42,55 +42,7 @@ var b8 = randomA();
 // var hex1 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`, hex2 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`, hex3 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`, hex4 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`, hex5 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`, hex6 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`, hex7 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`, hex8 = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`;
 
 // Set the background gradient of the div to the random values
-he1.style.background = "linear-gradient(-90deg, rgb(" +
-  r1 +
-  "," +
-  g1 +
-  "," +
-  b1 +
-  "), rgb(" +
-  r2 +
-  "," +
-  g2 +
-  "," +
-  b2 +
-  "), rgb(" +
-  r3 +
-  "," +
-  g3 +
-  "," +
-  b3 +
-  "), rgb(" +
-  r4 +
-  "," +
-  g4 +
-  "," +
-  b4 +
-  "), rgb(" +
-  r5 +
-  "," +
-  g5 +
-  "," +
-  b5 +
-  "), rgb(" +
-  r6 +
-  "," +
-  g6 +
-  "," +
-  b6 +
-  "), rgb(" +
-  r7 +
-  "," +
-  g7 +
-  "," +
-  b7 +
-  "), rgb(" +
-  r8 +
-  "," +
-  g8 +
-  "," +
-  b8 +
-  "))";
+he1.style.background = "linear-gradient(-90deg, rgb(" + r1 + "," + g1 + "," + b1 + "), rgb(" + r2 + "," + g2 + "," + b2 + "), rgb(" + r3 + "," + g3 + "," + b3 + "), rgb(" + r4 + "," + g4 + "," + b4 + "), rgb(" + r5 +"," + g5 + "," + b5 + "), rgb(" + r6 + "," + g6 + "," + b6 + "), rgb(" + r7 + "," + g7 + "," + b7 + "), rgb(" + r8 + "," + g8 + "," + b8 + "))";
 // he1.style.background = hex1;
 // he1.style.background = 'linear-gradient(-45deg, var('+hex1+'), var('+hex2+'), var('+hex3+'), var('+hex4+'), var('+hex5+'), var('+hex6+'), var('+hex7+'), var('+hex8+'))';
 he1.style.backgroundSize = "400% 400%";
@@ -98,55 +50,7 @@ he1.style.animation = "gradient 40s ease infinite";
 he1.style.height = "var(--HeadHeight)";
 he1.style.zIndex = "1";
 he1.style.position = "relative";
-ft.style.background = "linear-gradient(-90deg, rgb(" +
-  r1 +
-  "," +
-  g1 +
-  "," +
-  b1 +
-  "), rgb(" +
-  r2 +
-  "," +
-  g2 +
-  "," +
-  b2 +
-  "), rgb(" +
-  r3 +
-  "," +
-  g3 +
-  "," +
-  b3 +
-  "), rgb(" +
-  r4 +
-  "," +
-  g4 +
-  "," +
-  b4 +
-  "), rgb(" +
-  r5 +
-  "," +
-  g5 +
-  "," +
-  b5 +
-  "), rgb(" +
-  r6 +
-  "," +
-  g6 +
-  "," +
-  b6 +
-  "), rgb(" +
-  r7 +
-  "," +
-  g7 +
-  "," +
-  b7 +
-  "), rgb(" +
-  r8 +
-  "," +
-  g8 +
-  "," +
-  b8 +
-  "))";
+ft.style.background = "linear-gradient(-90deg, rgb(" + r1 + "," + g1 + "," + b1 + "), rgb(" + r2 + "," + g2 + "," + b2 + "), rgb(" + r3 + "," + g3 + "," + b3 + "), rgb(" + r4 + "," + g4 + "," + b4 + "), rgb(" + r5 + "," + g5 + "," + b5 + "), rgb(" + r6 + "," + g6 + "," + b6 + "), rgb(" + r7 + "," + g7 + "," + b7 + "), rgb(" + r8 + "," + g8 + "," + b8 + "))";
 ft.style.backgroundSize = "400% 400%";
 ft.style.animation = "gradient 40s ease infinite";
 // ft.style.height = "var(--HeadHeight)";
