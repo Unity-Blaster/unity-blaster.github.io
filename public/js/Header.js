@@ -43,7 +43,7 @@ var b8 = randomA();
 
 // Set the background gradient of the div to the random values
 he1.style.background =
-  "linear-gradient(-45deg, rgb(" +
+  "linear-gradient(-90deg, rgb(" +
   r1 +
   "," +
   g1 +
@@ -100,7 +100,7 @@ he1.style.height = "var(--HeadHeight)";
 he1.style.zIndex = "1";
 he1.style.position = "relative";
 ft.style.background =
-  "linear-gradient(-45deg, rgb(" +
+  "linear-gradient(-90deg, rgb(" +
   r1 +
   "," +
   g1 +
@@ -151,6 +151,6 @@ ft.style.background =
   "))";
 ft.style.backgroundSize = "400% 400%";
 ft.style.animation = "gradient 40s ease infinite";
-ft.style.height = "var(--HeadHeight)";
+// ft.style.height = "var(--HeadHeight)";
 ft.style.zIndex = "1";
 ft.style.position = "relative";
