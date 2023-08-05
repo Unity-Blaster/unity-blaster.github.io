@@ -280,7 +280,7 @@ b,
 
 	/* Set the background size and repeat properties. */
 
-	background-size: 101%;
+	/* background-size: 101%; */
 	background-repeat: repeat;
 
 	/* Use the text as a mask for the background. */
