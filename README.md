@@ -18,7 +18,7 @@ Please note that I won't be able to accept pull requests all the time (most of t
 ¦/[Default](https://unity-blaster.github.io/TestSite/)<br>
 .  ¦<br>
 .    |- /[Home](https://unity-blaster.github.io/TestSite/Home/)<br>
-.    |- /[Test](https://unity-blaster.github.io/TestSite/Test/) 
+.    |- /[Test](https://unity-blaster.github.io/TestSite/Test/)
 
 # Licencing
 The distro has to follow the [Unlicence Licence](https://github.com/Unity-Blaster/TestSite/blob/master/LICENSE) and the following guidelines:--
