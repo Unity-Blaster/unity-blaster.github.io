@@ -14,5 +14,6 @@
   "editor.minimap.autohide": true,
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
-  }
+  },
+  "liveServer.settings.port": 5501
 }

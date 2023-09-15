@@ -1,0 +1,41 @@
+body {
+	background: #06002b;
+	color: #7ed0ff;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+#follow1 {
+	height: 50px;
+	width: 10px;
+	border-radius: 4px;
+	background: rgb(25, 0, 255);
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+
+}
+#follow2 {
+	height: 10px;
+	width: 50px;
+	border-radius: 4px;
+	background: rgb(0, 255, 13);
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+
+}
+
+@keyframes mouseExit {
+	0% {
+		opacity: 1;
+	};
+
+	100% {
+		opacity: 0;
+	};
+}
