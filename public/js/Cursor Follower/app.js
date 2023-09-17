@@ -15,8 +15,8 @@ function mouseCoordinates(event){
 
 	// console.log(follow1.style.top);
 	// console.log(follow2.style.left);
-	follow1.innerHTML = follow1.style.top;
-	follow2.innerHTML = follow2.style.left;
+	follow1.innerHTML = yPos + "px";
+	follow2.innerHTML = xPos + "px";
 }
 
 function mouseExit(event) {
