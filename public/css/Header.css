@@ -11,7 +11,7 @@
   --FontSize: 1.75rem;
   --HFontSize: clamp(50px, 10vw, 100px);
   --SFontSize: 1rem;
-  --bg: linear-gradient(
+  /* --bg: linear-gradient(
     -45deg,
     #ee7752,
     #e73c7e,
@@ -21,7 +21,9 @@
     #11ff11,
     #00923d,
     #070069
-  );
+  ); */
+
+  --bg: linear-gradient(-45deg, #000080, #02001d, #5c00b8);
 
   /* --bar-width: clamp(50px, 5vw, 100px); */
   --bar-width: 100%;
@@ -69,6 +71,7 @@ body {
 } */
 
 header {
+  z-index: 999;
   position: fixed;
   top: 0;
   width: 100%;
@@ -95,6 +98,7 @@ header {
 
 .Filler2 {
   width: 25.5vw;
+  max-width: 10.5vw;
   height: auto;
 }
 
@@ -133,8 +137,8 @@ div#he1.head div h3 {
   font-size: var(--HFontSize);
   /* height: var(--HeadHeight); */
   height: fit-content;
-  color: #0e005c;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #00ffff;
+  font-family: Haettenschweiler, "Arial Narrow Bold", sans-serif;
   display: flex;
   align-items: center;
   margin: 0%;
