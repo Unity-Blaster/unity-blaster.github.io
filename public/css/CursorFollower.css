@@ -1,0 +1,49 @@
+body {
+  background: black;
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  50% {
+    scale: 1.125 1.5;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+#follow {
+  animation: rotate 20s infinite;
+  filter: blur(100px) brightness(69%);
+
+  background: linear-gradient(to right, #218faf, #8f00bf);
+
+  height: 40%;
+  aspect-ratio: 1;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+
+  z-index: 100;
+}
+
+#follow:hover {
+/*   background: red; */
+  cursor: none;
+}
+
+#followSub {
+  height: 10px;
+  width: 10px;
+  background: #ffffffa0;
+  z-index: 9999;
+  border-radius: 50%;
+  position: inherit;
+}

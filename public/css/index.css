@@ -4,7 +4,9 @@
 	--neon2: #0f3bff;
 
 	--HeadHeight: 100vh;
-	--bg: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #23d573, #11ff11, #00923d, #070069);
+	/* --bg: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #23d573, #11ff11, #00923d, #070069); */
+	/* --bg: linear-gradient(-45deg, #0000FF, #00FFFF, #800080, #4B0082, #FFC0CB, #FF69B4); */
+	--bg: linear-gradient(-45deg, #000080, #02001d, #5c00b8);
 }
 
 html {
@@ -276,7 +278,7 @@ b,
 	background-color: #5f5fdf;
 	/*
 	background-image: radial-gradient(45deg, #df9fff, #8f5fdf, #3f3faf, #2f2f8f); */
-	background-image: linear-gradient(45deg, #df9fff, #8f5fdf, #3f3faf, #2f2f8f);
+	background-image: linear-gradient(-45deg, #df9fff, #8f5fdf, #3f3faf, #2f2f8f);
 
 	/* Set the background size and repeat properties. */
 
@@ -374,11 +376,18 @@ b,
 
 
 #he1 {
-	/* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #23d573, #11ff11, #00923d, #070069); */
-	background: var(--bg);
-	background-size: 400% 400%;
-	animation: gradient 40s ease infinite;
-	z-index: 1;
-	position: relative;
-	padding: 0%;
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #23d573, #11ff11, #00923d, #070069); */
+  background: var(--bg);
+  background-size: 400% 400%;
+  animation: gradient 40s ease infinite;
+  z-index: 1;
+  position: relative;
+  padding: 0%;
+  transition: background-position 1s ease-in-out;
+}
+
+.glass {
+  background-color: rgba(255, 255, 255, 0.295);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
 }
