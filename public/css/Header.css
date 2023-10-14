@@ -1,246 +1,293 @@
 * {
-	font-family: "Arial Rounded MT";
-	font-size: var(--FontSize);
+  font-family: "Arial Rounded MT";
+  font-size: var(--FontSize);
 }
 
 :root {
-	--var1: #1e00ca;
-	--var2: #120061;
-	/* --HeadHeight: calc((10vh + 10 vw)/20); */
-	--HeadHeight: 10vw;
-	--FontSize: 1.75rem;
-	--HFontSize: 6vw;
-	--SFontSize: 1rem;
-	--bg: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #23d573, #11ff11, #00923d, #070069);
+  --var1: #1e00ca;
+  --var2: #120061;
+  /* --HeadHeight: calc((10vh + 10 vw)/20); */
+  --HeadHeight: clamp(50px, 10vw, 100px);
+  --FontSize: 1.75rem;
+  --HFontSize: clamp(50px, 10vw, 100px);
+  --SFontSize: 1rem;
+  --bg: linear-gradient(
+    -45deg,
+    #ee7752,
+    #e73c7e,
+    #23a6d5,
+    #23d5ab,
+    #23d573,
+    #11ff11,
+    #00923d,
+    #070069
+  );
+
+  /* --bar-width: clamp(50px, 5vw, 100px); */
+  --bar-width: 100%;
+  /* --bar-height: 0.8vw; */
+  --bar-height: 20%;
+  --hamburger-gap: 20%;
+  --foreground: #fff;
+  --background: #000020;
+  --hamburger-margin: 0.8vw;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
 
-	25% {
-		background-position: 25% 75%;
-	}
+  25% {
+    background-position: 25% 75%;
+  }
 
-	50% {
-		background-position: 50% 100%;
-	}
+  50% {
+    background-position: 50% 100%;
+  }
 
-	75% {
-		background-position: 25% 75%;
-	}
+  75% {
+    background-position: 25% 75%;
+  }
 
-	100% {
-		background-position: 0% 50%;
-	}
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 body {
-	margin: 0%;
-	overflow-x: hidden;
+  margin: 0%;
+  overflow-x: hidden;
+}
+
+/* .head,
+.head div,
+.head div img {
+  max-height: 100px;
+} */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 #he1 {
-	/* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #23d573, #11ff11, #00923d, #070069); */
-	background: var(--bg);
-	background-size: 400% 400%;
-	animation: gradient 40s ease infinite;
-	height: var(--HeadHeight);
-	/* height: fit-content; */
-	z-index: 1;
-	position: relative;
-	padding: 0%;
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #23d573, #11ff11, #00923d, #070069); */
+  background: var(--bg);
+  background-size: 400% 400%;
+  animation: gradient 40s ease infinite;
+  height: fit-content;
+  z-index: 1;
+  position: relative;
+  padding: 1%;
 }
 
 .WebImg {
-	height: var(--HeadHeight);
-	margin: 0;
-	position: relative;
-	border-radius: 20%;
-	display: flex;
-}
-
-.filler {
-	height: auto;
-	width: 15vw;
-	position: relative;
+  height: var(--HeadHeight);
+  margin: 0;
+  position: relative;
+  border-radius: 20%;
+  display: flex;
 }
 
 .Filler2 {
-	width: 10.5vw;
-	height: auto;
+  width: 25.5vw;
+  height: auto;
 }
 
 .hamBurger {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	/* display: block; */
-	height: var(--HeadHeight);
-	margin: 0;
-	/* position: relative; */
-	border-radius: 20%;
-	/* display: flex; */
-	aspect-ratio: 1/1;
-	background-color: #e73c7e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: block; */
+  height: var(--HeadHeight);
+  margin: 0;
+  /* position: relative; */
+  border-radius: 20%;
+  /* display: flex; */
+  aspect-ratio: 1/1;
+  background-color: #e73c7e;
 }
 
 .vsweb {
-	justify-self: center;
-	align-self: center;
-	min-width: fit-content;
+  justify-self: center;
+  align-self: center;
+  min-width: fit-content;
 }
 
 /* text eff */
 
 #he2 {
-	display: flex;
-	height: fit-content;
-	justify-items: center;
-	align-items: center;
+  display: flex;
+  height: var(--HeadHeight);
+  justify-items: center;
+  align-items: center;
+  max-width: 1200px;
+  padding: 0%;
 }
 
 div#he1.head div h3 {
-	font-size: var(--HFontSize);
-	/* height: var(--HeadHeight); */
-	height: fit-content;
-	color: #0e005c;
-	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-	display: flex;
-	align-items: center;
-	margin: 0%;
+  font-size: var(--HFontSize);
+  /* height: var(--HeadHeight); */
+  height: fit-content;
+  color: #0e005c;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  display: flex;
+  align-items: center;
+  margin: 0%;
 }
 
 div#ftbg div#ft h1 div#ModeToggle {
-	height: fit-content;
-	font-size: var(--HFontSize);
-	color: #0e005c;
-	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-	display: flex;
+  height: fit-content;
+  font-size: var(--HFontSize);
+  color: #0e005c;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  display: flex;
 }
 
 div#ftbg div#ft div h2 {
-	font-size: var(--SFontSize);
+  font-size: var(--SFontSize);
 }
 
 /* * Hamburger menu stuff */
 *,
 *::after,
 *::before {
-	box-sizing: border-box;
-}
-
-:root {
-	--bar-width: 5vw;
-	--bar-height: .8vw;
-	--hamburger-gap: 1vw;
-	--foreground: #FFF;
-	--background: #000020;
-	--hamburger-margin: .8vw;
-	--animation-timing: 200ms ease-in-out;
-	--hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+  box-sizing: border-box;
 }
 
 .hamburger-menu {
-	--x-width: calc(var(--hamburger-height) * 1.41421356237);
+  --x-width: calc(var(--hamburger-height) * 1);
 
-	align-self: center;
-	justify-self: center;
-	display: flex;
-	flex-direction: column;
-	gap: var(--hamburger-gap);
-	width: max-content;
-	/* position: absolute; */
-	/* position: relative; */
-	top: var(--hamburger-margin);
-	right: var(--hamburger-margin);
-	z-index: 999;
-	cursor: pointer;
+  align-self: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: 69%;
+  height: 69%;
+  /* position: absolute; */
+  /* position: relative; */
+  /* top: var(--hamburger-margin);
+  right: var(--hamburger-margin); */
+  z-index: 999;
+  cursor: pointer;
 }
 
 .hamburger-menu:has(input:checked) {
-	--foreground: #000020;
-	--background: #FFF;
+  --foreground: #000020;
+  --background: #fff;
 }
 
 .hamburger-menu:has(input:focus-visible)::before,
 .hamburger-menu:has(input:focus-visible)::after,
 .hamburger-menu input:focus-visible {
-	border: 1px solid var(--background);
-	box-shadow: 0 0 0 1px var(--foreground);
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px var(--foreground);
 }
 
 .hamburger-menu::before,
 .hamburger-menu::after,
 .hamburger-menu input {
-	content: "";
-	width: var(--bar-width);
-	height: var(--bar-height);
-	background-color: var(--foreground);
-	border-radius: 9999px;
-	transform-origin: left center;
-	transition: opacity var(--animation-timing), width var(--animation-timing),
-		rotate var(--animation-timing), translate var(--animation-timing),
-		background-color var(--animation-timing);
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground);
+  border-radius: 9999px;
+  transform-origin: left center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
 }
 
 .hamburger-menu input {
-	appearance: none;
-	padding: 0;
-	margin: 0;
-	outline: none;
-	pointer-events: none;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
 }
 
 .hamburger-menu:has(input:checked)::before {
-	rotate: 45deg;
-	width: var(--x-width);
-	translate: 0 calc(var(--bar-height) / -2);
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
 }
 
 .hamburger-menu:has(input:checked)::after {
-	rotate: -45deg;
-	width: var(--x-width);
-	translate: 0 calc(var(--bar-height) / 2);
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
 }
 
 .hamburger-menu input:checked {
-	opacity: 0;
-	width: 0;
+  opacity: 0;
+  width: 0;
 }
 
 .sidebar {
-	transition: translate var(--animation-timing);
-	translate: 100%;
-	padding: 0.5rem 1rem;
-	padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
-	background-color: var(--foreground);
-	color: var(--background);
-	width: 100vw;
-	min-height: 100vh;
-	display: flex;
-	justify-items: center;
-	justify-self: end;
-	align-items: center;
-	/* right: 100%; */
-	z-index: 99;
-	position: fixed;
+  transition: translate var(--animation-timing);
+  translate: 100%;
+  padding: 0.5rem 1rem;
+  padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+  background-color: var(--foreground);
+  color: var(--background);
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-items: center;
+  justify-self: end;
+  align-items: center;
+  /* right: 100%; */
+  z-index: 99;
+  position: fixed;
 }
 
 .hamToggle {
-	position: absolute;
-	height: var(--HeadHeight);
-	margin: 0;
-	border-radius: 20%;
-	aspect-ratio: 1/1;
+  position: absolute;
+  height: var(--HeadHeight);
+  margin: 0;
+  border-radius: 20%;
+  aspect-ratio: 1/1;
 }
 
 .hamToggleOut {
-	z-index: -1;
+  z-index: -1;
 }
 /* 
 #MainBody {
 	position: fixed;
 	width: 100vw;
 } */
+
+main,
+#he1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#text {
+  height: 100vh;
+  padding: 0%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+hr {
+  opacity: 0.5;
+}
+
+#bg {
+  max-width: 1200px;
+}
+
+main {
+  /* top: calc(clamp(50px, 10vw, 100px) * -1); */
+  top: 0%;
+  position: relative;
+}

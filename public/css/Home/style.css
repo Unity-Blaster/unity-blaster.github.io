@@ -1,118 +1,119 @@
 h1 {
-	background: black;
-	color: white;
+  background: black;
+  color: white;
 }
 
 body {
-	background-color: black;
+  background-color: black;
 }
 
 body::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 div.ST1 {
-	color:#00bdbd;
-	display:flex;
-	justify-content: center;
+  color: #00bdbd;
+  display: flex;
+  justify-content: center;
 }
 div.ST2 {
-	color: #c4ffff;
-	display:flex;
-	justify-content: center;
+  color: #c4ffff;
+  display: flex;
+  justify-content: center;
 }
 div.ST3 {
-	color: #3700ff;
-	display:flex;
-	justify-content: center;
+  color: #3700ff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 div#dName {
-	color: #000dc0;
-	display:flex;
-	justify-content: center;
-	align-items: center;
+  color: #000dc0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 ul.grid {
-	background: #003cff6c;
-	border-radius: 2rem 0rem 2rem 0rem;
-	padding: 1.5vh;
-	margin-top: 1%;
-	margin-left: 5%;
-	margin-bottom: 7%;
-	margin-right: 5%;
-	align-content: center;
-	justify-content: center;
-	/* height:fit-content; */
-	box-shadow:#0070f17e 0rem .5rem 2rem, #00087477 0rem 0rem 4rem;
+  background: #003cff6c;
+  border-radius: 2rem 0rem 2rem 0rem;
+  padding: 1.5vh;
+  margin-top: 1%;
+  margin-left: 5%;
+  margin-bottom: 7%;
+  margin-right: 5%;
+  align-content: center;
+  justify-content: center;
+  /* height:fit-content; */
+  box-shadow: #0070f17e 0rem 0.5rem 2rem, #00087477 0rem 0rem 4rem;
 }
 .subGrid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(5, 32vh);
-	column-gap: .3rem;
-	row-gap: .3rem;
-	list-style: none;
-	padding: 0%;
-	align-content: center;
-	justify-content: center;
-	width: inherit;
-	height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 32vh);
+  column-gap: 0.3rem;
+  row-gap: 0.3rem;
+  list-style: none;
+  padding: 0%;
+  align-content: center;
+  justify-content: center;
+  width: inherit;
+  height: fit-content;
 }
 ul li a.card {
-	text-align: center;
-	background-color: #06003d;
-	padding: 0%;
-	margin: 0%;
-	text-transform: uppercase;
-	letter-spacing: 0.038em;
-	/* border-radius: 20px; */
-	border-color: aqua;
-	border: aqua 0.025em solid;
-	display: inline-block;
-	cursor: pointer;
-	text-decoration: none;
-	color: #000dc0;
-	height: 100%;
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	transition: all 500ms;
-	overflow: hidden;
+  text-align: center;
+  background-color: #06003d;
+  padding: 0%;
+  margin: 0%;
+  text-transform: uppercase;
+  letter-spacing: 0.038em;
+  /* border-radius: 20px; */
+  border-color: aqua;
+  border: aqua 0.025em solid;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000dc0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 500ms;
+  overflow: hidden;
 
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-	transform: skew(-4deg);
+  transform: skew(-4deg);
 }
 
 a.card:hover {
-	box-shadow: #0004ffb6 0px 0.35rem 1.175rem, #00c3ffdc 0px 0.175rem 0.5rem;
-	transform: translateY(-3px) scale(1.1);
-	z-index: 999;
+  box-shadow: #0004ffb6 0px 0.35rem 1.175rem, #00c3ffdc 0px 0.175rem 0.5rem;
+  transform: translateY(-3px) scale(1.1);
+  z-index: 999;
 }
 
 h1 {
-	margin: 0%;
+  margin: 0%;
 }
 
 .leftt {
-	border-radius: 50px 10px 10px 10px;
+  border-radius: 50px 10px 10px 10px;
 }
 .rightt {
-	border-radius: 10px 0px 10px 10px;
+  border-radius: 10px 0px 10px 10px;
 }
 .mid {
-	border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
 }
 .leftb {
-	border-radius: 10px 10px 10px 0px;
+  border-radius: 10px 10px 10px 0px;
 }
 .rightb {
-	border-radius: 10px 10px 50px 10px;
+  border-radius: 10px 10px 50px 10px;
 }
 /* .Lipsum {
 	display: flex;
@@ -142,14 +143,14 @@ h1 {
 }
 
 #Loader { */
-	/* min-width: 100px;
+/* min-width: 100px;
 	min-height: 100px;
 	width: 10%;
 	height: 10%;
 	display: flex;
 	align-items: center;
 	justify-items: center; */
-	/* z-index: 10001;
+/* z-index: 10001;
 } */
 /* h1 {} */
 /* #MainBody {
@@ -168,3 +169,14 @@ h1 {
 } */
 
 /*! https://ihatetomatoes.net/create-custom-preloading-screen/ <--link to webpage used as ref */
+
+/* header {
+  height: 0;
+} */
+
+#text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
