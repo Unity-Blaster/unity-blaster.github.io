@@ -25,9 +25,10 @@ div.ST3 {
   flex-direction: column;
 }
 div#dName {
-  color: #000dc0;
+  color: #1310c5;
   justify-content: center;
   align-items: center;
+  font-weight: bold;
 }
 
 ul.grid {
@@ -212,10 +213,47 @@ h1 {
   font-size: 2.5rem;
   font-family: "Arial";
   font-weight: 700;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .STB1,
 .STB2 {
   font-size: 1rem;
   color: #ffffffa0;
+}
+
+.Decor {
+  background-clip: text;
+  font-size: 1.5em;
+  background-color: #5f5fdf;
+  background-image: linear-gradient(-45deg, #df9fff, #8f5fdf, #3f3faf, #2f2f8f);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+  font: inherit;
+}
+
+.Decor:hover {
+  animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+
+@keyframes rainbow-text-simple-animation {
+  0% {
+    background-size: 100%;
+  }
+
+  50% {
+    background-size: 200%;
+  }
+
+  100% {
+    background-size: 100%;
+  }
+}
+
+blockquote {
+  text-align: justify;
 }

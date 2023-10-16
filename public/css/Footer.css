@@ -1,8 +1,9 @@
-#ModeToggle {
+#ModeToggle h1 {
   height: var(--HeadHeight);
   width: 100vw;
   /* color: blueviolet; */
-  color: #0e005c;
+  color: var(--MainFontColor);
+  /* color: #0e005c; */
   background-color: #ff000000;
   position: absolute;
   display: flex;
@@ -11,7 +12,7 @@
   font-family: "Verdana", Geneva, Tahoma, sans-serif;
   font-weight: 1000;
   z-index: 5;
-  font-size: var(--HFontHeight);
+  font-size: var(--HFontSize);
 }
 
 body {
@@ -19,25 +20,20 @@ body {
 }
 
 #ft {
-  background: linear-gradient(
-    -45deg,
-    #ee7752,
-    #e73c7e,
-    #23a6d5,
-    #23d5ab,
-    #23d573,
-    #11ff11,
-    #00923d,
-    #070069
-  );
+  background: var(--bg);
   background-size: 400% 400%;
   animation: gradient 40s ease infinite;
-  height: 15vh;
+  height: calc(var(--HeadHeight) * 2);
   /* height: fit-content; */
   z-index: 1;
   position: relative;
   display: grid;
   align-self: start;
+  padding: 1%;
+  -webkit-box-shadow: 0px 0px 90px -20px var(--bg-shadow);
+  -moz-box-shadow: 0px 0px 90px -20px var(--bg-shadow);
+  box-shadow: 0px 0px 90px -20px var(--bg-shadow);
+  border-radius: 20px 20px 0 0;
 }
 
 h1,
@@ -60,4 +56,22 @@ h2 {
   width: 100vw;
   display: grid;
   align-items: end;
+}
+
+#ft div h2 {
+  justify-self: flex-start;
+  align-self: flex-end;
+}
+
+#ft div {
+  display: grid;
+  justify-content: start;
+  justify-items: center;
+}
+
+#ft #ModeToggle {
+  align-self: center;
+  justify-self: center;
+  height: max-content;
+  width: max-content;
 }
