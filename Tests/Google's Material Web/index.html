@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Material-Web</title>
+
+    <!-- * Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- * CSS -->
+    <link rel="stylesheet" href="public/css/style.css" />
+    <link rel="stylesheet" href="public/theme/colors.module.css" />
+    <!-- <link rel="stylesheet" href="public/theme/theme.css"> -->
+    <link rel="stylesheet" href="public/theme/theme.dark.css" />
+    <!-- <link rel="stylesheet" href="public/theme/theme.light.css"> -->
+    <link rel="stylesheet" href="public/theme/tokens.css" />
+    <link rel="stylesheet" href="public/theme/typography.module.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="public/css/theme-fix.css" />
+
+    <!-- * JS -->
+    <script src="public/js/bundle.js"></script>
+    <script type="module" src="public/js/index.js"></script>
+    <script type="module" src="public/js/app.js"></script>
+
+    <!-- * more css and js -->
+    <style>
+      md-dialog {
+        /* --md-dialog-container-color: #000040;
+        --md-dialog-headline-color: #00ffff; */
+        /* --md-dialog-supporting-text-color: #a1ffff; */
+        /* --md-dialog-headline-font: Arial;
+        --md-dialog-supporting-text-font: Arial; */
+        max-lines: unset;
+      }
+      md-filled-button {
+        /* --md-filled-button-container-color: #000040; */
+        /* --md-filled-button-container-shape: 10px; */
+        /* --md-filled-button-label-text-color: #00ffff; */
+        max-lines: unset;
+        /* --md-filled-button-label-text-font: Arial; */
+      }
+      md-filled-tonal-button {
+        /* --md-filled-tonal-button-container-color: rgba(0, 0, 64, 10); */
+        max-lines: unset;
+
+        /* --md-filled-tonal-button-container-shape: 10px; */
+        /* --md-filled-tonal-button-label-text-color: #008d8d; */
+        /* --md-filled-tonal-button-label-text-font: Arial; */
+      }
+      md-tonal-button {
+        /* --md-tonal-button-container-color: #00004077; */
+        /* --md-tonal-button-container-shape: 10px; */
+        /* --md-tonal-button-label-text-color: #008d8d; */
+        max-lines: unset;
+        /* --md-tonal-button-label-text-font: Arial; */
+      }
+      md-outlined-button {
+        /* --md-outlined-button-container-color: #00004000; */
+        /* --md-outlined-button-container-shape: 10px; */
+        /* --md-outlined-button-label-text-color: #008d8d; */
+        max-lines: unset;
+        /* --md-outlined-button-label-text-font: Arial; */
+      }
+      md-elevated-button {
+        /* --md-elevated-button-container-color: #00004000; */
+        /* --md-elevated-button-container-shape: 10px; */
+        /* --md-elevated-button-label-text-color: #008d8d; */
+        max-lines: unset;
+        /* --md-elevated-button-label-text-font: Arial; */
+      }
+      md-text-button {
+        /* --md-text-button-container-color: #00004000; */
+        /* --md-text-button-container-shape: 10px; */
+        max-lines: unset;
+        /* --md-text-button-label-text-color: #00ffff; */
+        /* --md-text-button-label-text-font: Arial; */
+      }
+      md-divider {
+        --md-sys-color-outline-variant: #bec9c8;
+        --md-divider-thickness: 2px;
+      }
+      nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        width: fit-content;
+        grid-gap: 8px;
+        background: var(--md-transparent);
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+      }
+      html,
+      body {
+        margin: 0%;
+        padding: 0%;
+      }
+      md-elevation {
+        border-radius: inherit;
+        overflow: hidden;
+      }
+      md-slider {
+        /* System tokens */
+        /* --md-sys-color-primary: #006A6A; */
+        /* Component tokens */
+        --md-slider-handle-shape: 5px;
+        overflow-y: visible;
+      }
+      md-list-item {
+        border-radius: 8px;
+      }
+      .nav-bar-parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background: var(--md-sys-color-on-surface-1);
+      }
+      .list {
+        max-width: 400px;
+        height: fit-content;
+      }
+      .lists {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "a b"
+          "c b"
+          /* "c d" */
+          "e d"
+          ;
+        max-width: 800px;
+        grid-gap: 8px;
+      }
+      .list.a {
+        grid-area: a;
+      }
+      .list.b {
+        grid-area: b;
+      }
+      .list.c {
+        grid-area: c;
+      }
+      .list.d {
+        grid-area: d;
+      }
+      .list.e {
+        grid-area: e;
+      }
+      main {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      * {
+        --md-focus-ring-shape: 0px;
+        --md-focus-ring-duration: 0s;
+        --md-focus-ring-width: 0px;
+      }
+      @media screen and (max-width: 750px) {
+        .lists {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+          grid-template-areas:
+            "a"
+            "b"
+            "c"
+            "d"
+            "e";
+        }
+        nav {
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          width: 100%;
+          grid-gap: 8px;
+          background: var(--md-transparent);
+          align-items: center;
+          justify-content: space-evenly;
+        }
+      }
+      md-icon[filled] {
+        font-variation-settings: "FILL" 1;
+      }
+      .rounded {
+        --md-icon-font: "Material Symbols Rounded";
+      }
+      .sharp {
+        --md-icon-font: "Material Symbols Sharp";
+      }
+    </style>
+
+    <script type="module">
+      const anchorEl0 = document.body.querySelector("#usage-submenu-anchor-0");
+      const menuEl0 = document.body.querySelector("#usage-submenu-0");
+      const openButton = document.body.querySelector("#open-button");
+
+      anchorEl0.addEventListener("click", () => {
+        menuEl0.open = !menuEl0.open;
+      });
+
+      openButton.addEventListener("click", () => {
+        const dialogEl = document.body.querySelector("md-dialog");
+        dialogEl.open = !dialogEl.open;
+      });
+
+      const menuButton = document.querySelector("#usage-submenu-anchor-0");
+      const menu = document.querySelector("#usage-submenu-0");
+
+      menuButton.addEventListener("click", () => {
+        const rect = menuButton.getBoundingClientRect();
+        // topX = rect.bottom - 10;
+        // lefY = rect.left;
+        menu.style.top = `${rect.bottom}px`;
+        menu.style.left = `${rect.left}px`;
+        // menu.style.top = topX + 'px';
+        // menu.style.left = lefY + `px`;
+        menu.style.display = "block";
+      });
+    </script>
+
+    <!-- * icons stuff-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL@20..48,100..700,0..1"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL@20..48,100..700,0..1"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="background primary-text">
+    <header>
+      <!-- !1 -->
+      <!-- Note the position: relative style -->
+      <span class="nav-bar-parent" style="position: relative">
+        <!-- ! navbar? -->
+        <nav>
+          <md-filled-tonal-button id="usage-submenu-anchor-0">
+            Material Web
+          </md-filled-tonal-button>
+          <md-elevated-button> Home </md-elevated-button>
+          <md-elevated-button> Blog </md-elevated-button>
+          <md-elevated-button> Projects </md-elevated-button>
+          <md-elevated-button> About </md-elevated-button>
+          <md-elevated-button> Contact </md-elevated-button>
+          <md-outlined-button aria-label="Open a dialog" id="open-button">
+            Open
+            <md-icon slot="end">arrow_down</md-icon>
+            <!-- <md-focus-ring inward style="--md-focus-ring-shape: 8px"></md-focus-ring> -->
+          </md-outlined-button>
+        </nav>
+      </span>
+
+      <md-dialog>
+        <div slot="headline">Dialog title</div>
+        <form slot="content" id="form-id" method="dialog">
+          A simple dialog with free-form content.
+        </form>
+        <div slot="actions">
+          <md-filled-button form="form-id">Ok</md-filled-button>
+        </div>
+      </md-dialog>
+
+      <!-- ! menu -->
+      <!-- Note the has-overflow attribute -->
+      <md-menu
+        has-overflow
+        id="usage-submenu-0"
+        anchor="usage-submenu-anchor-0"
+        style="position: absolute; min-width: 10em"
+      >
+        <md-sub-menu>
+          <md-menu-item slot="item">
+            <div slot="headline">Fruits with A</div>
+            <!-- Arrow icons are helpful affordances -->
+            <md-icon slot="end">arrow_right</md-icon>
+          </md-menu-item>
+          <!-- Submenu must be slotted into sub-menu's menu slot -->
+          <md-menu slot="menu">
+            <md-menu-item>
+              <div slot="headline">Apricot</div>
+            </md-menu-item>
+            <md-menu-item>
+              <div slot="headline">Avocado</div>
+            </md-menu-item>
+
+            <!-- Nest as many as you want and control menu anchoring -->
+            <md-sub-menu menu-corner="start-end" anchor-corner="start-start">
+              <md-menu-item slot="item">
+                <div slot="headline">Apples</div>
+                <!-- Arrow icons are helpful affordances -->
+                <md-icon slot="start"> arrow_left </md-icon>
+              </md-menu-item>
+              <md-menu slot="menu">
+                <md-menu-item>
+                  <div slot="headline">Fuji</div>
+                </md-menu-item>
+                <md-menu-item>
+                  <div slot="headline" style="white-space: nowrap">
+                    Granny Smith
+                  </div>
+                </md-menu-item>
+                <md-menu-item>
+                  <div slot="headline" style="white-space: nowrap">
+                    Red Delicious
+                  </div>
+                </md-menu-item>
+              </md-menu>
+            </md-sub-menu>
+          </md-menu>
+        </md-sub-menu>
+
+        <md-menu-item>
+          <div slot="headline">Banana</div>
+        </md-menu-item>
+        <md-menu-item>
+          <div slot="headline">Cucumber</div>
+        </md-menu-item>
+      </md-menu>
+
+      <!-- <br> -->
+      <md-divider></md-divider>
+      <!-- <br> -->
+    </header>
+
+    <main>
+      <h1>Material Design Web Components</h1>
+      <br />
+      <br />
+      <div class="lists">
+        <div class="list a sliders-1">
+          <md-list>
+            <md-list-item>
+              <h2>Sliders</h2>
+            </md-list-item>
+            <md-list-item>
+              <div class="slider1">
+                <br />
+                <md-slider min="0" max="100" value="50" labeled></md-slider>
+                Continuous (labeled)
+              </div>
+            </md-list-item>
+            <md-divider inset></md-divider>
+            <md-list-item>
+              <div class="slider2">
+                <md-slider
+                  step="5"
+                  ticks
+                  range
+                  value-start="25"
+                  value-end="50"
+                  labeled
+                ></md-slider>
+                Range (labeled)
+              </div>
+            </md-list-item>
+          </md-list>
+        </div>
+        <div class="list c lists-1">
+          <md-list>
+            <md-list-item>
+              <h2>Example List</h2>
+            </md-list-item>
+            <md-list-item>
+              Fruits
+              <svg slot="start" style="height: 24px" viewBox="0 0 160 200">
+                <path
+                  fill="currentColor"
+                  d="m160 80v80l-40-40zm-40 40v80l40-40zm0-80v80l-40-40zm-40 40v80l40-40zm-40-40v80l40-40zm40-40v80l-40-40zm-40 120v80l-40-40zm-40-40v80l40-40z"
+                />
+              </svg>
+            </md-list-item>
+            <md-divider inset></md-divider>
+            <md-list-item> Apple </md-list-item>
+            <md-divider inset></md-divider>
+            <md-list-item>
+              <div slot="headline">Banana</div>
+              <div slot="supporting-text">
+                Bananas are long yellow fruits...
+              </div>
+            </md-list-item>
+            <md-divider inset></md-divider>
+            <md-list-item interactive href="#nope" target="_top">
+              <div slot="headline">Cucumber</div>
+              <div slot="supporting-text">
+                Cucumbers are long green fruits that are just as long as this
+                multi-line description
+              </div>
+            </md-list-item>
+            <md-divider inset></md-divider>
+            <md-list-item
+              interactive
+              href="https://google.com/search?q=buy+kiwis&tbm=shop"
+              target="_blank"
+            >
+              <div slot="headline">Shop for Kiwis</div>
+              <div slot="supporting-text">
+                This will link you out in a new tab
+              </div>
+              <md-icon slot="end">open_in_new</md-icon>
+            </md-list-item>
+          </md-list>
+        </div>
+        <div class="list e switches-1">
+          <md-list>
+            <md-list-item>
+              <h2>Switches</h2>
+            </md-list-item>
+            <md-list-item>
+              <div class="switch1">
+                <label>
+                  <md-switch selected></md-switch>
+                  Normal Switch (selected)
+                </label>
+              </div>
+            </md-list-item>
+            <md-divider inset></md-divider>
+            <md-list-item>
+              <div class="switch2">
+                <label>
+                  <md-switch></md-switch>
+                  Normal Switch
+                </label>
+              </div>
+            </md-list-item>
+            <md-divider inset></md-divider>
+            <md-list-item>
+              <div class="switch3">
+                <label>
+                  <md-switch icons selected></md-switch>
+                  Switch with Icons (selected)
+                </label>
+              </div>
+            </md-list-item>
+            <md-divider inset></md-divider>
+            <md-list-item>
+              <div class="switch4">
+                <label>
+                  <md-switch icons></md-switch>
+                  Switch with Icons
+                </label>
+              </div>
+            </md-list-item>
+            <md-divider inset></md-divider>
+            <md-list-item>
+              <div class="switch5">
+                <md-switch aria-label="Lights"></md-switch>
+              </div>
+            </md-list-item>
+          </md-list>
+        </div>
+        <div class="list d tabs-1 tabpanels">
+          <md-list>
+            <md-list-item>
+              <h2>Tabs</h2>
+            </md-list-item>
+            <md-list-item>
+              <md-tabs aria-label="Content to view">
+                <md-primary-tab id="photos-tab" aria-controls="photos-panel">
+                  Photos
+                </md-primary-tab>
+                <md-primary-tab id="videos-tab" aria-controls="videos-panel">
+                  Videos
+                </md-primary-tab>
+                <md-primary-tab id="music-tab" aria-controls="music-panel">
+                  Music
+                </md-primary-tab>
+              </md-tabs>
+            </md-list-item>
+            <md-divider inset></md-divider>
+            <md-list-item>
+              <div
+                id="photos-panel"
+                role="tabpanel"
+                aria-labelledby="photos-tab"
+              >
+                Photos
+              </div>
+              <div
+                id="videos-panel"
+                role="tabpanel"
+                aria-labelledby="videos-tab"
+                hidden
+              >
+                Videos
+              </div>
+              <div
+                id="music-panel"
+                role="tabpanel"
+                aria-labelledby="music-tab"
+                hidden
+              >
+                Music
+              </div>
+            </md-list-item>
+          </md-list>
+        </div>
+        <div class="list b icons-1">
+          <md-list>
+            <md-list-item>
+              <h2>Icons</h2>
+            </md-list-item>
+            <md-list-item>
+              <h3>Outlined</h3>
+            </md-list-item>
+            <md-list-item>
+              <md-icon>settings</md-icon>
+              <md-icon>check_box</md-icon>
+              <md-icon>house</md-icon>
+            </md-list-item>
+            <md-list-item>
+              <md-icon filled>settings</md-icon>
+              <md-icon filled>check_box</md-icon>
+              <md-icon filled>house</md-icon>
+            </md-list-item>
+            <md-divider inset></md-divider>
+            <md-divider class="divider-dim" inset></md-divider>
+            <md-list-item>
+              <h3>Rounded</h3>
+            </md-list-item>
+            <md-list-item class="rounded">
+              <md-icon>settings</md-icon>
+              <md-icon>check_box</md-icon>
+              <md-icon>house</md-icon>
+            </md-list-item>
+            <md-list-item class="rounded">
+              <md-icon filled>settings</md-icon>
+              <md-icon filled>check_box</md-icon>
+              <md-icon filled>house</md-icon>
+            </md-list-item>
+            <md-divider inset></md-divider>
+            <md-list-item>
+              <h3>Sharp</h3>
+            </md-list-item>
+            <md-list-item class="sharp">
+              <md-icon>settings</md-icon>
+              <md-icon>check_box</md-icon>
+              <md-icon>house</md-icon>
+            </md-list-item>
+            <md-list-item class="sharp">
+              <md-icon filled>settings</md-icon>
+              <md-icon filled>check_box</md-icon>
+              <md-icon filled>house</md-icon>
+            </md-list-item>
+          </md-list>
+        </div>
+      </div>
+
+      <br />
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+/* This will affect the scrollbar globally */
+/* For Webkit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+    position: absolute;
+}
+
+::-webkit-scrollbar-track {
+    background: inset var(--md-sys-color-secondary-container-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--md-sys-color-secondary-dark);
+    outline: 1px solid slategrey;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--md-sys-color-on-secondary-container-dark);
+}
+
+::-webkit-scrollbar-button {
+    background: var(--md-sys-color-background-dark);
+}
+
+::-webkit-scrollbar-corner {
+    background: #00ff73;
+}
+
+::-webkit-scrollbar-track-piece {
+    background: var(--md-sys-color-background-dark);
+}
+
+body {
+    overflow: auto;
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--md-sys-color-on-secondary-dark) var(--md-transparent);
+}
+
+/* For Internet Explorer */
+* {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+/* Hide scrollbar for all elements */
+* {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+    display: none;
+}

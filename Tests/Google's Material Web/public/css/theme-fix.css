@@ -1,0 +1,54 @@
+:root {
+    --md-sys-color-on-surface-1: #6750a40d;
+    --md-transparent: #00000000;
+}
+
+md-text-button,
+md-outlined-button,
+md-elevated-button {
+    --md-text-button-container-color: var(--md-sys-color-background-dark);
+    --md-outlined-button-container-color: var(--md-sys-color-background-dark);
+    --md-elevated-button-container-color: var(--md-sys-color-background-dark);
+}
+
+md-dialog {
+    --md-dialog-container-color: var(--md-sys-color-tertiary-container-dark);
+    --md-dialog-container-text-color: var(--md-sys-color-on-tertiary-container-dark);
+}
+
+md-menu {
+    --md-menu-container-color: var(--md-sys-color-tertiary-container-dark);
+    --md-menu-container-text-color: var(--md-sys-color-on-tertiary-container-dark);
+}
+
+md-menu-item,
+md-sub-menu {
+    border-radius: 8px;
+}
+
+md-menu-item:hover,
+md-sub-menu:hover {
+    --md-menu-item-container-color: var(--md-sys-color-tertiary-dark);
+    --md-menu-item-container-text-color: var(--md-sys-color-on-tertiary-dark);
+}
+
+md-elevation {
+    border-radius: inherit;
+}
+
+md-list {
+    --md-list-container-color: var(--md-sys-color-secondary-container-dark);
+    --md-list-item-container-color: var(--md-sys-color-on-secondary-container-dark);
+    border-radius: 8px;
+    padding: 0;
+}
+
+md-primary-tab {
+    --md-primary-tab-container-shape: 8px;
+    --md-primary-tab-active-indicator-color: var(--md-sys-color-secondary-dark);
+}
+
+md-tabs {
+    background: var(--md-sys-color-background-dark);
+    border-radius: 8px;
+}
