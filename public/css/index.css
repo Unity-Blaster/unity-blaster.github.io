@@ -193,10 +193,16 @@ h1 {
 }
 
 .blur {
-	height: fit-content;
-	width: fit-content;
-	/* max-height: 50vh;
-	max-width: 70vw; */
+	/* height: 100rem;
+	width: 100rem; */
+	/* max-height: 69vh; */
+	/* max-width: 69%; */
+	max-height: fit-content;
+	max-width: fit-content;
+	min-height: fit-content;
+	min-width: fit-content;
+	/* aspect-ratio: 0.5/1; */
+
 	border-radius: 5%;
 	padding: 5%;
 
@@ -210,6 +216,8 @@ h1 {
 
 	box-shadow: 0 8px 20px 0 #ffffff21;
 	background: #8fa0ff18;
+
+	z-index: 102;
 }
 
 h1,
@@ -390,4 +398,11 @@ b,
   background-color: rgba(255, 255, 255, 0.295);
   backdrop-filter: blur(10px);
   border-radius: 10px;
+}
+
+html,
+body,
+main,
+#he1 {
+  height: 100svh, 100vh;
 }

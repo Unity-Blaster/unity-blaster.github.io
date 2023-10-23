@@ -15,5 +15,8 @@
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "liveServer.settings.port": 6969
+  "liveServer.settings.port": 6969,
+  "better-comments.highlightPlainText": true,
+  "github.copilot-labs.showBrushesLenses": true,
+  "github.copilot-labs.showTestGenerationLenses": true
 }
