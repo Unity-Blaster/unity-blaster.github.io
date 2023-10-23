@@ -1,42 +1,32 @@
-### Hi There, Github Surfer! 👋
-**This is the hobby-ist account of Vedant Srivastava. Can't provide more info. 'bout him.**
+# **Project-Info**
 
-# About Unity/Vedant
+**Notice: This Is Heavily Under-Development.**
 
-<!-- | Column 1 | Column 2 | Column 3 |
-|----------|----------|----------|
-| Row 1    | Cell 1,1 | Cell 1,2 |
-| Row 2    | Cell 2,1 | Cell 2,2 |
-| Row 3    | Cell 3,1 | Cell 3,2 | -->
+This is all of the code used in my first website, which I created as part of my journey of learning Web Development.
 
-- 🔭 He's currently working on [His own website/TestSite](https://unity-blaster.github.io/TestSite).
-- 🌱 He's currently learning [Web Development](https://en.wikipedia.org/wiki/Web_development) ([HTML](https://github.com/topics/html) + [CSS](https://github.com/topics/css) + [Javascript](https://github.com/topics/javascript))
-- 👯 He's currently not looking to collaborate. However, if you mant to collab with him, then hit him up anyways, that'll be much apprieciated!
-- 💬 Ask him about anything just other than more info. about him irl.
-- 📫 How to reach Him: Just start a discussion on any of [His Projects](https://github.com/Unity-Blaster/Unity-Blaster/edit/main/README.md#projects-hes-worked-on).
-- 😄 Pronouns: He/Him
-- ⚡ Fun fact: He' a Tech Nerd 🤓👨🏻‍💻 (😲Shocker!).
+You can go to the website [here](https://unity-blaster.github.io/TestSite/).<br>
+If you want to make modifications to the program, you open the files in [Microsoft's Visual Studio Code](https://vscode.dev/) (which I used for this project), or in any other Online/Offline Code Editor.
 
-# Projects He's Worked On
-1. [TestSite](https://unity-blaster.github.io/TestSite)
-2. [More to come!]
+# Contributing/Distributions
+Please note that I won't be able to accept pull requests all the time (most of the time rather), as I'm a student who has a lot to do in the real life as well, but you're welcome to create your own fork of the project. If you plan on distributing your version, please make sure that it's following [The Licencing Guidelines](https://github.com/Unity-Blaster/TestSite/edit/master/README.md#licencing).
+
+1. The project must be free to download (accepting donations is fine), and the source code must be available.
+2. There should be some indication, in the distribution, that it's not the official version.
+
+# Website Hierarchy
+
+¦/[Default](https://unity-blaster.github.io/TestSite/)<br>
+.  ¦<br>
+.    |- /[Home](https://unity-blaster.github.io/TestSite/Home/)<br>
+.    |- /[Test](https://unity-blaster.github.io/TestSite/Test/)
+
+# Licencing
+The distro has to follow the [Unlicence Licence](https://github.com/Unity-Blaster/TestSite/blob/master/LICENSE) and the following guidelines:--
+
+1. The project must be free to download (accepting donations is fine), and the source code must be available publicaly and should not be hard to reach to (shouldn't be hidden in directories).
+2. There should be some indication, in the distribution, that it's not the official version.
+3. There should be a link to the official version.
+4. The licencing should be updated whenever the project is updated.
 
 # Misc
-
-<a href=#><img src="https://github.com/Unity-Blaster/Unity-Blaster/blob/main/contributions.svg"></a>
-
-
-<!--
-**Unity-Blaster/Unity-Blaster** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+[I'll add more to Read-Me Later. Cuz it's not That important.]
