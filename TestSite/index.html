@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Landing -- Vedant Srivastava's Website</title>
+
+  <!-- * Meta -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+  <meta name="theme-color" content="#000020" />
+  <meta name="description" content="A Simple, Interesting And Fun Hobbyist Website.
+			Creator: Unity Blaster/Vedant Srivastava,
+			Category: Hobby,
+			Length: A Few Pages" />
+  <meta name="google-site-verification" content="dryoMLtKoHGU1hIboFje6L5kHwC7WeqczUFLjTKBmq8" />
+
+  <!-- * Links -->
+  <link rel="icon" type="image/x-icon" href="/public/assets/favicon.ico" />
+  <link rel="stylesheet" href="/public/TestSite/css/index.css" />
+  <link rel="stylesheet" href="/public/TestSite/css/CursorFollower.css" />
+
+  <!-- * JS -->
+  <script>
+    // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+    // {
+    //     var url = "http://unity-blaster.github.io/m/";
+    //     $(location).attr('href',url);
+
+    // }
+
+    var winX = window.innerHeight * 2;
+
+    function nextPage() {
+      window.scrollTo({
+        top: winX,
+        behavior: "smooth",
+      });
+    }
+  </script>
+  <script src="/public/TestSite/js/CursorFollower.js"></script>
+  <script src="/public/TestSite/js/Header.js"></script>
+</head>
+
+<body>
+  <div id="follow">
+    <div id="followSub"></div>
+  </div>
+  <!-- <div class="mfill"></div>
+	<div class="nfill"></div> -->
+
+  <main class="frontHead">
+    <header>
+      <div class="MainHead" id="he1">
+        <div class="blur blur2 glass">
+          <h1>
+
+            <b>
+              <div class="lo ool">Spreading</div>
+              <div class="lo cool">Unity</div>
+              <div class="lo ool">Using</div>
+              <div class="lo ool">A</div>
+              <div class="lo cool">Blaster</div>
+              <div class="lo ool">(Launcher)</div>
+            </b>
+
+          </h1>
+        </div>
+        <div class="arrow" onclick="nextPage()">
+          <div id="arrowSide1" class="arrowSide"></div>
+          <div id="arrowSide2" class="arrowSide"></div>
+        </div>
+      </div>
+      <div id="ft" class="notMainHead"></div>
+    </header>
+  </main>
+ 
+  <!-- <div class="nfill"></div>
+	<div class="mfill"></div> -->
+
+  <div class="subHead">
+    <a href="Home/" class="texta"> Home Page </a>
+  </div>
+</body>
+
+</html>
