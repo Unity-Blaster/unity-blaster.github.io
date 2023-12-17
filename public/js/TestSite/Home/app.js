@@ -2,21 +2,26 @@ function Welcome() {
   window.alert("Hello & Welcome!");
 
   var nName = prompt("What's Your Name?");
-  document.getElementById("dName").innerText = " " + nName;
+  document.getElementById("dName").innerText = nName;
   document.getElementById("Hii").innerText = "Hi";
+
+  if (nName=null){
+    var nName = "!";
+    document.getElementById("Name").innerText = "Hi" + nName;
+  } else {
+    nName = nName;
+    document.getElementById("Name").innerText = "Hi " + nName + "!";
+  }
 }
 
-// Welcome();
-// ?
-// *
-// !
-// if (nName=null){
-//     var nName = "!";
-//     document.getElementById("Name").innerText = "Hi" + nName;
-// } else {
-//     nName = nName
-//     document.getElementById("Name").innerText = "Hi " + nName + "!";
-// }
+document.addEventListener('keypress', function(event) {
+  if (event.key === 'a') {
+    console.log("The 'a' key was pressed");
+    Welcome();
+  }
+});
+
+
 
 // pre-loader stuff
 // he1.style.background = 'linear-gradient(-45deg, rgb('+r1+','+g1+','+b1+'), rgb('+r2+','+g2+','+b2+'), rgb('+r3+','+g3+','+b3+'), rgb('+r4+','+g4+','+b4+'), rgb('+r5+','+g5+','+b5+'), rgb('+r6+','+g6+','+b6+'), rgb('+r7+','+g7+','+b7+'), rgb('+r8+','+g8+','+b8+'))';
@@ -42,19 +47,3 @@ function Welcome() {
 // if (input.checked) {
 //   sidebar.style.transform = "translate(0)";
 // }
-var sidebar = document.querySelector(".sidebar");
-var hamToggleIn = document.querySelector(".hamToggleIn");
-var hamToggleOut = document.querySelector(".hamToggleOut");
-
-function menuSlideIn() {
-	sidebar.style.translate = '0%';
-	hamToggleOut.style.zIndex = '1';
-	hamToggleIn.style.zIndex = "-1";
-	sidebar.style.zIndex = '1';
-};
-function menuSlideOut() {
-	sidebar.style.translate = "100%";
-  hamToggleOut.style.zIndex = "-1";
-  hamToggleIn.style.zIndex = "1";
-	sidebar.style.zIndex = '1';
-};

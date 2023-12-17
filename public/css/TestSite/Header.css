@@ -33,6 +33,7 @@
   /* --bar-height: 0.8vw; */
   --bar-height: 20%;
   --hamburger-gap: 20%;
+  --hamburger-color: #114d75;
   --foreground: #fff;
   --background: #000020;
   --hamburger-margin: 0.8vw;
@@ -122,7 +123,7 @@ header {
   border-radius: 20%;
   /* display: flex; */
   aspect-ratio: 1/1;
-  background-color: #e73c7e;
+  background-color: var(--hamburger-color);
 }
 
 .vsweb {
@@ -173,7 +174,7 @@ div#ftbg div#ft div h2 {
 }
 
 .hamburger-menu {
-  --x-width: calc(var(--hamburger-height) * 1);
+  --x-width: calc(var(--hamburger-height) * 1.15);
 
   align-self: center;
   justify-content: center;
@@ -187,6 +188,7 @@ div#ftbg div#ft div h2 {
   /* top: var(--hamburger-margin);
   right: var(--hamburger-margin); */
   z-index: 999;
+  outline: none;
   cursor: pointer;
 }
 
@@ -257,7 +259,11 @@ div#ftbg div#ft div h2 {
   /* right: 100%; */
   z-index: 99;
   position: fixed;
+  transition: transform 500ms ease-in-out;
 }
+/* .sidebar.is-animated {
+  transform: translateX(100%);
+} */
 
 .hamToggle {
   position: absolute;

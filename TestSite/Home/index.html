@@ -16,7 +16,7 @@
 	<meta name="google-site-verification" content="dryoMLtKoHGU1hIboFje6L5kHwC7WeqczUFLjTKBmq8" />
 
 	<!-- * Links -->
-	<link rel="icon" type="image/x-icon" href="../public/assets/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="/public/assets/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="/public/css/TestSite/Home/style.css" />
 	<link rel="stylesheet" type="text/css" href="/public/css/TestSite/Header.css" />
 	<link rel="stylesheet" type="text/css" href="/public/css/TestSite/Footer.css" />
@@ -37,38 +37,38 @@
 
 	<header>
 		<div id="MainBody">
-			<!-- * Header -->
-			<div id="he1" class="head">
+			<div id="he1" class="head"><!-- * Header -->
 				<div id="he2" class="head">
 					<div class="WebImg">
-						<img class="WebImg" src="../public/assets/Unity_Blaster.jpg">
+						<img class="WebImg" src="/public/assets/Unity_Blaster.jpg">
 					</div>
 					<div class="Filler2"></div>
 					<h3 class="vsweb" data-value="VS'S WEBSITE">VS'S WEBSITE</h3>
 					<div class="Filler2"></div>
-					<div class="hamBurger">
+					<div class="hamBurger" onclick="menuSlide()">
 						<label class="hamburger-menu">
-							<input type="checkbox" data-group="ham" />
+							<input type="checkbox" class="hamInput" id="hamInputID" data-group="ham" onclick="menuSlide()"/>
 						</label>
-						<div class="hamToggle hamToggleIn" onclick="menuSlideIn()"></div>
-						<div class="hamToggle hamToggleOut" onclick="menuSlideOut()"></div>
+						<!-- <input type="checkbox" class="hamInput" id="hamInputID" onclick="menuSlide()" /> -->
+						<!-- <div class="hamToggle hamToggleIn" onclick="menuSlideIn()"></div>
+						<div class="hamToggle hamToggleOut" onclick="menuSlideOut()"></div> -->
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- <aside class="menu sidebar">
+		<section class="menu sidebar">
 			<nav>
 				Sidebar Stuff
 				<br>
-				<input type="checkbox" />
-
+				<!-- <input type="checkbox" /> -->
+				<button></button>
 			</nav>
-		</aside> -->
+		</section>
 	</header>
 
 
-	<!-- * Main Body -->
-	<main>
+	
+	<main><!-- * Main Body -->
 		<div id="bg">
 			<div id="text">
 				<!-- <section class="startingHead">* Starting Text
@@ -217,11 +217,27 @@
 
 				</div>
 			</section>
+
+			<hr>
+
+			<section class="tempHam"><!-- * Temp Hamburger -->
+				<nav>
+					<h2>Sidebar Stuff</h2>
+					<br>
+					<label class="themeCheckbox toggle">
+						<input class="toggle-checkbox" id="toggle-checkboxID" type="checkbox">
+						<div class="toggle-switch"></div>
+						<span class="toggle-label">Theme</span>
+					</label>
+				
+					<button type="button" class="usernameBtn" onclick="Welcome()">Change Username</button>
+				</nav>
+			</section>
 		</div>
 	</main>
 
-	<!-- * Footer -->
-	<footer>
+	
+	<footer><!-- * Footer -->
 		<div id="ftbg">
 			<div id="ft">
 				<div id="ModeToggle">
