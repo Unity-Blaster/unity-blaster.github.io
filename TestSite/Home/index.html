@@ -18,8 +18,7 @@
 	<!-- * Links -->
 	<link rel="icon" type="image/x-icon" href="/public/assets/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="/public/css/TestSite/Home/style.css" />
-	<link rel="stylesheet" type="text/css" href="/public/css/TestSite/Header.css" />
-	<link rel="stylesheet" type="text/css" href="/public/css/TestSite/Footer.css" />
+	<link rel="stylesheet" type="text/css" href="/public/css/TestSite/Header n Footer.css" />
 
 	<!-- * JS -->
 	<script src="/public/js/TestSite/Home/app.js"></script>
@@ -39,7 +38,7 @@
 		<div id="MainBody"><!-- * Header Content -->
 			<div id="he1" class="head"><!-- * Header -->
 				<div id="he2" class="head">
-					<div class="WebImg">
+					<div class="WebImg antiShadowImg">
 						<img
 							class="WebImg"
 							src="/public/assets/Unity_Blaster.jpg"
@@ -49,14 +48,16 @@
 					<div class="Filler2"></div>
 					<h3 class="vsweb randName" data-value="VS'S WEBSITE" onmouseover="randNameAnim()">VS'S WEBSITE</h3>
 					<div class="Filler2"></div>
-					<div class="hamBurger" onclick="menuSlide()">
-						<label class="hamburger-menu">
-							<input type="checkbox" class="hamInput" id="hamInputID" data-group="ham" onclick="menuSlide()"/>
-						</label>
-						<!-- <input type="checkbox" class="hamInput" id="hamInputID" onclick="menuSlide()" /> -->
-						<!-- <div class="hamToggle hamToggleIn" onclick="menuSlideIn()"></div>
-						<div class="hamToggle hamToggleOut" onclick="menuSlideOut()"></div> -->
-					</div>
+					<!-- <div class="antiShadow"> -->
+						<div class="hamBurger" onclick="menuSlide()">
+							<label class="hamburger-menu">
+								<input type="checkbox" class="hamInput" id="hamInputID" data-group="ham" onclick="menuSlide()"/>
+							</label>
+							<!-- <input type="checkbox" class="hamInput" id="hamInputID" onclick="menuSlide()" /> -->
+							<!-- <div class="hamToggle hamToggleIn" onclick="menuSlideIn()"></div>
+							<div class="hamToggle hamToggleOut" onclick="menuSlideOut()"></div> -->
+						</div>
+					<!-- </div> -->
 				</div>
 			</div>
 		</div>
@@ -152,118 +153,122 @@
 			</div>
 			<hr>
 
-			<div class="dummy">
-				<h2>
-					Links
-				</h2>
-			</div>
+			<div class="subMain sM1">
+				<div class="dummy">
+					<h2>
+						Links
+					</h2>
+				</div>
 
-			<section class="midHead"><!-- * Mid Text/Grid -->
-				<ul class="grid" type="square">
-					<div class="subGrid">
-						<li class="carda">
-							<a class="card leftt" href="https://www.youtube.com/@Blaster_Unity_UB">
-								Me on YT!
-							</a>
-						</li>
-						<li class="carda">
-							<a class="card rightt" href="https://www.example.com/">
-								idk
-							</a>
-						</li>
-						<li class="carda">
-							<a class="card mid" href="https://www.github.com/Unity-Blaster/">
-								Github Profile
-							</a>
-						</li>
-						<li class="carda">
-							<a class="card mid" href="https://www.github.com/Unity-Blaster/TestSite/">
-								Project on Github
-							</a>
-						</li>
-						<li class="carda">
-							<a class="card mid" href="">
-								Placeholder
-							</a>
-						</li>
-						<li class="carda">
-							<a class="card mid" href="">
-								Placeholder
-							</a>
-						</li>
-						<li class="carda">
-							<a class="card mid" href="">
-								Placeholder
-							</a>
-						</li>
-						<li class="carda">
-							<a class="card mid" href="">
-								Placeholder
-							</a>
-						</li>
-						<li class="carda">
-							<a class="card leftb"
-								href="mailto:info.help.gamedev.unity@gmail.com?subject=Feedback From TestSite&body=Write the feedback here."
-								target="_blank">
-								Contact?
-							</a>
-						</li>
-						<li class="carda">
-							<a class="card rightb" href="../Tests/">
-								Not a Placeholder
-							</a>
-						</li>
-					</div>
-				</ul>
-			</section>
+				<section class="midHead"><!-- * Mid Text/Grid -->
+					<ul class="grid" type="square">
+						<div class="subGrid">
+							<li class="carda">
+								<a class="card leftt" href="https://www.youtube.com/@Blaster_Unity_UB">
+									Me on YT!
+								</a>
+							</li>
+							<li class="carda">
+								<a class="card rightt" href="https://www.example.com/">
+									idk
+								</a>
+							</li>
+							<li class="carda">
+								<a class="card mid" href="https://www.github.com/Unity-Blaster/">
+									Github Profile
+								</a>
+							</li>
+							<li class="carda">
+								<a class="card mid" href="https://www.github.com/Unity-Blaster/TestSite/">
+									Project on Github
+								</a>
+							</li>
+							<li class="carda">
+								<a class="card mid" href="">
+									Placeholder
+								</a>
+							</li>
+							<li class="carda">
+								<a class="card mid" href="">
+									Placeholder
+								</a>
+							</li>
+							<li class="carda">
+								<a class="card mid" href="">
+									Placeholder
+								</a>
+							</li>
+							<li class="carda">
+								<a class="card mid" href="">
+									Placeholder
+								</a>
+							</li>
+							<li class="carda">
+								<a class="card leftb"
+									href="mailto:info.help.gamedev.unity@gmail.com?subject=Feedback From TestSite&body=Write the feedback here."
+									target="_blank">
+									Contact?
+								</a>
+							</li>
+							<li class="carda">
+								<a class="card rightb" href="../Tests/">
+									Not a Placeholder
+								</a>
+							</li>
+						</div>
+					</ul>
+				</section>
+			</div>
 
 			<hr>
 
-			<div class="dummy">
-				<h2>
-					Dummy Text
-				</h2>
+			<div class="subMain sM2">
+				<div class="dummy">
+					<h2>
+						Dummy Text
+					</h2>
+				</div>
+
+				<section class="endHead"><!-- * Ending Text -->
+					<div class="ST3 StartingText" id="Lipsum">
+
+						<blockquote>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus repellendus quis error
+							aut
+							saepe odio et accusamus sit exercitationem illum! Sapiente ut explicabo incidunt fuga
+							rerum
+							eveniet debitis culpa aspernatur voluptas laboriosam iure enim mollitia, nesciunt nihil
+							minima. Similique quasi sunt cupiditate nulla ipsum ipsa in modi tenetur debitis
+							quisquam,
+							reprehenderit, beatae sed quis ut obcaecati delectus voluptate. Dicta aperiam, commodi,
+							qui
+							nam nobis ratione nostrum similique doloribus a, itaque repellendus fuga nisi ea impedit
+							ut
+							optio. Repellat sed aut, vel tempore, ex cupiditate maiores tempora adipisci distinctio
+							voluptatum mollitia odit, ab possimus modi porro similique omnis quaerat ducimus
+							nesciunt.
+							Qui porro perspiciatis, rerum corporis dicta placeat amet modi rem facere ea eligendi
+							consequatur ut numquam recusandae quas enim culpa quia, ipsa non a architecto officiis?
+							Officia vel architecto modi, non veritatis eaque recusandae dolorem, molestias nesciunt
+							aut
+							cum. Provident accusamus veniam fuga quaerat voluptate nihil quidem reprehenderit, minus
+							animi, sint amet ut exercitationem, ipsa laudantium quia unde deleniti hic ratione!
+							Corporis
+							cum earum illum eveniet nemo tempora iste quam libero! Ipsum tempora voluptas corrupti
+							totam
+							minima tempore nemo vero ratione? Minima sapiente ea hic vero ipsam porro id perferendis
+							accusamus quasi quas veritatis molestiae odio tenetur, placeat possimus dolor.
+						</blockquote>
+
+						<h2>
+							[Sample text to study behavior(s)]
+						</h2>
+
+					</div>
+				</section>
 			</div>
 
-			<section class="endHead"><!-- * Ending Text -->
-				<div class="ST3 StartingText" id="Lipsum">
-
-					<blockquote>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus repellendus quis error
-						aut
-						saepe odio et accusamus sit exercitationem illum! Sapiente ut explicabo incidunt fuga
-						rerum
-						eveniet debitis culpa aspernatur voluptas laboriosam iure enim mollitia, nesciunt nihil
-						minima. Similique quasi sunt cupiditate nulla ipsum ipsa in modi tenetur debitis
-						quisquam,
-						reprehenderit, beatae sed quis ut obcaecati delectus voluptate. Dicta aperiam, commodi,
-						qui
-						nam nobis ratione nostrum similique doloribus a, itaque repellendus fuga nisi ea impedit
-						ut
-						optio. Repellat sed aut, vel tempore, ex cupiditate maiores tempora adipisci distinctio
-						voluptatum mollitia odit, ab possimus modi porro similique omnis quaerat ducimus
-						nesciunt.
-						Qui porro perspiciatis, rerum corporis dicta placeat amet modi rem facere ea eligendi
-						consequatur ut numquam recusandae quas enim culpa quia, ipsa non a architecto officiis?
-						Officia vel architecto modi, non veritatis eaque recusandae dolorem, molestias nesciunt
-						aut
-						cum. Provident accusamus veniam fuga quaerat voluptate nihil quidem reprehenderit, minus
-						animi, sint amet ut exercitationem, ipsa laudantium quia unde deleniti hic ratione!
-						Corporis
-						cum earum illum eveniet nemo tempora iste quam libero! Ipsum tempora voluptas corrupti
-						totam
-						minima tempore nemo vero ratione? Minima sapiente ea hic vero ipsam porro id perferendis
-						accusamus quasi quas veritatis molestiae odio tenetur, placeat possimus dolor.
-					</blockquote>
-
-					<br>
-
-					<h2>
-						[Sample text to study behavior(s)]
-					</h2>
-
-				</div>
-			</section>
+			<br>
 		</div>
 	</main>
 

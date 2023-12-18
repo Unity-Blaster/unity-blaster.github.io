@@ -97,7 +97,9 @@ body {
   padding: 1%;
   -webkit-box-shadow: 0px 0px 90px -20px var(--bg-shadow);
   -moz-box-shadow: 0px 0px 90px -20px var(--bg-shadow);
-  box-shadow: 0px 0px 90px -20px var(--bg-shadow);
+  box-shadow:
+    0px 0px 90px -20px var(--bg-shadow),
+    0 0 8px 1px #ffffff2f inset;
   border-radius: 0 0 20px 20px;
 }
 
@@ -108,6 +110,17 @@ body {
   border-radius: 20%;
   display: flex;
   cursor: pointer;
+}
+
+.WebImg::after {
+  box-shadow: 0 0 16px 2px #ffffff5f inset;
+  border-radius: inherit;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .Filler2 {
@@ -128,12 +141,14 @@ body {
   /* display: flex; */
   aspect-ratio: 1/1;
   background-color: var(--hamburger-color);
+  box-shadow: 0 0 16px 1px #ffffff5f inset;
 }
 
 .vsweb {
   justify-self: center;
   align-self: center;
   min-width: fit-content;
+  cursor: none;
 }
 
 /* text eff */
@@ -502,4 +517,82 @@ main {
   /* top: calc(clamp(50px, 10vw, 100px) * -1); */
   top: 0%;
   position: relative;
+}
+
+/* * Footer */
+
+#ModeToggle h1 {
+  height: var(--HeadHeight);
+  width: 100vw;
+  /* color: blueviolet; */
+  color: var(--MainFontColor);
+  /* color: #0e005c; */
+  background-color: #ff000000;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Verdana", Geneva, Tahoma, sans-serif;
+  font-weight: 1000;
+  z-index: 5;
+  font-size: var(--HFontSize);
+}
+
+#ft {
+  background: var(--bg);
+  background-size: 400% 400%;
+  animation: gradient 40s ease infinite;
+  height: calc(var(--HeadHeight) * 2);
+  /* height: fit-content; */
+  z-index: 1;
+  position: relative;
+  display: grid;
+  align-self: start;
+  padding: 1%;
+  -webkit-box-shadow: 0px 0px 90px -20px var(--bg-shadow);
+  -moz-box-shadow: 0px 0px 90px -20px var(--bg-shadow);
+  box-shadow:
+    0px 0px 90px -20px var(--bg-shadow),
+    0 0 8px 1px #ffffff2f inset;
+  border-radius: 20px 20px 0 0;
+}
+
+h1,
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+h2 {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#ftbg {
+  height: fit-content;
+  width: 100vw;
+  display: grid;
+  align-items: end;
+}
+
+#ft div h2 {
+  justify-self: flex-start;
+  align-self: flex-end;
+}
+
+#ft div {
+  display: grid;
+  justify-content: start;
+  justify-items: center;
+}
+
+#ft #ModeToggle {
+  align-self: center;
+  justify-self: center;
+  height: max-content;
+  width: max-content;
 }
