@@ -1,25 +1,3 @@
-function Welcome() {
-  window.alert("Hello & Welcome!");
-
-  var nName = prompt("What's Your Name?");
-  document.getElementById("dName").innerText = nName;
-  document.getElementById("Hii").innerText = "Hi";
-
-  if (nName=null){
-    var nName = "!";
-    document.getElementById("Name").innerText = "Hi" + nName;
-  } else {
-    nName = nName;
-    document.getElementById("Name").innerText = "Hi " + nName + "!";
-  }
-}
-
-document.addEventListener('keypress', function(event) {
-  if (event.key === 'a') {
-    console.log("The 'a' key was pressed");
-    Welcome();
-  }
-});
 
 
 

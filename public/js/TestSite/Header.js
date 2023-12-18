@@ -56,24 +56,7 @@
 // ft.style.zIndex = "1";
 // ft.style.position = "relative";
 
-// var hamToggleIn = document.querySelector(".hamToggleIn");
-// var hamToggleOut = document.querySelector(".hamToggleOut");
-
-// function menuSlideIn() {
-// 	sidebar.style.translate = '0%';
-// 	hamToggleOut.style.zIndex = '1';
-// 	hamToggleIn.style.zIndex = "-1";
-// 	sidebar.style.zIndex = '1';
-// };
-// function menuSlideOut() {
-// 	sidebar.style.translate = "100%";
-//   hamToggleOut.style.zIndex = "-1";
-//   hamToggleIn.style.zIndex = "1";
-// 	sidebar.style.zIndex = '1';
-// };
-
-// ! Sidebar stuff
-
+// * Sidebar stuff
 
 var menuStatus = 0;
 function menuSlide() {
@@ -89,6 +72,50 @@ function menuSlide() {
         // sidebar.style.zIndex = '1';
         menuStatus = 0;
       };
-    }
+    };
   }, 0);
 };
+
+// * Username stuff
+
+function Welcome0() {
+  setTimeout(() => {
+    // Get stored username, if any
+    var storedName = localStorage.getItem("username");
+
+    // If stored name exists, use it
+    if (storedName) {
+      document.getElementById("Hii").innerText = "Welcome back,";
+      document.getElementById("dName").innerText = storedName;
+    };
+  }, 0);
+};
+
+function Welcome() {
+  setTimeout(() => {
+    window.alert("Hello & Welcome!");
+
+    // Prompt for and store username (initial)
+    var nName = prompt("What's Your Name?");
+    if (!nName.trim().length) {
+      localStorage.removeItem("username");
+      nName = "User";
+    } else {
+      localStorage.setItem("username", nName);
+    }
+    document.getElementById("Hii").innerText = "Hi";
+    document.getElementById("dName").innerText = nName;
+  }, 0);
+};
+
+Welcome0();
+
+document.addEventListener('keypress', function(event) {
+  if (event.key === 'a') {
+    console.log("The 'a' key was pressed");
+    Welcome();
+  } else if (event.key === 'Escape') {
+    console.log("The 'esc' key was pressed");
+    menuSlide();
+  };
+});

@@ -1,25 +1,31 @@
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-document.querySelector("h3").onmouseover = event => {
-  let iterations = 0;
-  
-  const interval = setInterval(() => {
-    event.target.innerText = event.target.innerText.split("")
-      .map((letter,index) => {
-        if(index < iterations) {
-          return event.target.dataset.value[index];
-        }
+function randNameAnim() {
+  setTimeout(() => {
+    const randName = document.querySelector(".randName");
+    const randNamelength = Number(randName.textContent.length);
+    // randName.onmouseover = event => {
+    let iterations = 0;
       
-        return letters[Math.floor(Math.random() * 26)]
-      })
-      .join("");
-    
-    if(iterations >= event.target.dataset.value.length){
-      clearInterval(interval);
-    } 
-    
-    iterations += 1/2;
-  }, 24);
+    const interval = setInterval(() => {
+      randName.innerText = randName.innerText.split("")
+        .map((letter, index) => {
+          if (index < iterations) {
+            return randName.dataset.value[index];
+          }
+          
+          return letters[Math.floor(Math.random() * (randNamelength + 2))]
+        })
+        .join("");
+        
+      if (iterations >= randName.dataset.value.length) {
+        clearInterval(interval);
+      }
+        
+      iterations += 1 / 2;
+    }, randNamelength);
+    // }
+  }, 0);
 }
 
 // declare a var and generate random no between 0.2 and 0.8

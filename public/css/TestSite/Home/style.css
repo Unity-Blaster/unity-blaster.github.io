@@ -196,7 +196,7 @@ h1 {
   height: calc(100% - clamp(50px, 10vw, 100px));
   display: flex;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   padding: 1%;
   /* width: clamp(0, 50%, 1200px); */
 }
@@ -256,111 +256,4 @@ h1 {
 
 blockquote {
   text-align: justify;
-}
-
-button.usernameBtn {
-  text-align: center;
-  background-color: #06003d;
-  padding: 0%;
-  margin: 0%;
-  text-transform: uppercase;
-  letter-spacing: 0.038em;
-  /* border-radius: 20px; */
-  border-color: aqua;
-  border: aqua 0.025em solid;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  color: #000dc0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  transition: all 500ms;
-  overflow: hidden;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  transform: skew(-4deg);
-  border-radius: 10px 10px 10px 10px;
-}
-
-button.usernameBtn:hover {
-  box-shadow: #0004ffb6 0px 0.35rem 1.175rem, #00c3ffdc 0px 0.175rem 0.5rem;
-  transform: translateY(-3px) scale(1.1);
-  z-index: 999;
-}
-
-.toggle {
-  cursor: pointer;
-  display: inline-block;
-}
-
-.toggle-switch {
-  display: inline-block;
-  background: #000020;
-  width: 58px;
-  height: 32px;
-  position: relative;
-  vertical-align: middle;
-  transition: background 0.25s;
-  transition: all 500ms;
-  border-color: aqua;
-  border: aqua 0.025em solid;
-
-  transform: skew(-4deg);
-  border-radius: 16px;
-
-  &:before,
-  &:after {
-    content: "";
-  }
-
-  &:before {
-    display: block;
-    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
-    border-radius: 16px;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    transition: left 0.25s;
-  }
-
-  &:hover{
-    box-shadow: #0004ffb6 0px 0.35rem 1.175rem, #00c3ffdc 0px 0.175rem 0.5rem;
-    transform: translateY(-3px) scale(1.1);
-    z-index: 999;
-  }
-
-  .toggle:hover &:before {
-		background: linear-gradient(to bottom, #fff 0%,#fff 100%);
-		box-shadow: 0 0 0 1px rgba(0,0,0,0.5);
-	}
-  
-  .toggle-checkbox:checked+& {
-    background: #0000a0;
-
-    &:before {
-      left: 30px;
-    }
-  }
-}
-
-.toggle-checkbox {
-  position: absolute;
-  visibility: hidden;
-}
-
-.toggle-label {
-  margin-left: 5px;
-  position: relative;
-  top: 2px;
-  color: #ffffff;
 }

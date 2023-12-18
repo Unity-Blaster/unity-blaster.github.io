@@ -36,14 +36,14 @@
 	</div> -->
 
 	<header>
-		<div id="MainBody">
+		<div id="MainBody"><!-- * Header Content -->
 			<div id="he1" class="head"><!-- * Header -->
 				<div id="he2" class="head">
 					<div class="WebImg">
 						<img class="WebImg" src="/public/assets/Unity_Blaster.jpg">
 					</div>
 					<div class="Filler2"></div>
-					<h3 class="vsweb" data-value="VS'S WEBSITE">VS'S WEBSITE</h3>
+					<h3 class="vsweb randName" data-value="VS'S WEBSITE" onmouseover="randNameAnim()">VS'S WEBSITE</h3>
 					<div class="Filler2"></div>
 					<div class="hamBurger" onclick="menuSlide()">
 						<label class="hamburger-menu">
@@ -56,12 +56,34 @@
 				</div>
 			</div>
 		</div>
-		<section class="menu sidebar">
+		<section class="menu sidebar"><!-- * Sidebar -->
 			<nav>
-				Sidebar Stuff
-				<br>
-				<!-- <input type="checkbox" /> -->
-				<button></button>
+				<div class="mainSb">
+					<h2>Sidebar Stuff</h2>
+					
+					<div class="side-grid">
+						<div class="theme-block sidebarBtn">
+							<div class="theme-toggle">
+								<span class="toggle-label-small">Dark</span>
+								<label class="themeCheckbox toggle">
+									<input class="toggle-checkbox" id="toggle-checkboxID" type="checkbox">
+									<div class="toggle-switch"></div>
+								</label>
+								<span class="toggle-label-small">Light</span>
+							</div>
+							<span class="toggle-label">Theme</span>
+						</div>
+						<button
+							type="button"
+							class="sidebarBtn"
+							onclick="Welcome()">
+							Change Username
+						</button>
+						<!-- <button type="button" class="sidebarBtn randName" id="usernameBtn" onmouseover="randNameAnim()" data-value="CHANGE USERNAME" onclick="Welcome()">
+							CHANGE USERNAME
+						</button> -->
+					</div>
+				</div>
 			</nav>
 		</section>
 	</header>
@@ -216,22 +238,6 @@
 					</h2>
 
 				</div>
-			</section>
-
-			<hr>
-
-			<section class="tempHam"><!-- * Temp Hamburger -->
-				<nav>
-					<h2>Sidebar Stuff</h2>
-					<br>
-					<label class="themeCheckbox toggle">
-						<input class="toggle-checkbox" id="toggle-checkboxID" type="checkbox">
-						<div class="toggle-switch"></div>
-						<span class="toggle-label">Theme</span>
-					</label>
-				
-					<button type="button" class="usernameBtn" onclick="Welcome()">Change Username</button>
-				</nav>
 			</section>
 		</div>
 	</main>

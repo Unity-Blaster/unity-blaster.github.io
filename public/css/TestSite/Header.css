@@ -36,9 +36,12 @@
   --hamburger-color: #114d75;
   --foreground: #fff;
   --background: #000020;
+  --sidebar-bg: #000020;
+  --sidebar-fd: #00ffff;
   --hamburger-margin: 0.8vw;
-  --animation-timing: 200ms ease-in-out;
+  --animation-timing: 500ms ease-in-out;
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+  --arial-rounded-bold: "/public/assets/Arial_Rounded_MT_Bold.ttf";
 }
 
 @keyframes gradient {
@@ -74,7 +77,7 @@ body {
   max-height: 100px;
 } */
 
-header {
+#MainBody {
   z-index: 999;
   position: fixed;
   top: 0;
@@ -148,7 +151,7 @@ div#he1.head div h3 {
   /* height: var(--HeadHeight); */
   height: fit-content;
   color: var(--MainFontColor);
-  font-family: Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: var(--arial-rounded-bold), Haettenschweiler, "Arial Narrow Bold", sans-serif;
   display: flex;
   align-items: center;
   margin: 0%;
@@ -197,12 +200,12 @@ div#ftbg div#ft div h2 {
   --background: #fff;
 }
 
-.hamburger-menu:has(input:focus-visible)::before,
+/* .hamburger-menu:has(input:focus-visible)::before,
 .hamburger-menu:has(input:focus-visible)::after,
 .hamburger-menu input:focus-visible {
   border: 1px solid var(--background);
   box-shadow: 0 0 0 1px var(--foreground);
-}
+} */
 
 .hamburger-menu::before,
 .hamburger-menu::after,
@@ -213,8 +216,12 @@ div#ftbg div#ft div h2 {
   background-color: var(--foreground);
   border-radius: 9999px;
   transform-origin: left center;
-  transition: opacity var(--animation-timing), width var(--animation-timing),
-    rotate var(--animation-timing), translate var(--animation-timing),
+  transition:
+    opacity var(--animation-timing),
+    width var(--animation-timing),
+    rotate var(--animation-timing),
+    translate var(--animation-timing),
+    transform var(--animation-timing),
     background-color var(--animation-timing);
 }
 
@@ -243,44 +250,193 @@ div#ftbg div#ft div h2 {
   width: 0;
 }
 
+.hamburger-menu:has(input:checked) {
+  transform: translateX(10%);
+}
+
 .sidebar {
   transition: translate var(--animation-timing);
   translate: 100%;
-  padding: 0.5rem 1rem;
-  padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
-  background-color: var(--foreground);
-  color: var(--background);
+  /* padding: 0.5rem 1rem; */
+  padding-top: calc(1rem);
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-fd);
   width: 100vw;
   min-height: 100vh;
-  display: flex;
-  justify-items: center;
-  justify-self: end;
-  align-items: center;
-  /* right: 100%; */
   z-index: 99;
   position: fixed;
+  top: 0;
   transition: transform 500ms ease-in-out;
-}
-/* .sidebar.is-animated {
-  transform: translateX(100%);
-} */
 
-.hamToggle {
+  & nav {
+    position: relative;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    max-width: 1200px;
+    padding-top: var(--HeadHeight);
+
+    & .mainSb {
+      height: calc(100% - clamp(50px, 10vw, 100px));
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+      
+      & .side-grid {
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        transform: skew(-4deg);
+      }
+    }
+  }
+}
+
+.sidebarBtn {
+  text-align: center;
+  background-color: #06003d;
+  padding: 0%;
+  margin: 0%;
+  text-transform: uppercase;
+  letter-spacing: 0.038em;
+  /* border-radius: 20px; */
+  border-color: aqua;
+  border: aqua 0.025em solid;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000dc0;
+  height: fit-content;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 500ms;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* transform: skew(-4deg); */
+  border-radius: 10px 10px 10px 10px;
+  margin-bottom: 2%;
+  
+  &:hover {
+    box-shadow: #0004ffb6 0px 0.35rem 1.175rem, #00c3ffdc 0px 0.175rem 0.5rem;
+    transform: translateY(-3px) scale(1.1) skew(4deg);
+    height: fit-content;
+    margin-bottom: 3%;
+  }
+
+  &.theme-block {
+      display: inherit;
+      flex-direction: inherit;
+      justify-items: inherit;
+      align-items: inherit;
+  }
+}
+
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.toggle-switch {
+  display: inline-block;
+  background: #000020;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+  transition: all 500ms;
+  border-color: aqua;
+  border: aqua 0.025em solid;
+
+  transform: skew(-4deg);
+  border-radius: 16px;
+
+  &:before,
+  &:after {
+    content: "";
+  }
+
+  &:before {
+    display: block;
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    border-radius: 16px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: left 0.25s;
+  }
+
+  &:hover {
+    box-shadow: #0004ffb6 0px 0.35rem 1.175rem, #00c3ffdc 0px 0.175rem 0.5rem;
+    transform: translateY(-3px) scale(1.1);
+    z-index: 999;
+  }
+
+  .toggle:hover &:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+  }
+
+  .toggle-checkbox:checked+& {
+    background: #0000a0;
+
+    &:before {
+      left: 30px;
+    }
+  }
+}
+
+.toggle-checkbox {
   position: absolute;
-  height: var(--HeadHeight);
-  margin: 0;
-  border-radius: 20%;
-  aspect-ratio: 1/1;
+  visibility: hidden;
 }
 
-.hamToggleOut {
-  z-index: -1;
+.toggle-label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+  color: #ffffff;
+  height: fit-content;
+  font-size: var(--HFontSize);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  display: flex;
 }
-/* 
-#MainBody {
-	position: fixed;
-	width: 100vw;
-} */
+
+.toggle-label-small {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+  color: #ffffff;
+  height: fit-content;
+  font-size: var(--FontSize);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  /* display: flex; */
+}
+
+.theme-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
 
 main,
 #he1 {
