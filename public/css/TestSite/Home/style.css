@@ -32,7 +32,8 @@ div#dName {
 }
 
 ul.grid {
-  background: #003cff6c;
+  /* background: #003cff6c; */
+  /* background: #0070f17e; */
   border-radius: 2rem 0rem 2rem 0rem;
   padding: 1.5vh;
   margin-top: 1%;
@@ -42,7 +43,11 @@ ul.grid {
   align-content: center;
   justify-content: center;
   /* height:fit-content; */
-  box-shadow: #0070f17e 0rem 0.5rem 2rem, #00087477 0rem 0rem 4rem;
+  /* box-shadow: 
+    #0070f17e 0rem 0.5rem 2rem inset,
+    #00087477 0rem 0.0rem 4rem inset; */
+  /* box-shadow: #000000 0 0 4rem inset; */
+  transform: skew(-2deg);
 }
 .subGrid {
   display: grid;
@@ -80,17 +85,31 @@ ul li a.card {
   transition: all 500ms;
   overflow: hidden;
 
+  box-shadow:
+    0 0 0 0 #00000a inset,
+    0 0 0 0 #000008 inset,
+    0 0 0 0 #000006 inset,
+    0 0 0 0 #000004 inset;
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  transform: skew(-4deg);
+  /* transform: skew(-4deg); */
 }
 
 a.card:hover {
-  box-shadow: #0004ffb6 0px 0.35rem 1.175rem, #00c3ffdc 0px 0.175rem 0.5rem;
-  transform: translateY(-3px) scale(1.1);
+  box-shadow: 
+    #0004ffb6 0px 0.35rem 1.175rem inset,
+    #00c3ffdc 0px 0.175rem 0.5rem inset;
+  transform: translateY(-3px) scale(1.1) skew(2deg);
   z-index: 999;
+  margin: 1%;
+  box-shadow:
+    0 0 0 10px #000080 inset,
+    0 0 0 20px #000060 inset,
+    0 0 0 30px #000050 inset,
+    0 0 0 40px #000040 inset;
 }
 
 h1 {
@@ -228,7 +247,12 @@ h1 {
   background-clip: text;
   font-size: 1.5em;
   background-color: #5f5fdf;
-  background-image: linear-gradient(-45deg, #df9fff, #8f5fdf, #3f3faf, #2f2f8f);
+  background-image: linear-gradient(
+    -45deg,
+    #df9fff,
+    #8f5fdf,
+    #3f3faf,
+    #2f2f8f);
   background-repeat: repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -256,4 +280,15 @@ h1 {
 
 blockquote {
   text-align: justify;
+  background-image: linear-gradient(
+    -45deg, 
+    #df9fff,
+    #8f5fdf,
+    #3f3faf,
+    #2f2f8f);
+  background-clip: text;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
 }

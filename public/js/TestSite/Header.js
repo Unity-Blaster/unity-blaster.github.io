@@ -85,8 +85,8 @@ function Welcome0() {
 
     // If stored name exists, use it
     if (storedName) {
-      document.getElementById("Hii").innerText = "Welcome back,";
-      document.getElementById("dName").innerText = storedName;
+      document.getElementById("Hii").innerHTML = "Welcome back,";
+      document.getElementById("dName").innerHTML = storedName;
     };
   }, 0);
 };
@@ -107,6 +107,14 @@ function Welcome() {
     document.getElementById("dName").innerText = nName;
   }, 0);
 };
+
+function GoToHome() {
+  window.location.replace("/TestSite/Home/");
+}
+
+function GoToLanding() {
+  window.location.replace("/TestSite/");
+}
 
 Welcome0();
 

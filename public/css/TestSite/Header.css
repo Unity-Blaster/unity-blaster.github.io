@@ -107,6 +107,7 @@ body {
   position: relative;
   border-radius: 20%;
   display: flex;
+  cursor: pointer;
 }
 
 .Filler2 {
@@ -165,7 +166,7 @@ div#ftbg div#ft h1 div#ModeToggle {
   display: flex;
 }
 
-div#ftbg div#ft div h2 {
+.copyright h2 {
   font-size: var(--SFontSize);
 }
 
@@ -262,11 +263,15 @@ div#ftbg div#ft div h2 {
   background-color: var(--sidebar-bg);
   color: var(--sidebar-fd);
   width: 100vw;
-  min-height: 100vh;
+  min-height: 100lvh, 100vh;
   z-index: 99;
   position: fixed;
   top: 0;
   transition: transform 500ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 
 }
 .sidebar nav {
@@ -277,10 +282,15 @@ div#ftbg div#ft div h2 {
   max-width: 1200px;
   padding-top: var(--HeadHeight);
 
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 }
 nav .mainSb {
-  height: calc(100% - clamp(50px, 10vw, 100px));
+  height: 100%;
   width: 100%;
+  padding: 1%;
 
   display: flex;
   flex-direction: column;
@@ -302,24 +312,24 @@ nav .mainSb {
 
 .sidebarBtn {
   text-align: center;
-  background-color: #06003d;
   padding: 0%;
   margin: 0%;
   text-transform: uppercase;
   letter-spacing: 0.038em;
   /* border-radius: 20px; */
-  border-color: aqua;
-  border: aqua 0.025em solid;
-  display: inline-block;
+  /* border-color: aqua; */
+  /* border: aqua 0.025em solid; */
   cursor: pointer;
   text-decoration: none;
-  color: #000dc0;
+  /* color: #000dc0; */
   height: fit-content;
   width: 80%;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
   transition: all 500ms;
   overflow: hidden;
 
@@ -329,14 +339,38 @@ nav .mainSb {
 
   /* transform: skew(-4deg); */
   border-radius: 10px 10px 10px 10px;
-  margin-bottom: 2%;
+  /* margin-bottom: 2%; */
+  margin-top: 5px;
+  margin-bottom: 5px;
   
+  position: relative;
+  box-sizing: border-box;
+
+  border: 3px solid #0000c0;
+  box-shadow:
+    0 0 0 0 #00000a inset,
+    0 0 0 0 #000008 inset,
+    0 0 0 0 #000006 inset,
+    0 0 0 0 #000004 inset;
+  background-color: #06003d;
+  color: #008f8f;
+
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  /* transition: box-shadow 500ms, top 1s, left 1s; */
 }
 .sidebarBtn:hover {
-  box-shadow: #0004ffb6 0px 0.35rem 1.175rem, #00c3ffdc 0px 0.175rem 0.5rem;
+  /* box-shadow: #0004ffb6 0px 0.35rem 1.175rem, #00c3ffdc 0px 0.175rem 0.5rem; */
   transform: translateY(-3px) scale(1.1) skew(4deg);
   height: fit-content;
-  margin-bottom: 3%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  color: #00ffff;
+
+  box-shadow:
+    0 0 0 10px #000080 inset,
+    0 0 0 20px #000060 inset,
+    0 0 0 30px #000050 inset,
+    0 0 0 40px #000040 inset;
 }
 
 .sidebarBtn.theme-block {
@@ -358,9 +392,9 @@ nav .mainSb {
   height: 32px;
   position: relative;
   vertical-align: middle;
-  transition: background 0.25s;
+  /* transition: background 0.25s; */
   transition: all 500ms;
-  border-color: aqua;
+  /* border-color: aqua; */
   border: aqua 0.025em solid;
 
   transform: skew(-4deg);
@@ -374,9 +408,9 @@ nav .mainSb {
 
 .toggle-switch:before {
   display: block;
-  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  background: linear-gradient(to bottom, #ffffff, #bef0ff 100%);
   border-radius: 16px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25); */
   width: 24px;
   height: 24px;
   position: absolute;
@@ -392,8 +426,8 @@ nav .mainSb {
 }
 
 .toggle:hover .toggle-switch:before {
-  background: linear-gradient(to bottom, #fff 0%, #fff 100%);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to bottom, #ffffff 0%, #bef0ff 100%);
+  /* box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5); */
 }
 
 .toggle-checkbox:checked+.toggle-switch {
@@ -412,23 +446,19 @@ nav .mainSb {
 .toggle-label {
   margin-left: 5px;
   position: relative;
-  top: 2px;
-  color: #ffffff;
   height: fit-content;
   font-size: var(--HFontSize);
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: inherit;
   display: flex;
 }
 
 .toggle-label-small {
   margin-left: 5px;
   position: relative;
-  top: 2px;
-  color: #ffffff;
+  top: calc(var(--FontSize) / 10);
   height: fit-content;
   font-size: var(--FontSize);
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  /* display: flex; */
+  font-family: inherit;
 }
 
 .theme-toggle {
@@ -436,6 +466,7 @@ nav .mainSb {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  font-family: inherit;
 }
 
 main,
@@ -455,6 +486,12 @@ main,
 
 hr {
   opacity: 0.5;
+  width: 100%;
+}
+
+.side-grid hr {
+  width: 50%;
+  margin: 20px;
 }
 
 #bg {

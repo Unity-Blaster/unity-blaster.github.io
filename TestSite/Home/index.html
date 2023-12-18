@@ -40,7 +40,11 @@
 			<div id="he1" class="head"><!-- * Header -->
 				<div id="he2" class="head">
 					<div class="WebImg">
-						<img class="WebImg" src="/public/assets/Unity_Blaster.jpg">
+						<img
+							class="WebImg"
+							src="/public/assets/Unity_Blaster.jpg"
+							onclick="GoToLanding()"
+						>
 					</div>
 					<div class="Filler2"></div>
 					<h3 class="vsweb randName" data-value="VS'S WEBSITE" onmouseover="randNameAnim()">VS'S WEBSITE</h3>
@@ -82,6 +86,27 @@
 						<!-- <button type="button" class="sidebarBtn randName" id="usernameBtn" onmouseover="randNameAnim()" data-value="CHANGE USERNAME" onclick="Welcome()">
 							CHANGE USERNAME
 						</button> -->
+
+						<hr>
+						
+						<button
+							type="button"
+							class="sidebarBtn"
+							onclick="GoToLanding()">
+							Landing Page
+						</button>
+						<button
+							type="button"
+							class="sidebarBtn"
+							onclick="GoToHome()">
+							Home
+						</button>
+					</div>
+
+					<div class="copyright">
+						<h2>
+							© Vedant Srivastava/Unity Blaster 2023
+						</h2>
 					</div>
 				</div>
 			</nav>
@@ -109,7 +134,7 @@
 							<div id="Hii">Hi</div>
 							<div> </div>
 							<div id="dName">Human</div>
-							<div> </div>
+							<!-- <div> </div> -->
 							<div id="Exclaim">!</div>
 						</div>
 						<div class="STA1 ST2 StartingText">This Is </div>
@@ -252,7 +277,7 @@
 						Test
 					</h1>
 				</div>
-				<div>
+				<div class="copyright">
 					<h2>
 						© Vedant Srivastava/Unity Blaster 2023
 					</h2>
