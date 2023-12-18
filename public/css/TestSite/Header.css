@@ -268,36 +268,36 @@ div#ftbg div#ft div h2 {
   top: 0;
   transition: transform 500ms ease-in-out;
 
-  & nav {
-    position: relative;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    max-width: 1200px;
-    padding-top: var(--HeadHeight);
+}
+.sidebar nav {
+  position: relative;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: 1200px;
+  padding-top: var(--HeadHeight);
 
-    & .mainSb {
-      height: calc(100% - clamp(50px, 10vw, 100px));
-      width: 100%;
+}
+nav .mainSb {
+  height: calc(100% - clamp(50px, 10vw, 100px));
+  width: 100%;
 
-      display: flex;
-      flex-direction: column;
-      justify-items: center;
-      align-items: center;
-      
-      & .side-grid {
-        height: 100%;
-        width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  
+}
+.mainSb .side-grid {
+  height: 100%;
+  width: 100%;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-        transform: skew(-4deg);
-      }
-    }
-  }
+  transform: skew(-4deg);
 }
 
 .sidebarBtn {
@@ -331,19 +331,19 @@ div#ftbg div#ft div h2 {
   border-radius: 10px 10px 10px 10px;
   margin-bottom: 2%;
   
-  &:hover {
-    box-shadow: #0004ffb6 0px 0.35rem 1.175rem, #00c3ffdc 0px 0.175rem 0.5rem;
-    transform: translateY(-3px) scale(1.1) skew(4deg);
-    height: fit-content;
-    margin-bottom: 3%;
-  }
+}
+.sidebarBtn:hover {
+  box-shadow: #0004ffb6 0px 0.35rem 1.175rem, #00c3ffdc 0px 0.175rem 0.5rem;
+  transform: translateY(-3px) scale(1.1) skew(4deg);
+  height: fit-content;
+  margin-bottom: 3%;
+}
 
-  &.theme-block {
-      display: inherit;
-      flex-direction: inherit;
-      justify-items: inherit;
-      align-items: inherit;
-  }
+.sidebarBtn.theme-block {
+  display: inherit;
+  flex-direction: inherit;
+  justify-items: inherit;
+  align-items: inherit;
 }
 
 .toggle {
@@ -366,42 +366,42 @@ div#ftbg div#ft div h2 {
   transform: skew(-4deg);
   border-radius: 16px;
 
-  &:before,
-  &:after {
-    content: "";
-  }
+}
+.toggle-switch:before,
+.toggle-switch:after {
+  content: "";
+}
 
-  &:before {
-    display: block;
-    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
-    border-radius: 16px;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    transition: left 0.25s;
-  }
+.toggle-switch:before {
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 16px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: left 0.25s;
+}
 
-  &:hover {
-    box-shadow: #0004ffb6 0px 0.35rem 1.175rem, #00c3ffdc 0px 0.175rem 0.5rem;
-    transform: translateY(-3px) scale(1.1);
-    z-index: 999;
-  }
+.toggle-switch:hover {
+  box-shadow: #0004ffb6 0px 0.35rem 1.175rem, #00c3ffdc 0px 0.175rem 0.5rem;
+  transform: translateY(-3px) scale(1.1);
+  z-index: 999;
+}
 
-  .toggle:hover &:before {
-    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
-  }
+.toggle:hover .toggle-switch:before {
+  background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
 
-  .toggle-checkbox:checked+& {
-    background: #0000a0;
+.toggle-checkbox:checked+.toggle-switch {
+  background: #0000a0;
 
-    &:before {
-      left: 30px;
-    }
-  }
+}
+.toggle-checkbox:before {
+  left: 30px;
 }
 
 .toggle-checkbox {
