@@ -1,27 +1,61 @@
 
+// * Bg Grid stuff
 
+setTimeout(() => {
+	const wrapper = document.getElementById("tiles");
+	const gridParent = document.getElementById("gridParent");
 
-// pre-loader stuff
-// he1.style.background = 'linear-gradient(-45deg, rgb('+r1+','+g1+','+b1+'), rgb('+r2+','+g2+','+b2+'), rgb('+r3+','+g3+','+b3+'), rgb('+r4+','+g4+','+b4+'), rgb('+r5+','+g5+','+b5+'), rgb('+r6+','+g6+','+b6+'), rgb('+r7+','+g7+','+b7+'), rgb('+r8+','+g8+','+b8+'))';
-//     he1.style.backgroundSize = '400% 400%';
-//     he1.style.animation = 'gradient 40s ease infinite';
-// #loader-wrapper.loader-sec
+	let columns = 0,
+		rows = 0,
+		toggled = false;
 
-// LoaderWrapper.style.width = screen.width;
-// LoaderWrapper.style.height = screen.height;
+	const toggle = () => {
+		toggled = !toggled;
+		
+	gridParent.classList.toggle("toggled");
+	}
 
-// $(document).ready(function(){
-//     setTimeout(function(){
-//         $('body').addClass('loaded');
-//         $('h1').css('color','#222222');
-//     }, 3000);
-//     Welcome();
-// });
+	const handleOnClick = index => {
+		toggle();
+		
+		anime({
+			targets: ".tile",
+			opacity: toggled ? 0 : 1,
+			delay: anime.stagger(50, {
+				grid: [columns, rows],
+				from: index
+			})
+		});
+	}
 
-// const hamburgerMenu = document.querySelector(".hamburger-menu");
-// const sidebar = hamburgerMenu.querySelector(".sidebar");
-// const input = hamburgerMenu.querySelector("input");
+	const createTile = index => {
+		const tile = document.createElement("div");
+		tile.classList.add("tile");
+		tile.style.opacity = toggled ? 0 : 1;
+		tile.onclick = e => handleOnClick(index);
+		return tile;
+	}
 
-// if (input.checked) {
-//   sidebar.style.transform = "translate(0)";
-// }
+	const createTiles = quantity => {
+		Array.from(Array(quantity)).map((tile, index) => {
+			wrapper.appendChild(createTile(index));
+		});
+	}
+
+	const createGrid = () => {
+		wrapper.innerHTML = "";
+		
+		const size = gridParent.clientWidth > 800 ? 50 : 25;
+		
+		columns = Math.floor(gridParent.clientWidth / size);
+		rows = Math.floor(gridParent.clientHeight / size);
+		
+		wrapper.style.setProperty("--columns", columns);
+		wrapper.style.setProperty("--rows", rows);
+		
+		createTiles(columns * rows);
+	}
+
+	createGrid();
+	window.onresize = () => createGrid();
+}, 1000);
