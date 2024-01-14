@@ -19,11 +19,13 @@
 	<link rel="icon" type="image/x-icon" href="/public/assets/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="/public/css/TestSite/Home/style.css" />
 	<link rel="stylesheet" type="text/css" href="/public/css/TestSite/Header n Footer.css" />
+	<link rel="stylesheet" type="text/css" href="/public/css/TestSite/CardHover.css" />
 
 	<!-- * JS -->
 	<script src="/public/js/TestSite/anime.min.js"></script>
 	<script src="/public/js/TestSite/NameGame.js"></script>
 	<script src="/public/js/TestSite/Header.js"></script>
+	<script src="/public/js/TestSite/CardHover.js"></script>
 	<script src="/public/js/TestSite/Home/app.js"></script>
 </head>
 
@@ -64,16 +66,11 @@
 					<div class="Filler2"></div>
 					<h3 class="vsweb randName" data-value="VS'S WEBSITE" onmouseover="randNameAnim()">VS'S WEBSITE</h3>
 					<div class="Filler2"></div>
-					<!-- <div class="antiShadow"> -->
-						<div class="hamBurger" onclick="menuSlide()">
+						<div class="hamBurger" onclick="testJS()">
 							<label class="hamburger-menu">
-								<input type="checkbox" class="hamInput" id="hamInputID" data-group="ham" onclick="menuSlide()"/>
+								<input type="checkbox" class="hamInput" id="hamInputID" data-group="ham" />
 							</label>
-							<!-- <input type="checkbox" class="hamInput" id="hamInputID" onclick="menuSlide()" /> -->
-							<!-- <div class="hamToggle hamToggleIn" onclick="menuSlideIn()"></div>
-							<div class="hamToggle hamToggleOut" onclick="menuSlideOut()"></div> -->
 						</div>
-					<!-- </div> -->
 				</div>
 			</div>
 		</div>
@@ -133,20 +130,10 @@
 
 	
 	<main><!-- * Main Body -->
-		<div id="bg">
+		<div id="bg" class="cardsB">
 			<div id="text">
-				<!-- <section class="startingHead">* Starting Text
-					<div class="ST1 StartingText" id="MainOfName">
-						<div id="Hii">Hi</div>
-						<div id="dName"></div>
-						<div id="Exclaim">!</div>
-					</div>
-					<div class="ST2 StartingText">This Is Vedant Srivastava's Very Own Website!</div>
-					<div class="ST1 StartingText">Currently, It Is Heavily Under-Construction.</div>
-					<div class="ST2 StartingText">Thanks For Visiting!</div>
-				</section> -->
-				<section class="startingHead"><!-- * Starting Text -->
-					<div class="alignHead subMain sM0">
+				<section class="startingHead cardsB"><!-- * Starting Text -->
+					<div class="alignHead subMain sM0 cardB">
 						<div class="STA0 ST1 StartingText" id="MainOfName">
 							<div id="Hii">Hi</div>
 							<div> </div>
@@ -169,7 +156,7 @@
 			</div>
 			<hr>
 
-			<div class="subMain sM1">
+			<div class="subMain sM1 cardB">
 				<div class="dummy">
 					<h2>
 						Links
@@ -238,7 +225,7 @@
 
 			<hr>
 
-			<div class="subMain sM2">
+			<div class="subMain sM2 cardB">
 				<div class="dummy">
 					<h2>
 						Dummy Text

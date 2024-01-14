@@ -1,24 +1,24 @@
 // * preloader stuff
+setTimeout(() => {
+	function percentIncrease(timeB4Open) {
+		var percent = 0;
+		var loaderElement = document.querySelector('.loaderPercentage');
 
-function percentIncrease(timeB4Open) {
-	var percent = 0;
-	var loaderElement = document.querySelector('.loaderPercentage');
+		function updatePercent() {
+			percent += 1;
+			loaderElement.textContent = percent + '%';
+		};
 
-	function updatePercent() {
-		percent += 5;
-		loaderElement.textContent = percent + '%';
+		var interval = setInterval(function() {
+			if (percent >= 100) {
+				clearInterval(interval);
+			} else {
+				updatePercent();
+			}
+		}, (timeB4Open * 1000) / 100); // Divide by 100 because 100% / 1% increments = 100 updates
 	};
 
-	var interval = setInterval(function() {
-		if (percent >= 100) {
-			clearInterval(interval);
-		} else {
-			updatePercent();
-		}
-	}, (timeB4Open * 1000) / 20); // Divide by 20 because 100% / 5% increments = 20 updates
-};
 
-setTimeout(() => {
 	function revealPage() {
 		document.body.classList.add("loaded");
 	};
@@ -27,8 +27,8 @@ setTimeout(() => {
 
 	setTimeout(() => {
 		revealPage();
-	}, 5000);
-}, 1000);
+	}, 5500);
+}, 500);
 
 // * Username stuff
 
@@ -73,10 +73,7 @@ setTimeout(() => {
 		if (event.key === 'a') {
 			console.log("The 'a' key was pressed");
 			Welcome();
-		} else if (event.key === 'Escape') {
-			console.log("The 'esc' key was pressed");
-			menuSlide();
-		};
+		}
 	});
 }, 1000);
 
@@ -97,5 +94,18 @@ setTimeout(() => {
 				menuStatus = 0;
 			};
 		};
+	};
+	document.addEventListener('keypress', function(event) {
+		if (event.key === 'b') {
+			console.log("The 'a' key was pressed");
+			menuSlide();
+		} else if (event.key === 'Escape') {
+			console.log("The 'esc' key was pressed");
+			menuSlide();
+		};
+	});
+
+	function testJS() {
+		console.log("Hi! The test was successful and the checkbox works (at least).");
 	};
 }, 1000);

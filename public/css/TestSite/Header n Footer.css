@@ -289,7 +289,7 @@ div#ftbg div#ft h1 div#ModeToggle {
   color: var(--sidebar-fd);
   width: 100vw;
   min-height: 100lvh, 100vh;
-  z-index: 99;
+  z-index: 500;
   position: fixed;
   top: 0;
   transition: transform 500ms ease-in-out;
