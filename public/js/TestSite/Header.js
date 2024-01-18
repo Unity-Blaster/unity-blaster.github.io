@@ -1,35 +1,3 @@
-// * preloader stuff
-setTimeout(() => {
-	function percentIncrease(timeB4Open) {
-		var percent = 0;
-		var loaderElement = document.querySelector('.loaderPercentage');
-
-		function updatePercent() {
-			percent += 1;
-			loaderElement.textContent = percent + '%';
-		};
-
-		var interval = setInterval(function() {
-			if (percent >= 100) {
-				clearInterval(interval);
-			} else {
-				updatePercent();
-			}
-		}, (timeB4Open * 1000) / 100); // Divide by 100 because 100% / 1% increments = 100 updates
-	};
-
-
-	function revealPage() {
-		document.body.classList.add("loaded");
-	};
-
-	percentIncrease(4.5);
-
-	setTimeout(() => {
-		revealPage();
-	}, 5500);
-}, 500);
-
 // * Username stuff
 
 setTimeout(() => {
@@ -54,18 +22,10 @@ setTimeout(() => {
 			nName = "User";
 		} else {
 			localStorage.setItem("username", nName);
-		}
+		};
 		document.getElementById("Hii").innerText = "Hi";
 		document.getElementById("dName").innerText = nName;
 	};
-
-	function GoToHome() {
-		window.location.replace("/TestSite/Home/");
-	}
-
-	function GoToLanding() {
-		window.location.replace("/TestSite/");
-	}
 
 	Welcome0();
 
@@ -73,7 +33,7 @@ setTimeout(() => {
 		if (event.key === 'a') {
 			console.log("The 'a' key was pressed");
 			Welcome();
-		}
+		};
 	});
 }, 1000);
 
@@ -81,31 +41,29 @@ setTimeout(() => {
 
 setTimeout(() => {
 	var menuStatus = 0;
+	var hamburg = document.querySelector('.hamBurger');
+	var hamburgMenu = document.querySelector('.hamburger-menu');
+	var hamInput = document.querySelector('.hamInput');
 	function menuSlide() {
 		const sidebar = document.querySelector('.sidebar');
 		if (sidebar) {
 			if (menuStatus == 0) {
 				sidebar.style.transform = `translateX(-100%) translateY(0)`;
-				// sidebar.style.zIndex = '999';
 				menuStatus = 1;
 			} else if (menuStatus == 1){
 				sidebar.style.transform = `translateX(100%) translateY(0)`;
-				// sidebar.style.zIndex = '1';
 				menuStatus = 0;
 			};
 		};
 	};
+	hamburg.addEventListener('click', menuSlide);
+	hamburgMenu.addEventListener('click', menuSlide);
+	hamInput.addEventListener('click', menuSlide);
+
 	document.addEventListener('keypress', function(event) {
 		if (event.key === 'b') {
-			console.log("The 'a' key was pressed");
-			menuSlide();
-		} else if (event.key === 'Escape') {
-			console.log("The 'esc' key was pressed");
+			console.log("The 'b' key was pressed");
 			menuSlide();
 		};
 	});
-
-	function testJS() {
-		console.log("Hi! The test was successful and the checkbox works (at least).");
-	};
 }, 1000);

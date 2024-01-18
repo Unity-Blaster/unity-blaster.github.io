@@ -22,22 +22,25 @@
 	<link rel="stylesheet" type="text/css" href="/public/css/TestSite/CardHover.css" />
 
 	<!-- * JS -->
-	<script src="/public/js/TestSite/anime.min.js"></script>
-	<script src="/public/js/TestSite/NameGame.js"></script>
+	<script src="/public/js/TestSite/Preloader.js"></script>
 	<script src="/public/js/TestSite/Header.js"></script>
+	<script src="/public/js/TestSite/NameGame.js"></script>
 	<script src="/public/js/TestSite/CardHover.js"></script>
 	<script src="/public/js/TestSite/Home/app.js"></script>
+	<script src="/public/js/TestSite/anime.min.js"></script>
 </head>
 
 <body>
 
-	<!-- * Pre-loader -->
-	<div id="loader-wrapper">
+	<div id="loader-wrapper"><!-- * Pre-loader -->
 		<div id="loader">
 			<div class="ld1"></div>
 			<div class="ld2"></div>
 			<div class="ld3"></div>
 			<div class="ld4"></div>
+			<!-- <div class="preloader-shape">
+				<div class="preloader-shape-mid"></div>
+			</div> -->
 		</div>
 	
 		<div class="loader-section section-left"></div>
@@ -56,21 +59,20 @@
 		<div id="MainBody"><!-- * Header Content -->
 			<div id="he1" class="head"><!-- * Header -->
 				<div id="he2" class="head">
-					<div class="WebImg antiShadowImg">
+					<div class="WebImg antiShadowImg" onclick="location.href='/TestSite/'">
 						<img
 							class="WebImg"
 							src="/public/assets/Unity_Blaster.jpg"
-							onclick="GoToLanding()"
 						>
 					</div>
-					<div class="Filler2"></div>
-					<h3 class="vsweb randName" data-value="VS'S WEBSITE" onmouseover="randNameAnim()">VS'S WEBSITE</h3>
-					<div class="Filler2"></div>
-						<div class="hamBurger" onclick="testJS()">
-							<label class="hamburger-menu">
-								<input type="checkbox" class="hamInput" id="hamInputID" data-group="ham" />
-							</label>
-						</div>
+					<div class="vsweb-wrapper">
+						<h3 class="vsweb randName" data-value="VS'S WEBSITE" onmouseover="randNameAnim()">VS'S WEBSITE</h3>
+					</div>
+					<div class="hamBurger">
+						<label class="hamburger-menu">
+							<input type="checkbox" class="hamInput" id="hamInputID" data-group="ham" />
+						</label>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -106,13 +108,13 @@
 						<button
 							type="button"
 							class="sidebarBtn"
-							onclick="GoToLanding()">
+							onclick="location.href='/TestSite/'">
 							Landing Page
 						</button>
 						<button
 							type="button"
 							class="sidebarBtn"
-							onclick="GoToHome()">
+							onclick="location.href='/TestSite/Home/'">
 							Home
 						</button>
 					</div>
@@ -126,31 +128,36 @@
 			</nav>
 		</section>
 	</header>
-
-
 	
 	<main><!-- * Main Body -->
 		<div id="bg" class="cardsB">
 			<div id="text">
 				<section class="startingHead cardsB"><!-- * Starting Text -->
-					<div class="alignHead subMain sM0 cardB">
-						<div class="STA0 ST1 StartingText" id="MainOfName">
-							<div id="Hii">Hi</div>
-							<div> </div>
-							<div id="dName">Human</div>
-							<!-- <div> </div> -->
-							<div id="Exclaim">!</div>
+					<div class="alignHead subMain sM0 cardB hero">
+						<div class="hero1">
+							<div class="STA0 ST1 StartingText" id="MainOfName">
+								<div id="Hii">Hi</div>
+								<div> </div>
+								<div id="dName">Human</div>
+								<!-- <div> </div> -->
+								<div id="Exclaim">!</div>
+							</div>
+							<div class="STA1 ST2 StartingText">This Is </div>
+							<div class="STA2 ST2 StartingText">
+								<div class="Decor">Vedant Srivastava</div>
+								's
+							</div>
+							<div class="STA3 ST2 StartingText">Very Own Website!</div>
+							<br>
+							<div class="STB1 ST1 StartingText">Note: This Is Under-Construction.</div>
+							<div class="STB2 ST2 StartingText">Thanks For Visiting!</div>
 						</div>
-						<div class="STA1 ST2 StartingText">This Is </div>
-						<div class="STA2 ST2 StartingText">
-							<div class="Decor">Vedant </div>
-							<div class="Decor">Srivastava</div>
-							's
+						<div class="hero2">
+							<div class="hero-img1 hero-img"></div>
+							<div class="hero-img2 hero-img"></div>
+							<div class="hero-img3 hero-img"></div>
+							<div class="hero-img4 hero-img"></div>
 						</div>
-						<div class="STA3 ST2 StartingText">Very Own Website!</div>
-						<br>
-						<div class="STB1 ST1 StartingText">Note: This Is Under-Construction.</div>
-						<div class="STB2 ST2 StartingText">Thanks For Visiting!</div>
 					</div>
 				</section>
 			</div>
@@ -208,7 +215,7 @@
 							</li>
 							<li class="carda">
 								<a class="card leftb"
-									href="mailto:info.help.gamedev.unity@gmail.com?subject=Feedback From TestSite&body=Write the feedback here."
+									href="mailto:vedantsrivastava29@gmail.com?subject=Feedback From TestSite&body=Write the feedback here."
 									target="_blank">
 									Contact?
 								</a>
@@ -263,9 +270,11 @@
 							accusamus quasi quas veritatis molestiae odio tenetur, placeat possimus dolor.
 						</blockquote>
 
-						<h2>
-							[Sample text to study behavior(s)]
-						</h2>
+						<div class="dummy">
+							<h2>
+								[Sample text to study behavior(s)]
+							</h2>
+						</div>
 
 					</div>
 				</section>
@@ -274,7 +283,6 @@
 			<br>
 		</div>
 	</main>
-
 	
 	<footer><!-- * Footer -->
 		<div id="ftbg">

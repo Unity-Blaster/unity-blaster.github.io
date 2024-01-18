@@ -9,8 +9,8 @@
   /* --HeadHeight: calc((10vh + 10 vw)/20); */
   --HeadHeight: clamp(50px, 10vw, 100px);
   --FontSize: 1.75rem;
-  --HFontSize: clamp(50px, 10vw, 100px);
-  --SFontSize: 1rem;
+  --HFontSize: 10cqi;
+  --SFontSize: 3cqi;
   /* --bg: linear-gradient(
     -45deg,
     #ee7752,
@@ -47,6 +47,10 @@
   --tile-clr-2: #21A3F4; */
   --tile-clr-1: #131361;
   --tile-clr-2: #135985;
+
+  --hero-height: 20rem;
+  --hero-height-2: 15rem;
+  /* --hero-height: clamp(fit-content, 50vh, 8050px); */
 }
 
 @keyframes gradient {
@@ -104,7 +108,7 @@ footer {
   height: fit-content;
   z-index: 1;
   position: relative;
-  padding: 1%;
+  padding: 1vw;
   -webkit-box-shadow: 0px 0px 90px -20px var(--bg-shadow);
   -moz-box-shadow: 0px 0px 90px -20px var(--bg-shadow);
   box-shadow:
@@ -115,11 +119,11 @@ footer {
 
 .WebImg {
   height: var(--HeadHeight);
-  margin: 0;
   position: relative;
   border-radius: 20%;
   display: flex;
   cursor: pointer;
+
 }
 
 .WebImg::after {
@@ -131,12 +135,6 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.Filler2 {
-  width: 25.5vw;
-  max-width: 10.5vw;
-  height: auto;
 }
 
 .hamBurger {
@@ -158,7 +156,19 @@ footer {
   justify-self: center;
   align-self: center;
   min-width: fit-content;
+  margin: auto;
   cursor: none;
+}
+
+.vsweb-wrapper {
+  width: calc(90vw - (var(--HeadHeight)*2));
+  min-width: fit-content;
+  height: var(--HeadHeight);
+	container-type: inline-size;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 /* text eff */
@@ -189,8 +199,9 @@ div#ftbg div#ft h1 div#ModeToggle {
   color: #0e005c;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   display: flex;
+  container-type: inline-size;
 }
-
+#ft .copyright {container-type: inline-size;}
 .copyright h2 {
   font-size: var(--SFontSize);
 }
@@ -505,8 +516,8 @@ main,
 #text {
   height: 100vh;
   padding: 0%;
-  padding-left: 1%;
-  padding-right: 1%;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
 hr {
@@ -838,3 +849,52 @@ h2 {
 }
 
 /*! https://ihatetomatoes.net/create-custom-preloading-screen/ <--link to webpage used as ref */
+
+.preloader-shape {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 505;
+}
+
+.preloader-shape-mid {
+  transition: all 2500ms;
+  animation: shape-change-preloader 6s linear;
+  transform: rotate(90deg);
+  animation-fill-mode: forwards;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: black;
+}
+
+@keyframes shape-change-preloader {
+  0%, 24.9% {
+    border-radius: 50%;
+    background: green;
+  }
+
+  25%, 49.9% {
+    border-radius: 10%;
+    background: blue;
+  }
+
+  50%, 74.9% {
+    border-radius: 10%;
+    background: red;
+    height: 60px;
+    width: 60px;
+  }
+
+  75%, 99.9% {
+    border-radius: 50%;
+    background: white;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
