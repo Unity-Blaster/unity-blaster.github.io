@@ -22,7 +22,7 @@ body::-webkit-scrollbar {
 	box-shadow: 0 0 16px 1px #ffffff5f inset;
 	padding: 1%;
 	transition: all 500ms ease-in-out;
-  /* backdrop-filter: blur(10px); */
+	backdrop-filter: blur(4px);
 }
 
 /* .subMain:hover {
@@ -190,7 +190,7 @@ blockquote {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
-	font-size: 5cqi;
+	font-size: 3.5cqi;
 	margin: 1vw;
 }
 
@@ -277,6 +277,7 @@ blockquote {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	position: absolute;
 }
 
 .STA2 {
@@ -289,8 +290,8 @@ blockquote {
 }
 
 .hero-img {
-	width: 100px;
-	height: 100px;
+	width: 150px;
+	height: 150px;
 	position: relative;
 	filter: blur(150px);
 	transition: all 500ms ease-in-out;
@@ -298,7 +299,7 @@ blockquote {
 
 .hero-img1 {
 	background: red;
-	transform: translateX(30rem) translateY(8rem);
+	transform: translateX(20rem) translateY(2rem);
 }
 .hero-img2 {
 	background: blue;
@@ -310,7 +311,7 @@ blockquote {
 }
 .hero-img4 {
 	background: yellow;
-	transform: translateX(20rem) translateY(6rem);
+	transform: translateX(16rem) translateY(-1rem);
 }
 
 .startingHead {
@@ -410,6 +411,7 @@ blockquote {
 		width: 100%;
 		height: var(--hero-height);
 		min-height: fit-content;
+		position: absolute;
 	}
 
 	.hero2 {
@@ -430,5 +432,8 @@ blockquote {
 	.subGrid {
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(10, 20vh);
+	}
+	blockquote {
+		font-size: 5cqi;
 	}
 }
