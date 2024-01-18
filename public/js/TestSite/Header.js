@@ -29,6 +29,9 @@ setTimeout(() => {
 
 	Welcome0();
 
+	var usernameBtn = document.querySelector('.usernameBtn');
+	usernameBtn.addEventListener('click', Welcome);
+
 	document.addEventListener('keypress', function(event) {
 		if (event.key === 'a') {
 			console.log("The 'a' key was pressed");
