@@ -16,36 +16,72 @@ body {
   }
 }
 
-#follow {
-  animation: rotate 20s infinite;
-  filter: blur(100px) brightness(69%);
+.follow {
+  /* animation: rotate 20s infinite; */
+  /* filter: blur(100px) brightness(69%); */
 
-  background: linear-gradient(to right, #218faf, #8f00bf);
+  /* background: linear-gradient(to right, #218faf, #8f00bf); */
 
-  height: 40%;
-  aspect-ratio: 1/0.7;
-  max-height: 50vw;
-  max-width: 50vw;
+  height: 200%;
+  width: 100%;
 
   position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  border-radius: 50%;
+  left: 0;
+  top: 0;
 
   z-index: 100;
+  pointer-events: all;
 }
 
-#follow:hover {
-/*   background: red; */
+/* .follow:hover {
+  background: red;
   cursor: none;
+} */
+
+.follow::after:hover {
+  opacity: 1;
 }
- 
-#followSub {
-  max-height: inherit;
-  max-width: inherit;
-  background: #ffffffa0;
-  /* z-index: 9999; */
-  border-radius: 50%;
-  position: inherit;
+
+/* .follow {
+  position: relative;
+} */
+
+.follow:hover::before {
+  opacity: 1;
 }
+
+.follow::before,
+.follow::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+}
+
+.follow::before {
+  background: radial-gradient(
+    300px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.1),
+    #62b3ff10,
+    /* #0077ff10, */
+    #0000,
+    transparent 40%);
+  z-index: 102;
+  pointer-events: none;
+}
+
+/* .follow::after {
+  background: radial-gradient(
+    100px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.9),
+    transparent 40%);
+
+  z-index: 103;
+  pointer-events: none;
+} */

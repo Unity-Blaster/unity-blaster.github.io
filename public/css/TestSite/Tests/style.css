@@ -4,7 +4,8 @@ html {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: 100vw;
+  width: 90vw;
+  margin: auto;
 }
 body {
   background-color: #000020;
@@ -21,18 +22,19 @@ body {
   border-radius: 30px 4px;
   color: #ffffffaf;
   padding: 10px;
-  margin: 5px;
+  margin: auto;
   transform: skew(-4deg);
   max-width: 1200px;
 }
 
 .idd {
-  width: 90vw;
+  width: 100%;
   aspect-ratio: 1/0.1;
   background-color: #5f5f7fff;
   /* transform: skew(-4deg); */
   transition: all 300ms;
   max-width: 1200px;
+  container-type: inline-size;
 }
 
 .idd:hover {
@@ -48,19 +50,6 @@ body {
   color: white;
 }
 
-/* 
-@keyframes hoverGrow {
-	0% {
-		border-radius: initial;
-		aspect-ratio: 1/0.1;
-	}
-
-	100% {
-		border-radius: 5px;
-		aspect-ratio: 1/0.2;
-	}
-} */
-
 a {
   height: 100%;
   width: 100%;
@@ -70,7 +59,7 @@ a {
   text-decoration: none;
   color: #ffffff8f;
   transition: all 300ms;
-  font-size: 200%;
+  font-size: 4cqi;
 }
 .up {
   border-radius: 15px 2px 5px 5px;
@@ -86,18 +75,30 @@ a {
   height: 5px;
 }
 
-center {
-  text-decoration: #5f5f7ffe underline;
-}
-
 h1 {
   text-align: center;
-  font-size: 3em;
+  font-size: 6cqi;
   /* text-decoration-line: underline; */
   font-weight: 900;
+  text-decoration: #5f5f7ffe underline;
 }
 
 html,
 body {
   height: 100svh, 100vh;
+}
+
+@media (orientation: portrait) {
+  .idd {
+    aspect-ratio: 1/0.25;
+  }
+  .idd:hover {
+    aspect-ratio: 1/0.4;
+  }
+  a {
+    font-size: 6cqi;
+  }
+  h1 {
+    font-size: 8cqi;
+  }
 }
