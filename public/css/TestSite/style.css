@@ -1,23 +1,6 @@
-/* Colors for site. */
-:root {
-	--neon: #000061FF;
-	--neon2: #0f3bff;
-
-	--HeadHeight: 100vh;
-	/* --bg: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #23d573, #11ff11, #00923d, #070069); */
-	/* --bg: linear-gradient(-45deg, #0000FF, #00FFFF, #800080, #4B0082, #FFC0CB, #FF69B4); */
-	--bg: linear-gradient(-45deg, #000080, #02001d, #5c00b8);
+body {
+	background: var(--bg);
 }
-
-html {
-	background: black;
-}
-
-/* @font-face {
-	font-family: ARB;
-	src: url(TestSite/public/assets/Arial_Rounded_MT_Bold.ttf);
-} */
-
 
 * {
 	border: 0;
@@ -32,15 +15,13 @@ html {
 	/* use font from assets named Arial_Rounded_MT_Bold.ttf*/
 
 	font-family: Arial, Helvetica, sans-serif;
-
+	color: var(--txt);
 }
 
 body {
-	/* background-image: url("/assets/UC.png"); */
 	min-height: 100vh;
 	display: grid;
 	place-items: center;
-	/* background: linear-gradient(180deg, #000020,#00008a,#02004b,#000418,#000418,#02004a,#00008a,#000020), var(--neon); */
 	color: var(--clr-neon);
 
 	overflow-x: hidden;
@@ -76,28 +57,14 @@ div {
 }
 
 /* ! Landing page main stuff */
-/* .mfill {
-	Width: 100vw;
-	Height: 8vh;
-	Background-image: linear-gradient(90deg, #000020, red);
-}
-
-.nfill {
-	Width: 100vw;
-	Height: 2vh;
-	Background-image: linear-gradient(90deg, #000020, green);
-
-} */
-
 .lo {
 	/* cursor: none; */
 	text-decoration: none;
-	color: rgb(212, 0, 255);
+	/* color: rgb(212, 0, 255); */
 	border: currentColor 0em solid;
 	padding: 0.05em 0.05em;
 	border-radius: 0.025em;
 	margin: 0%;
-	/* text-shadow: 0 0 0.025em rgb(255, 60, 0), 0 0 0.15em currentColor; */
 	box-shadow: inset 0 0 0 0 rgb(51, 255, 0), 0 0 0 0 rgb(255, 230, 0);
 	text-shadow: 0 .1em .25em rgba(17, 0, 167, 0.295);
 }
@@ -200,6 +167,10 @@ h1 {
 
 	box-shadow: 0 8px 20px 0 #ffffff21;
 	background: #8fa0ff18;
+	background-image: linear-gradient(
+		var(--clr-dialog-blur),
+		transparent
+	);
 	z-index: 999;
 }
 
@@ -211,46 +182,8 @@ b,
 	width: fit-content;
 }
 
-/* .shapeBlurred {
-	position: absolute;
-
-	height: 20vh;
-	width: 20vh;
-	border-radius: 50%;
-
-	background: rgb(0, 1, 66);
-}
-
-.sB1 {
-	translate: -90% -40%;
-	background: rgba(0, 238, 255, 0.473);
-	top: -10%;
-	left: -10%;
-}
-
-.sB2 {
-	translate: 80% 90%;
-	background: rgba(0, 255, 21, 0.473);
-	top: -10%;
-	left: 70%;
-}
-
-.sB3 {
-	translate: -40% 90%;
-	background: rgba(255, 0, 0, 0.473);
-	top: 65%;
-	left: -15%;
-}
-
-.sB4 {
-	translate: 80% -40%;
-	background: rgba(208, 255, 0, 0.473);
-	top: 65%;
-	left: 65%;
-} */
-
 .ool {
-	color: #dfdfffaf;
+	/* color: #dfdfffaf; */
 	font-size: 1.25em;
 }
 
@@ -270,6 +203,7 @@ b,
 	/*
 	background-image: radial-gradient(45deg, #df9fff, #8f5fdf, #3f3faf, #2f2f8f); */
 	background-image: linear-gradient(-45deg, #df9fff, #8f5fdf, #3f3faf, #2f2f8f);
+	background-image: var(--txt-cool);
 
 	/* Set the background size and repeat properties. */
 
@@ -348,17 +282,17 @@ b,
 		background-position: 0% 50%;
 	}
 
-	25% {
+	/* 25% {
 		background-position: 25% 75%;
-	}
+	} */
 
 	50% {
 		background-position: 50% 100%;
 	}
 
-	75% {
+	/* 75% {
 		background-position: 25% 75%;
-	}
+	} */
 
 	100% {
 		background-position: 0% 50%;
@@ -367,9 +301,8 @@ b,
 
 
 #he1 {
-  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #23d573, #11ff11, #00923d, #070069); */
-	background: var(--bg);
-	background-size: 400% 400%;
+	background: var(--bg-gradient-hdr);
+	background-size: 400% 100%;
 	animation: gradient 40s ease infinite;
 	position: relative;
 	padding: 0%;
@@ -377,7 +310,7 @@ b,
 }
 
 .glass {
-	background-color: rgba(255, 255, 255, 0.295);
+	/* background-color: rgba(255, 255, 255, 0.295); */
 	backdrop-filter: blur(10px);
 	border-radius: 10px;
 }

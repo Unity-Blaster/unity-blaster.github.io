@@ -4,8 +4,10 @@ setTimeout(() => {
             const rect = follow.getBoundingClientRect(),
                 x = e.clientX - rect.left,
                 y = e.clientY - rect.top;
-            follow.style.setProperty("--mouse-x", `${x}px`);
-            follow.style.setProperty("--mouse-y", `${y}px`);
+            setTimeout(() => {
+                follow.style.setProperty("--mouse-x", `${x}px`);
+                follow.style.setProperty("--mouse-y", `${y}px`);
+            }, 0);
         };
     };
 }, 100);

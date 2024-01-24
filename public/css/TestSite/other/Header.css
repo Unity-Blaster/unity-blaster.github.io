@@ -1,74 +1,27 @@
 * {
   font-family: "Arial Rounded MT";
   font-size: var(--FontSize);
+  color: var(--txt);
 }
 
-:root {
-  --var1: #1e00ca;
-  --var2: #120061;
-  /* --HeadHeight: calc((10vh + 10 vw)/20); */
-  --HeadHeight: clamp(50px, 10vw, 100px);
-  --FontSize: 1.75rem;
-  --HFontSize: 10cqi;
-  --SFontSize: 3cqi;
-  /* --bg: linear-gradient(
-    -45deg,
-    #ee7752,
-    #e73c7e,
-    #23a6d5,
-    #23d5ab,
-    #23d573,
-    #11ff11,
-    #00923d,
-    #070069
-  ); */
 
-  --bg: linear-gradient(-45deg, #0000809a, #02001d9a, #5c00b89a);
-  /* --bg-shadow: #00d9ff7e; */
-  --bg-shadow: #00000000;
-  --MainFontColor: #00ffff;
-
-  /* --bar-width: clamp(50px, 5vw, 100px); */
-  --bar-width: 100%;
-  /* --bar-height: 0.8vw; */
-  --bar-height: 20%;
-  --hamburger-gap: 20%;
-  --hamburger-color: #114d75;
-  --foreground: #fff;
-  --background: #000020;
-  --sidebar-bg: #000020;
-  --sidebar-fd: #00ffff;
-  --hamburger-margin: 0.8vw;
-  --animation-timing: 500ms ease-in-out;
-  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
-  --arial-rounded-bold: "/public/assets/Arial_Rounded_MT_Bold.ttf";
-
-  /* --tile-clr-1: #2121AF;
-  --tile-clr-2: #21A3F4; */
-  --tile-clr-1: #131361;
-  --tile-clr-2: #135985;
-
-  --hero-height: 20rem;
-  --hero-height-2: 15rem;
-  /* --hero-height: clamp(fit-content, 50vh, 8050px); */
-}
 
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
   }
 
-  25% {
+  /* 25% {
     background-position: 25% 75%;
-  }
+  } */
 
   50% {
     background-position: 50% 100%;
   }
 
-  75% {
+  /* 75% {
     background-position: 25% 75%;
-  }
+  } */
 
   100% {
     background-position: 0% 50%;
@@ -78,6 +31,7 @@
 body {
   margin: 0%;
   overflow-x: hidden;
+  background: var(--bg);
 }
 
 /* .head,
@@ -100,10 +54,10 @@ footer {
 
 #he1 {
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #23d573, #11ff11, #00923d, #070069); */
-  background: var(--bg);
+  background: var(--bg-gradient-hdr);
   /* background-color: rgba(255, 255, 255, 0.5); */
   backdrop-filter: blur(10px);
-  background-size: 400% 400%;
+  background-size: 400% 100%;
   animation: gradient 40s ease infinite;
   height: fit-content;
   z-index: 1;
