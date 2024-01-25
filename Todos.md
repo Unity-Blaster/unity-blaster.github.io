@@ -18,7 +18,7 @@
 * [X] ~~*Basic Responsive Layouts*~~ [01-01-2024]
 * [X] ~~*Basic but good file system layout*~~ [05-01-2024]
 * [X] ~~*This list*~~ [25-01-2024]
-* [ ] Moar
+* [X] ~~*Moar*~~ [25-01-2024]
 
 <h2>Partial Implementation</h2>
 
@@ -28,7 +28,8 @@
 * [ ] *Font stuff*
 + * [ ] *Use Arial_Rounded_MT_Bold as the main heading font*
 + * [ ] *Use Arial for normal text*
-* [ ] Moar
+* [ ] *Update the above section withcorrect dates*
+* [ ] *Moar*
 
 <h2>To be Implemented</h2>
 
