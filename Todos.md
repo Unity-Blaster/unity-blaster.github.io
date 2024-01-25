@@ -29,6 +29,7 @@
 + * [ ] *Use Arial_Rounded_MT_Bold as the main heading font*
 + * [ ] *Use Arial for normal text*
 * [ ] *Update the above section withcorrect dates*
+* [ ] *Some Accessibility*
 * [ ] *Moar*
 
 <h2>To be Implemented</h2>
@@ -52,7 +53,8 @@
 + * [ ] Simplify code while achiveing the same results
 * [ ] Make css and js files change the elements they're meant for
 + * [ ] Remove 'body {code}' from Header.css
-+ * [ ] 
++ * [ ] Moar
+* [ ] Proper Well Thought-out Accessiblity
 * [ ] Moar
 
 </ul>
