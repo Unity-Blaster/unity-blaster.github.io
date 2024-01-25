@@ -34,4 +34,6 @@ The distro has to follow the [Unlicence Licence](/LICENSE.txt) and the following
 ## Misc
 [I'll add more to Read-Me Later. Cuz it's not That important.]
 
-## [**Timeline/Roadmap For This Project**](/Todos.md)
+### [***Timeline/Roadmap For This Project -->***](/Todos.md)
+
+<style>a, a:hover {color: white;} body {background: black; color: cyan;} h1, h2, h3 {color: white;}</style>

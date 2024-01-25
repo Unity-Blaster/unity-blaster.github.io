@@ -1,7 +1,9 @@
 # **Timeline/Roadmap**
 <ul type="none">
 
-<h2>Fully Implemented</h2>
+<h2 style="color: #00ff00">Fully Implemented</h2>
+
+<font color="#80ff80">
 
 * [X] ~~*Home Page*~~ [2022]
 * [X] ~~*Landing Page*~~ [2022]
@@ -20,7 +22,11 @@
 * [X] ~~*This list*~~ [25-01-2024]
 * [X] ~~*Moar*~~ [25-01-2024]
 
-<h2>Partial Implementation</h2>
+</font>
+
+<h2 style="color: #ffff00">Partial Implementation</h2>
+
+<font color="#ffff80">
 
 * [ ] *Theme Support*
 + * [ ] *Responsive Themes*
@@ -32,7 +38,11 @@
 * [ ] *Some Accessibility*
 * [ ] *Moar*
 
-<h2>To be Implemented</h2>
+</font>
+
+<h2 style="color: #ff0000">To be Implemented</h2>
+
+<font color="#ff8080">
 
 * [ ] Complex Responsive Layouts
 * [ ] Complex Username Support
@@ -57,4 +67,10 @@
 * [ ] Proper Well Thought-out Accessiblity
 * [ ] Moar
 
+</font>
+
 </ul>
+
+### [***<-- Head Back to Readme?***](/README.md)
+
+<style>a, a:hover {color: white;} body {background: black; color: cyan;} h1, h2, h3 {color: white;}</style>
