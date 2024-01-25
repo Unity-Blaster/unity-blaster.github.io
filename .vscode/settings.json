@@ -18,5 +18,10 @@
   "liveServer.settings.port": 6969,
   "better-comments.highlightPlainText": true,
   "github.copilot-labs.showBrushesLenses": true,
-  "github.copilot-labs.showTestGenerationLenses": true
+  "github.copilot-labs.showTestGenerationLenses": true,
+
+  "markdown-checkbox.typeOfBulletPoint": "+",
+  "markdown-checkbox.strikeThroughWhenChecked": true,
+  "markdown-checkbox.italicWhenChecked": true,
+  "markdown-checkbox.dateFormat": "DD-MM-YYYY"
 }

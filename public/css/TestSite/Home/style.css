@@ -128,22 +128,39 @@ ul li a.card {
 .dummy h2 {font-size: 6cqi;}
 
 a.card:hover {
-	box-shadow: 
-	#0004ffb6 0px 0.35rem 1.175rem inset,
-	#00c3ffdc 0px 0.175rem 0.5rem inset;
 	transform: translateY(-3px) translateZ(10px) scale(1.1) skew(2deg);
 	z-index: 999;
 	margin: 1%;
+	border-radius: 10px 10px 10px 10px;
+	/* margin: 10%; */
+	position: relative;
+}
+a.card::after {
+	content: '';
+	height: 100%;
+	width: 100%;
+	opacity: 0;
 	box-shadow:
 	0 0 0 10px #000080 inset,
 	0 0 0 20px #000060 inset,
-	0 0 0 30px #000050 inset,
-	0 0 0 40px #000040 inset;
-	border-radius: 10px 10px 10px 10px;
-	/* margin: 10%; */
+	0 0 0 30px #00006077 inset,
+	0 0 0 40px #0000 inset;
+	position: absolute;
+	border-radius: inherit;
+	transition: opacity 500ms, box-shadow 500ms;
+	/*
+	0px 0.350rem 1.175rem #0004ffb6 inset,
+	0px 0.175rem 0.500rem #00c3ffdc inset;
+	*/
 }
+a.card:hover::after {
+	opacity: 1;
+	transition: opacity 300ms, box-shadow 500ms;
+}
+/* ! FIXME: fix box-shadow transition resource-hungry-ness */
 li.carda:hover {
 	z-index: 999;
+	transition: all 300ms;
 }
 
 h1 {

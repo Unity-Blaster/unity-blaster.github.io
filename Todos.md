@@ -1,47 +1,57 @@
-# TODO
+# **Timeline/Roadmap**
+<ul type="none">
 
-## For index.css<!-- * For index.css -->
+<h2>Fully Implemented</h2>
 
-1. [by Baba] While transitioning b/w pages, make each transition like:
-        Prev.Page --> Gets Smaller --> Next.Page appears --> Gets Normal size.  
+* [X] ~~*Home Page*~~ [2022]
+* [X] ~~*Landing Page*~~ [2022]
+* [X] ~~*nice colours*~~ [2022]
+* [X] ~~*Proper Header & Footer*~~ [2023]
+* [X] ~~*Few Extra Pages*~~ [2023]
+* [X] ~~*Cool Hacker-ish hover-effect for header at Home Page*~~ [05-2023]
+* [X] ~~*max-width for Main Content*~~ [08-2023]
+* [X] ~~*Sidebar*~~ [09-2023]
+* [X] ~~*Basic Username Support*~~ [10-2023]
+* [X] ~~*Basic preloader*~~ [11-2023]
+* [X] ~~*Cool background grid effect (interactive)*~~ [12-2023]
+* [X] ~~*Use container queries for font resizing*~~ [01-2024]
+* [X] ~~*Basic Responsive Layouts*~~ [01-01-2024]
+* [X] ~~*Basic but good file system layout*~~ [05-01-2024]
+* [X] ~~*This list*~~ [25-01-2024]
+* [ ] Moar
 
-## For Home.css<!-- * For Home.css -->
+<h2>Partial Implementation</h2>
 
-1. [by me] Add a pre-loader.
-2. [by me & m^3] Add a diff style to the Name entered than the rest of the text.
-3. Fix.problem("Hi null!");
+* [ ] *Theme Support*
++ * [ ] *Responsive Themes*
+* [ ] *Better Performance with box-shadows*
+* [ ] *Font stuff*
++ * [ ] *Use Arial_Rounded_MT_Bold as the main heading font*
++ * [ ] *Use Arial for normal text*
+* [ ] Moar
 
-## For Header.css<!-- * For Header.css + .js -->
+<h2>To be Implemented</h2>
 
-1. add a sys to limit the amount of times the header text can be "hacker animated', or rather, put a cap on it.
-2. take the value of header colors and then pick a random from that and put it as text color.
-3. add a toggle for the above.
+* [ ] Complex Responsive Layouts
+* [ ] Complex Username Support
+* [ ] Enabling access of secret content thru specific keyword(s)
+* [ ] Themes
++ * [ ] Theme Switcher
++ * [ ] Auto Theme picker (system-based)
++ * [ ] Storage of chosen Theme
++ * [ ] Picking stored theme
+* [ ] Cool stuff
++ * [ ] Better file layout
++ * [ ] Better sidebar
++ * [ ] Make the preloader smarter
++ * [ ] While transitioning b/w pages, make each transition like: <br>
+		Prev.Page --> Gets Smaller --> Next.Page appears --> Gets Normal size.  
+* [ ] Simplification & less Recursive code
++ * [ ] Remove Repetition of code
++ * [ ] Simplify code while achiveing the same results
+* [ ] Make css and js files change the elements they're meant for
++ * [ ] Remove 'body {code}' from Header.css
++ * [ ] 
+* [ ] Moar
 
-## Imp<!-- ! Imp -->
-
-1. fix conflicts in dev tools and font-scaling-in-relation-oth-elements-while-zooming...
-
-2. Change the viewport units into rem or % or something similar.
-
-3. make the header change its size as the text gets bigger/smaller.
-
-## to fix, which can't be fixed now<!-- ! to fix, which can't be fixed now -->
-
-<!-- 1.in header.css
-* {
-        font-family: url(/assets/Arial_Rounded_MT_Bold.ttf);
-} -->
-
-2.remove body {} from header.css and footer.css
-
-3.remove repetetive properties from header.css and footer.css and assign them to only head.css
-
-## not that imp but still necessary<!-- ? not that imp but still necessary -->
-
-1. use profiles feature in vs cde to be used while writing diff. codes.
-
-## Overall
-
-1. Add css, js, assets to /public/
-
-2. Test stuff
+</ul>
