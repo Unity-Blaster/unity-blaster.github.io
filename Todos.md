@@ -1,7 +1,7 @@
 # **Timeline/Roadmap**
 <ul type="none">
 
-<h2 style="color: #00ff00">Fully Implemented</h2>
+<h2 style="color: #00ff00">🟩Fully Implemented🟢</h2>
 
 <font color="#80ff80">
 
@@ -24,7 +24,7 @@
 
 </font>
 
-<h2 style="color: #ffff00">Partial Implementation</h2>
+<h2 style="color: #ffff00">🟨Partial Implementation🟡</h2>
 
 <font color="#ffff80">
 
@@ -40,7 +40,7 @@
 
 </font>
 
-<h2 style="color: #ff0000">To be Implemented</h2>
+<h2 style="color: #ff0000">🟥To be Implemented🔴</h2>
 
 <font color="#ff8080">
 
@@ -72,5 +72,3 @@
 </ul>
 
 ### [***<-- Head Back to Readme?***](/README.md)
-
-<style>a, a:hover {color: white;} body {background: black; color: cyan;} h1, h2, h3 {color: white;}</style>
