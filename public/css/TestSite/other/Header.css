@@ -517,6 +517,60 @@ main #bg,
     0 0 0 20px #00ffff60;
   border-radius: 32px;
 }
+/* 
+.scroll-watcher {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 100vw;
+  bottom: 0;
+  margin: 10px;
+  background-image: conic-gradient(
+    green,
+    green
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: scroll-watcher linear scroll();
+  pointer-events: all;
+}
+
+@keyframes scroll-watcher {
+  from {
+    background-image: conic-gradient(
+      green,
+      green
+    );
+  } to {
+    background-image: conic-gradient(
+      blue,
+      blue
+    );
+  }
+}
+
+.wrap-btn--sound {
+  left: 0;
+}
+
+.btn--sound {
+  height: 40px;
+  width: 40px;
+  border-radius: inherit;
+  background: pink;
+}
+
+.wrap-btn--up {
+  right: 0;
+}
+
+.btn--up {
+  height: 40px;
+  width: 40px;
+  border-radius: inherit;
+  background: aqua;
+} */
 
 /* * Footer */
 
@@ -610,7 +664,7 @@ h2 {
   width: 100%;
   height: 100%;
   z-index: 2001;
-  background: #000032;
+  background: #000002;
   display: grid;
 }
 
@@ -626,105 +680,6 @@ h2 {
 
 }
 
-.ld1 {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  border: 3px solid transparent;
-  border-top-color: #3498db;
-  border-radius: 50%;
-
-  -webkit-animation: spin 1.5s linear infinite;
-  animation: spin 1s linear infinite;
-}
-
-.ld2 {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  border: 3px solid transparent;
-  border-top-color: #e74c3c;
-  border-radius: 50%;
-
-  -webkit-animation: spin 1.5s linear infinite;
-  animation: spin 1.25s linear infinite;
-}
-
-.ld3 {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
-  border: 3px solid transparent;
-  border-top-color: #f9c922;
-  border-radius: 50%;
-
-  -webkit-animation: spin 1.5s linear infinite;
-  animation: spin 1.5s linear infinite;
-}
-
-.ld4 {
-  content: "";
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  right: 25px;
-  bottom: 25px;
-  border: 3px solid transparent;
-  border-top-color: #22f93f;
-  border-radius: 50%;
-
-  -webkit-animation: spin 1.5s linear infinite;
-  animation: spin 1.75s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(0deg);
-    /* IE 9 */
-    transform: rotate(0deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(360deg);
-    /* IE 9 */
-    transform: rotate(360deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(0deg);
-    /* IE 9 */
-    transform: rotate(0deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(360deg);
-    /* IE 9 */
-    transform: rotate(360deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-}
 
 #loader-wrapper .loader-section {
   position: fixed;
@@ -804,51 +759,22 @@ h2 {
 
 /*! https://ihatetomatoes.net/create-custom-preloading-screen/ <--link to webpage used as ref */
 
-.preloader-shape {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 505;
+.loaderBarWrap {
+  height: fit-content;
+  padding: .2rem;
+  width: 90vw;
+  border-radius: 100vw;
+  position: absolute;
+  left: 5vw;
+  bottom: 5vh;
+  z-index: 2000;
+  border: white solid .1rem;
 }
 
-.preloader-shape-mid {
-  transition: all 2500ms;
-  animation: shape-change-preloader 6s linear;
-  transform: rotate(90deg);
-  animation-fill-mode: forwards;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: black;
-}
-
-@keyframes shape-change-preloader {
-  0%, 24.9% {
-    border-radius: 50%;
-    background: green;
-  }
-
-  25%, 49.9% {
-    border-radius: 10%;
-    background: blue;
-  }
-
-  50%, 74.9% {
-    border-radius: 10%;
-    background: red;
-    height: 60px;
-    width: 60px;
-  }
-
-  75%, 99.9% {
-    border-radius: 50%;
-    background: white;
-  }
-
-  100% {
-    opacity: 0;
-  }
+.loaderBar {
+  height: 10px;
+  background: white;
+  min-width: 0;
+  width: var(--loaderBarWidth);
+  border-radius: 100vw;
 }

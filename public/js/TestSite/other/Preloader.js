@@ -3,10 +3,16 @@ setTimeout(() => {
 	function percentIncrease(timeB4Open) {
 		var percent = 0;
 		var loaderElement = document.querySelector('.loaderPercentage');
+		var loaderBar = document.querySelector('.loaderBar');
 
 		function updatePercent() {
 			percent += 1;
 			loaderElement.textContent = percent + '%';
+			loaderBar.setAttribute('style', '--loaderBarWidth: ' + percent + '%');
+
+			if (loaderElement.textContent == '100%') {
+				revealPage();
+			}
 		};
 
 		var interval = setInterval(function() {
@@ -20,11 +26,8 @@ setTimeout(() => {
 
 	function revealPage() {
 		document.body.classList.add("loaded");
+		// console.log("Preloader has now completed animating...");
 	};
 
 	percentIncrease(4.5);
-
-	setTimeout(() => {
-		revealPage();
-	}, 5500);
 }, 500);

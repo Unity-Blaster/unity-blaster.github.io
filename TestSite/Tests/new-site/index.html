@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>New Site Concept for TestSite</title>
+
+	<!-- Reset -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+	<style>
+		:root {
+			--body-bg: #000020;
+			--hero-bg: rgba(15, 21, 37, .6);
+			--text-bg: white;
+            --def-transition-duration: 300ms;
+			--loader-text-color: #f6e9fe;
+			--loader-dot-color: #A51FF6;
+			--loader-bg: #100319;
+        	--HeadHeight: clamp(50px, 10vw, 80px);
+            --btn-classy-clr: #9E70EB;
+		}
+		html {
+			color:  var(--text-bg);
+			font-size: 16px;
+			font-family: 'Poppins', sans-serif;
+			line-height: 1.5;
+		}
+
+		body {
+			background: var(--body-bg);
+		}
+
+        /* * preloader */
+        .loader-container {
+			position: fixed;
+			inset: 0;
+			z-index: 999;
+			display: grid;
+			place-content: center;
+			transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
+		}
+
+		.svg-logo {
+            min-width: 10rem;
+		}
+		.svg-logo text {
+			font-size: 5rem;
+			stroke: none;
+			fill: var(--loader-text-color);
+			font-weight: 700;
+			stroke-linecap: round;
+		}
+
+        .svg-preloader {
+			width: 100vw;
+			z-index: 2500;
+		}
+		.svg-preloader text {
+			stroke-width: 2;
+			fill: none;
+			letter-spacing: -2px;
+			animation: animate-stroke 4s 1s infinite alternate;
+		}
+		@keyframes animate-stroke {
+			0% {
+				stroke-opacity: 0;
+				stroke-dashoffset: 25%;
+				stroke-dasharray: 0 32%;
+			}
+			5%, 10% {
+				fill: transparent;
+				stroke: var(--loader-text-color);
+				stroke-width: 3;
+			}
+			50% {
+				fill: transparent;
+				stroke: var(--loader-text-color);
+				stroke-width: 3;
+				stroke-opacity: 60%;
+			}
+			80%, 100% {
+				fill: var(--loader-text-color);
+				stroke: transparent;
+				stroke-width: 0;
+				stroke-dashoffset: -25%;
+				stroke-dasharray: 32% 0;
+			}
+		}
+		@keyframes animate-stroke-finished {
+			from, to {
+				fill: var(--loader-text-color);
+				stroke: transparent;
+				stroke-width: 0;
+				stroke-dashoffset: -25%;
+				stroke-dasharray: 32% 0;
+			}
+		}
+		@keyframes body-animate-fill{
+			0%, 50% {
+				background: var(--loader-bg);
+			}
+			80%, 100% {
+				background: #000000;
+			}
+		}
+		@keyframes body-fill-finished {
+			from, to {
+				background: #000000;
+			}
+		}
+
+		@keyframes fill-in {from {opacity: 0;} to {opacity: 1;}}
+		@keyframes fill-out {from {opacity: 1;}to {opacity: 0;}}
+		
+		#loader-wrapper {
+			position: fixed;
+			top: 0;
+			left: 0;
+			min-width: 100vw;
+			min-height: 100vh;
+			width: 100%;
+			height: 100%;
+			z-index: 2001;
+			background: #000002af;
+			backdrop-filter: blur(16px);
+			display: grid;
+		}
+
+		#loader-wrapper .loader-section {
+			position: fixed;
+			top: 0;
+			width: 51%;
+			height: 100%;
+			background-color: var(--loader-bg);
+			animation: body-animate-fill 4s 1s infinite alternate;
+			z-index: 2000;
+		}
+
+		#loader-wrapper .loader-section.section-left {
+			left: 0;
+		}
+
+		#loader-wrapper .loader-section.section-right {
+			right: 0;
+		}
+
+		.loaderPercentage {
+			color: white;
+			font-size: large;
+			z-index: 2500;
+			justify-self: center;
+			top: 80%;
+			position: fixed;
+			opacity: 0;
+		}
+
+		/* Loaded */
+		.loaded #loader-wrapper .loader-section.section-left {
+			-webkit-transform: translateX(-100%);
+			/* Chrome, Opera 15+, Safari 3.1+ */
+			-ms-transform: translateX(-100%);
+			/* IE 9 */
+			transform: translateX(-100%);
+			/* Firefox 16+, IE 10+, Opera */
+		}
+
+		.loaded #loader-wrapper .loader-section.section-right {
+			-webkit-transform: translateX(100%);
+			/* Chrome, Opera 15+, Safari 3.1+ */
+			-ms-transform: translateX(100%);
+			/* IE 9 */
+			transform: translateX(100%);
+			/* Firefox 16+, IE 10+, Opera */
+		}
+
+		.loaded #loader {
+			opacity: 0;
+		}
+
+		.loaded #loader {
+			opacity: 0;
+			-webkit-transition: all 0.3s ease-out;
+			transition: all 0.3s ease-out;
+		}
+
+		.loaded #loader-wrapper .loader-section.section-right,
+		.loaded #loader-wrapper .loader-section.section-left {
+			-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+			transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		}
+
+		.loaded #loader-wrapper {
+			-webkit-transform: translateY(-100%);
+			-ms-transform: translateY(-100%);
+			transform: translateY(-100%);
+
+		-webkit-transition: all 0.3s 1s ease-out;
+			transition: all 0.3s 1s ease-out;
+		}
+
+		.loaded #loader-wrapper .loaderPercentage {
+			opacity: 0;
+			transition: all 200ms;
+		}
+
+		.loaderBarWrap {
+			height: fit-content;
+			padding: .2rem;
+			width: 90vw;
+			border-radius: 100vw;
+			position: absolute;
+			left: 5vw;
+			bottom: 5vh;
+			z-index: 2000;
+			border: white solid .1rem;
+			opacity: 0;
+		}
+
+		.loaderBar {
+			--loaderBarWidth: 0%;
+			height: 10px;
+			background: white;
+			min-width: 0;
+			width: var(--loaderBarWidth);
+			border-radius: 100vw;
+			transition: width 50ms linear forwards;
+		}
+        /* * preloader end */
+
+        /* * header */
+        .btn-classy {
+			appearance: none;
+			border: 1px solid var(--btn-classy-clr);
+			color: var(--text-bg);
+			background-color: var(--btn-classy-clr);
+			border-radius: 10rem;
+			padding: .75rem 1.5rem;
+			cursor: pointer;
+            transition: 
+                background-color var(--def-transition-duration) ease-in-out,
+                color var(--def-transition-duration) ease-in-out;
+		}
+
+        .btn-classy:hover {
+            background-color: transparent;
+            color: var(--btn-classy-clr);
+        }
+        /* classy button */
+
+        /* classy button end */
+        .svg-header {
+			width: 10rem;
+		}
+        
+        nav li {
+            display: inline-flex;
+            align-items: center;
+        }
+
+		nav ul {
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+            display: flex;
+            gap: 3rem;
+            width: 80%;
+            justify-content: center;
+		}
+
+		nav ul a {
+            text-decoration: none;
+            color: #A1A2A3;
+            display: inline-flex;
+            padding: 1.5rem 0;
+            align-items: center;
+		}
+
+        #svg-logo-a,
+        #nav-btn {
+            padding: 0%;
+            height: var(--HeadHeight);
+        }
+
+		nav ul a:hover {
+			color: #E8E8E8;
+		}
+        
+        nav {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-sq {
+            height: calc(var(--HeadHeight) * 90 / 100);
+            width: calc(var(--HeadHeight) * 90 / 100);
+            height: calc(var(--HeadHeight));
+            width: calc(var(--HeadHeight));
+            top: 0;
+            position: absolute;
+            background: black;
+            border-radius: 10px;
+        }
+
+        #nav-sq-left {left: 0;}
+        #nav-sq-right {right: 0;}
+
+		#main-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 80%;
+			margin: 0 auto;
+			margin: 0 auto;
+			padding: 0 1.5rem;
+			position: fixed;
+			z-index: 10;
+            height: var(--HeadHeight);
+		}
+
+		.back-header,
+		.back-drop-down {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			transition-property: border-radius;
+		}
+		.back-header {
+			border-radius: 1vw;
+		}
+
+		.back-drop-down {
+			border-radius: 0 0 .5rem .5rem;
+		}
+
+		.has-submenu {
+			position: relative;
+			display: flex;
+			gap: .5rem;
+			align-items: center;
+			justify-content: flex-start;
+		}
+
+		.has-submenu::after {
+			content: url('assets/icon-arrow-down.svg');
+			opacity: .6;
+			height: 25px;
+		}
+
+		.has-submenu:hover .drop-down {
+			display: block;
+		}
+
+		.drop-down {
+			--dd-height: 250px;
+
+			position: absolute;
+			top: 100%;
+			left: -2rem;
+			height: var(--dd-height);
+            width: fit-content;
+			padding: .5rem;
+			display: none;
+			transition-property: border-radius;
+			z-index: 0;
+		}
+		.drop-down:hover > .back-drop-down {
+			border-radius: 0 0 0 .5rem;
+		}
+
+		.drop-down li {
+			height: 20%;
+		}
+
+		.drop-down a {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1rem;
+			height: 100%;
+			min-width: 15rem;
+			border-radius: .5rem;
+			transition-property: background-color, padding;
+			transition-delay: 50ms;
+		}
+
+		.drop-down a::after {
+			content: '';
+			height: 17px;
+			opacity: 0;
+			transition-property: opacity, content;
+		}
+
+		.drop-down a:hover {
+			padding: 1rem 1.5rem;
+			background-color: var(--hero-bg);
+		}
+
+		.drop-down a:hover::after {
+			opacity: 1;
+			content: url('assets/icon-arrow-right.svg');
+		}
+
+		.has-submenu:hover::after {
+			opacity: 1;
+		}
+
+		.has-submenu:hover > a {
+			color: #E8E8E8;
+		}
+
+		.drop-right {
+			--width: 500px;
+			position: absolute;
+			height: var(--dd-height);
+			background: var(--hero-bg);
+			width: var(--width);
+			top: 0rem;
+			right: calc(var(--width) * -1);
+			opacity: 0;
+			transform: translateX(-1rem);
+			padding: inherit;
+			border-radius: inherit;
+			visibility: hidden;
+			transition-property: opacity, transform, visibility, border-radius;
+			transition-delay: 100ms;
+		}
+
+		.drop-down a:hover > .drop-right {
+			opacity: 1;
+			transform: translateX(0px);
+			border-radius: 0 0 .5rem 0;
+			z-index: 5;
+			visibility: visible;
+		}
+
+		nav ul a {transition-property: color;}
+		.has-submenu::after {transition-property: opacity;}
+		.drop-down {
+			display: block;
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(-1rem);
+			transition-property: opacity, visibility, transform;
+		}
+		.has-submenu:hover .drop-down {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+
+		nav ul a,
+		.has-submenu::after,
+		.drop-down,
+		.drop-down a,
+		.drop-down a::after,
+		.drop-right,
+		.back-header,
+		.back-drop-down {
+			transition-timing-function: ease-in-out;
+			transition-duration: var(--def-transition-duration);
+		}
+		.drop-right,
+		.back-drop-down,
+		.back-header {
+			backdrop-filter: blur(16px);
+			background-color: var(--hero-bg);
+		}
+        /* * header end */
+
+        /* * hero */
+		img {
+			display: block;
+		}
+
+		#hero {
+			height: 100vh;
+			color:  var(--text-bg);
+			object-fit: cover;
+		}
+
+		#hero .container::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: var(--hero-bg);
+			z-index: -1;
+		}
+
+		.container {
+			width: 100%;
+			padding: 4rem 10%;
+			height: 60%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-start;
+			position: relative;
+		}
+
+		h1 {
+			font-size: 4.875rem;
+			font-weight: 700;
+			max-width: 80%;
+			line-height: 1.2;
+			color: var(--text-bg);
+		}
+
+		h1 span {
+			color: #FFBF1A;
+		}
+
+		.vid {
+			position: absolute;
+			object-fit: cover;
+		}
+
+		#hero-vid {
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			z-index: -2;
+		}
+
+		#body-vid-1 {
+			border-radius: 10px;
+			right: 100px;
+			top: 0;
+			width: 200px;
+			height: auto;
+			z-index: 1;
+		}
+		
+		.hero-under {
+			background-image: linear-gradient(
+				var(--hero-bg),
+				/* transparent, */
+				var(--body-bg)
+			);
+			width: 100%;
+			height: 40vh;
+            /* position: absolute; */
+		}
+        /* * hero end */
+
+        /* lower res screen support */
+        .support-error {
+            position: fixed;
+            opacity: 0;
+            visibility: hidden;
+            z-index: -999;
+            height: 100vh;
+            width: 100vw;
+            background: #ff000038;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .support-error-msg {
+            height: fit-content;
+            width: 60%;
+            border-radius: 10px;
+            text-align: justify;
+            color: white;
+            background: #500000;
+            padding: 1rem;
+        }
+        @media only screen and (max-width: 1200px) {
+            .support-error {
+                opacity: 1;
+                visibility: visible;
+                z-index: 9999;
+            }
+        }
+        /* lower res screen support end*/
+
+        /* * main content */
+        main {
+            position: absolute;
+
+        }
+		p {
+			text-align: justify;
+		}
+        /* * main content end */
+	</style>
+    <script>
+		// * preloader stuff
+		setTimeout(() => {
+			function percentIncrease(timeB4Open) {
+				var percent = 0;
+				var loaderElement = document.querySelector('.loaderPercentage');
+				var loaderBar = document.querySelector('.loaderBar');
+
+				function updatePercent() {
+					percent += 1;
+					loaderElement.textContent = percent + '%';
+					loaderBar.setAttribute('style', '--loaderBarWidth: ' + percent + '%');
+
+					if (loaderElement.textContent == '100%') {
+						setTimeout(() => {
+							revealPage();
+							document.querySelector('.svg-preloader').setAttribute('style', 'animation: fill-out 500ms linear forwards');
+							document.querySelector('.loaderBarWrap').setAttribute('style', 'animation: fill-out 500ms linear forwards');
+							document.querySelector('.loaderPercentage').setAttribute('style', 'animation: fill-out 500ms linear forwards');
+						}, 1000);
+					};
+				};
+
+				var interval = setInterval(function() {
+					if (percent >= 100) {
+						clearInterval(interval);
+					} else {
+						updatePercent();
+					}
+				}, (timeB4Open * 1000) / 100); // Divide by 100 because 100% / 1% increments = 100 updates
+			};
+
+			function revealPage() {
+				document.body.classList.add("loaded");
+				// console.log("Preloader has now completed animating...");
+			};
+
+			const items = document.querySelectorAll('.svg-preloader text');
+			const itemWraps = document.querySelectorAll('.loader-section');
+			function svgLogoFin() {
+
+				items.forEach(item => {
+					item.setAttribute('style', 'animation: animate-stroke-finished 4s linear forwards');
+				});
+				itemWraps.forEach(itemWrap => {
+					itemWrap.setAttribute('style', 'animation: body-fill-finished 4s linear forwards');
+				});
+
+				setTimeout(() => {
+					document.querySelector('.loaderBarWrap').setAttribute('style', 'animation: fill-in 2s linear forwards')
+					document.querySelector('.loaderPercentage').setAttribute('style', 'animation: fill-in 2s linear forwards')
+					percentIncrease(5);
+				}, 4000);
+			};
+			svgLogoFin()			
+		}, 11000);
+        // preloader end
+	</script>
+</head>
+<body>
+    <div class="support-error">
+        <div class="support-error-msg">
+            This webpage has not been optimised for lower resolution screens. To view the content, please consider turning on 'Desktop Mode' or viewing this site on a wider screen.
+        </div>
+    </div>
+    <div class="loader-container" id="loader-wrapper">
+		<svg viewBox="0 0 400 160" class="svg-logo svg-preloader">
+			<text x="33.75%" y="60%" dy=".32rem" text-anchor="middle" class="svg-text-a">
+				v
+			</text>
+			<text x="45%" y="60%" dy=".32rem" text-anchor="middle" class="svg-text-b">
+				e
+			</text>
+			<text x="57.75%" y="60%" dy=".32rem" text-anchor="middle" class="svg-text-c">
+				d
+			</text>
+			<text x="66.25%" y="60%" dy=".32rem" text-anchor="middle" class="svg-text-d">
+				.
+			</text>
+		</svg>
+	
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+
+		<div class="loaderBarWrap">
+			<div class="loaderBar"></div>
+		</div>
+		<div class="loaderPercentage">0%</div>
+	
+	</div>
+    
+    <section id="hero">
+        <div class="container">
+            <video class="vid" id="hero-vid" src="assets/video-2@c.webm" autoplay muted loop></video>
+            
+            <header id="main-header">        
+                <nav>
+                    <div class="nav-sq" id="nav-sq-left"></div>
+
+                    <ul>
+                        <li class="has-submenu">
+                            <a href="#">Services</a>
+        
+                            <ul class="drop-down">
+                                <li>
+                                    <a href="#">
+                                        Branding
+                                        <div class="drop-right">
+                                            <h2>Branding.</h2>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt fugit nam nihil, impedit inventore. Mollitia sint aspernatur vitae quas.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Web Design
+                                        <div class="drop-right">
+                                            <h2>Web Design.</h2>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt fugit nam nihil, impedit inventore. Mollitia sint aspernatur vitae quas.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Web Development
+                                        <div class="drop-right">
+                                            <h2>Web Development.</h2>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt fugit nam nihil, impedit inventore. Mollitia sint aspernatur vitae quas.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        eCommerce
+                                        <div class="drop-right">
+                                            <h2>eCommerce.</h2>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt fugit nam nihil, impedit inventore. Mollitia sint aspernatur vitae quas.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Print
+                                        <div class="drop-right">
+                                            <h2>Print.</h2>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt fugit nam nihil, impedit inventore. Mollitia sint aspernatur vitae quas.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <div class="back-drop-down"></div>
+                            </ul>
+                        </li>
+                        <li><a href="#">Blog</a></li>
+                        <li>
+                            <a href="/" id="svg-logo-a">
+                                <svg viewBox="0 0 400 160" class="svg-logo svg-header">
+                                    <text x="33.75%" y="60%" dy=".32rem" text-anchor="middle" class="svg-text-a">
+                                        v
+                                    </text>
+                                    <text x="45%" y="60%" dy=".32rem" text-anchor="middle" class="svg-text-b">
+                                        e
+                                    </text>
+                                    <text x="57.75%" y="60%" dy=".32rem" text-anchor="middle" class="svg-text-c">
+                                        d
+                                    </text>
+                                    <text x="66.25%" y="56%" dy=".32rem" text-anchor="middle" class="svg-text-d">
+                                        .
+                                    </text>
+                                </svg>
+                            </a>
+                        </li>
+                        <li><a href="#">Contact</a></li>
+                        <li>
+                            <a href="#" id="nav-btn">
+                                <button class="btn-classy">Get a Quote</button>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="nav-sq" id="nav-sq-right"></div>
+                </nav>
+        
+                <div class="back-header"></div>
+            </header>
+            <br>
+
+			<h1>Crafting <span>digital masterpieces</span> with pixel-perfect precision.</h1>
+
+		</div>
+        <section class="hero-under"></section>
+	</section>
+	<main>
+		<div class="container">
+			<h1>Hello, World!</h1>
+			<video class="vid" id="body-vid-1" src="assets/video-1@c.webm" autoplay muted loop></video>
+
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque sint deleniti assumenda, repellat eos alias doloremque eligendi nemo harum ut facilis eaque officiis quod velit nihil aliquam veniam sit odit pariatur cum! Soluta rerum totam veritatis dolor, error fuga neque, accusantium iure quam culpa quasi ullam modi inventore odit quas ut doloremque natus voluptates qui, iusto molestiae provident facere. Ipsam autem debitis blanditiis. Unde impedit aut commodi vero molestias consectetur doloremque illo blanditiis! Accusamus pariatur, impedit modi nam autem architecto, at vero, asperiores repudiandae perspiciatis quas distinctio aliquid necessitatibus iste totam quam quis aliquam eos praesentium. Nisi doloribus atque voluptatum numquam quaerat nulla asperiores id ea facilis aliquam sit, modi esse aspernatur dicta? Illo totam tempora corrupti commodi facere corporis labore fugiat quidem dicta blanditiis vitae quia nam deserunt excepturi facilis, dolor eius nulla temporibus eveniet rem! Voluptates possimus numquam iste dolores ducimus molestiae quos magni nisi odio similique. Esse saepe deleniti veritatis voluptatibus odio rem porro voluptates sit molestias ex deserunt nobis asperiores, neque doloremque, quae, vel suscipit fugit quo consectetur quasi corrupti quibusdam. Voluptatem repudiandae aliquam recusandae placeat ut, quaerat iure tenetur reiciendis blanditiis non temporibus fuga praesentium similique possimus, quidem, deleniti ipsam voluptate. Voluptate, placeat, numquam ad aliquid facere id maxime, non nulla repudiandae recusandae error. Id obcaecati facilis maxime, ullam expedita veritatis necessitatibus autem odit! Distinctio rerum quas est non consequuntur dolore molestiae corporis expedita sapiente labore eligendi quae culpa, dolor exercitationem sed ipsa ullam, voluptas aliquid sint totam voluptatibus. Sit repellat consectetur ex at, magnam vel dolores quidem totam, tempore illum ullam dolorum! Optio, velit hic reprehenderit ab quis provident amet ipsam praesentium, cumque eveniet rerum omnis aspernatur nesciunt quisquam consequatur nobis id similique? Amet nostrum consequatur ipsa similique cupiditate numquam molestias. Ratione, unde ipsam ipsum ex assumenda error similique illum reprehenderit fugiat deleniti officia optio mollitia. Fugiat deleniti adipisci deserunt! Eum iure nam sequi neque fuga, voluptate, animi ad vero molestias itaque veritatis placeat laboriosam. Velit, vero ex. Corrupti rem id amet perspiciatis voluptate rerum nam, autem expedita in impedit eveniet nostrum quaerat porro mollitia fugit. Mollitia vel earum unde atque sit repellendus modi delectus excepturi, aperiam tenetur natus! Impedit fugit voluptates quisquam quam voluptatem? Nam tenetur in repellat, distinctio voluptatum excepturi a consequatur unde facilis magnam nobis dicta accusamus inventore exercitationem autem vel itaque rerum error, vitae reprehenderit ut mollitia reiciendis vero odit? Voluptates aliquid cupiditate nemo hic dolorem excepturi ullam maxime recusandae sunt rem est odit ex, in illo! Saepe molestias sapiente minus, dolor corrupti ad, provident voluptates consequatur debitis expedita voluptate nesciunt libero laborum delectus, totam rerum exercitationem animi harum architecto voluptatibus? Aliquam aperiam assumenda nihil adipisci deserunt possimus est, repellat animi sapiente rem harum quaerat dignissimos laudantium eos tenetur nostrum soluta consectetur provident alias. Est eius numquam minus magnam ducimus vero, obcaecati, quas, quia voluptas magni totam commodi. Veritatis quibusdam blanditiis facere minus id cumque dolorum incidunt cum beatae, unde quo similique quaerat dicta earum enim doloremque placeat. Saepe, nobis amet magnam sint est exercitationem nemo aut adipisci autem dolores.</p>
+
+		</div>
+	</main>
+</body>
+</html>
