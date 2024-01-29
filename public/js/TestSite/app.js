@@ -8,8 +8,12 @@
 var winX = window.innerHeight * 2;
 
 function nextPage() {
-    window.scrollTo({
-    top: winX,
-    behavior: "smooth",
-    });
+	window.scrollTo({
+	top: winX,
+	behavior: "smooth",
+	});
 }
+
+window.addEventListener("load", () => {
+	pageLoad();
+});

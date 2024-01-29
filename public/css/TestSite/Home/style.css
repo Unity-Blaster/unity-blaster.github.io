@@ -125,7 +125,7 @@ ul li a.card {
 }
 
 .dummy, li.carda {container-type: inline-size;}
-.dummy h2 {font-size: 6cqi;}
+.dummy h2, .dummy h2 * {font-size: 6cqi;}
 
 a.card:hover {
 	transform: translateY(-3px) translateZ(10px) scale(1.1) skew(2deg);
@@ -209,7 +209,7 @@ blockquote {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
-	font-size: 3.5cqi;
+	font-size: 3.25cqi;
 	margin: 1vw;
 }
 
@@ -452,7 +452,7 @@ blockquote {
 		grid-template-rows: repeat(10, 32vh);
 	}
 	blockquote {
-		font-size: 5cqi;
+		font-size: 4cqi;
 	}
 }
 

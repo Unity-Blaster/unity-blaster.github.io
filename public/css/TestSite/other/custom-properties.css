@@ -48,10 +48,19 @@
 	);
 		
 	--bg-shadow: #00000000;
+	--bg: var(--bg-2);
 	--bg: var(--background);
+	--txt: var(--txt-2b);
 	--txt: var(--text);
 	--txt-cool: var(--linearPrimarySecondary45);
 	--clr-dialog-blur: var(--primary-300);
+
+	--txt-2a: #145369;
+	--bg-2: #041014;
+	--txt-2b: #2596be;
+
+	/* timing */
+	--def-transition-duration: 300ms;
 
 	/* --MainFontColor: #00ffff; */
 

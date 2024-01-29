@@ -2,66 +2,107 @@
 <html lang="en">
 <head>
 
-  <title>Landing -- Vedant Srivastava's Website</title>
+	<title>Landing -- Vedant Srivastava's Website</title>
 
-  <!-- * Meta -->
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=0.5" />
-  <meta name="theme-color" content="#000020" />
-  <meta name="description" content="A Simple, Interesting And Fun Hobbyist Website.
+	<!-- * Meta -->
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=0.5" />
+	<meta name="theme-color" content="#000020" />
+	<meta name="description" content="A Simple, Interesting And Fun Hobbyist Website.
 			Creator: Unity Blaster/Vedant Srivastava,
 			Category: Hobby,
 			Length: A Few Pages" />
-  <meta name="google-site-verification" content="dryoMLtKoHGU1hIboFje6L5kHwC7WeqczUFLjTKBmq8" />
+	<meta name="google-site-verification" content="dryoMLtKoHGU1hIboFje6L5kHwC7WeqczUFLjTKBmq8" />
 
-  <!-- * Links -->
-  <link rel="icon" type="image/x-icon" href="/public/assets/favicon.ico" />
-  <link rel="stylesheet" href="/public/css/TestSite/other/CursorFollower.css" />
-  <link rel="stylesheet" href="/public/css/TestSite/other/custom-properties.css" />
-  <link rel="stylesheet" href="/public/css/TestSite/style.css" />
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" !important>
+	
+	<!-- * Links -->
+	<link rel="icon" type="image/x-icon" href="/public/assets/favicon.ico" />
+	<link rel="stylesheet" href="/public/css/TestSite/other/CursorFollower.css" />
+	<link rel="stylesheet" href="/public/css/TestSite/other/custom-properties.css" />
+	<link rel="stylesheet" href="/public/css/TestSite/other/newPreloader.css" />
+	<link rel="stylesheet" href="/public/css/TestSite/style.css" />
 
-  <!-- * JS -->
-  <script src="/public/js/TestSite/app.js"></script>
-  <script src="/public/js/TestSite/other/CursorFollower.js"></script>
+	<!-- * JS -->
+	<script src="/public/js/TestSite/app.js"></script>
+	<script src="/public/js/TestSite/other/CursorFollower.js"></script>
+	<script src="/public/js/TestSite/other/newPreloader.js"></script>
 
 </head>
 
 <body>
+	<!-- <div class="support-error">
+			<div class="support-error-msg">
+					This webpage has not been optimised for lower resolution screens. To view the content, please consider turning on 'Desktop Mode' or viewing this site on a wider screen.
+			</div>
+	</div> -->
+	<div class="loader-container" id="loader-wrapper">
+		<svg viewBox="0 0 400 160" class="svg-logo svg-preloader">
+			<text x="33.75%" y="60%" dy=".32rem" text-anchor="middle" class="svg-text-a">
+				v
+			</text>
+			<text x="45%" y="60%" dy=".32rem" text-anchor="middle" class="svg-text-b">
+				e
+			</text>
+			<text x="57.75%" y="60%" dy=".32rem" text-anchor="middle" class="svg-text-c">
+				d
+			</text>
+			<text x="66.25%" y="60%" dy=".32rem" text-anchor="middle" class="svg-text-d">
+				.
+			</text>
+		</svg>
+	
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
 
-  <div class="follow">
-    <div class="followSub"></div>
-  </div>
+		<div class="loaderBarWrap">
+			<div class="loaderBar"></div>
+		</div>
+		<div class="loaderPercentageWrap">
+			<div class="loaderPercentage">0%</div>
+		</div>
+	
+	</div>
 
-  <main class="frontHead">
-    <header>
-      <div class="MainHead" id="he1">
-        <div class="blur blur2 glass">
-          <h1>
+	<div class="follow"></div>
 
-            <b>
-              <div class="lo ool">Spreading</div>
-              <div class="lo cool">Unity</div>
-              <div class="lo ool">Using</div>
-              <div class="lo ool">A</div>
-              <div class="lo cool">Blaster</div>
-              <div class="lo ool">(Launcher)</div>
-            </b>
+	<section class="hero">
+		<div class="container">
+			<video class="vid" id="hero-vid" src="/public/assets/video-2@c.webm" autoplay muted loop></video>
+				<div class="heroContent">
+					<div class="glass">
+						<h1>
+							<div class="lo ool">Spreading</div>
+							<div class="lo cool">Unity</div>
+							<div class="lo ool">Using</div>
+							<div class="lo ool">A</div>
+							<div class="lo cool">Blaster</div>
+							<div class="lo ool">(Launcher)</div>
+						</h1>
+					</div>
+					<div class="arrow" onclick="nextPage()">
+						<svg viewBox="0 0 24 25" fill="none">
+							<path
+								d="M16.9998 9.67C16.8124 9.48375 16.559 9.37921 16.2948 9.37921C16.0306 9.37921 15.7772 9.48375 15.5898 9.67L11.9998 13.21L8.45981 9.67C8.27245 9.48375 8.019 9.37921 7.75481 9.37921C7.49063 9.37921 7.23717 9.48375 7.04981 9.67C6.95608 9.76297 6.88169 9.87357 6.83092 9.99543C6.78015 10.1173 6.75401 10.248 6.75401 10.38C6.75401 10.512 6.78015 10.6427 6.83092 10.7646C6.88169 10.8864 6.95608 10.997 7.04981 11.09L11.2898 15.33C11.3828 15.4237 11.4934 15.4981 11.6152 15.5489C11.7371 15.5997 11.8678 15.6258 11.9998 15.6258C12.1318 15.6258 12.2625 15.5997 12.3844 15.5489C12.5062 15.4981 12.6168 15.4237 12.7098 15.33L16.9998 11.09C17.0935 10.997 17.1679 10.8864 17.2187 10.7646C17.2695 10.6427 17.2956 10.512 17.2956 10.38C17.2956 10.248 17.2695 10.1173 17.2187 9.99543C17.1679 9.87357 17.0935 9.76297 16.9998 9.67Z"
+								fill="#E8E8E8"
+							/>
+						</svg>
+							
+					</div>
+				</div>
+			<section class="hero-under"></section>
+		</div>
+	</section>
 
-          </h1>
-        </div>
-        <div class="arrow" onclick="nextPage()">
-          <div id="arrowSide1" class="arrowSide"></div>
-          <div id="arrowSide2" class="arrowSide"></div>
-        </div>
-      </div>
-      <!-- <div id="ft" class="notMainHead"></div> -->
-    </header>
-  </main>
-
-  <div class="subHead">
-    <a href="Home/" class="texta"> Home Page </a>
-  </div>
+	<main>
+		<div class="mainPage">
+			<a href="Home/" class="texta"> Home Page </a>
+		</div>
+	</main>
 
 </body>
 </html>
