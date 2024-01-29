@@ -40,17 +40,17 @@ function pageLoad() {
 	function svgLogoFin() {
 
 		items.forEach(item => {
-			item.setAttribute('style', 'animation: animate-stroke-finished 4s linear forwards');
+			item.setAttribute('style', 'animation: animate-stroke-finished 2s linear forwards');
 		});
 		itemWraps.forEach(itemWrap => {
-			itemWrap.setAttribute('style', 'animation: body-fill-finished 4s linear forwards');
+			itemWrap.setAttribute('style', 'animation: body-fill-finished 2s linear forwards');
 		});
 
-		setTimeout(() => {
+		// setTimeout(() => {
 			document.querySelector('.loaderBarWrap').setAttribute('style', 'animation: fill-in 2s linear forwards')
 			document.querySelector('.loaderPercentage').setAttribute('style', 'animation: fill-in 2s linear forwards')
-			percentIncrease(5);
-		}, 2000);
+			percentIncrease(2);
+		// }, 2000);
 	};
 	svgLogoFin()
 }

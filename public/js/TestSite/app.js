@@ -14,6 +14,8 @@ function nextPage() {
 	});
 }
 
-window.addEventListener("load", () => {
-	pageLoad();
-});
+setTimeout(() => {
+	window.addEventListener("load", () => {
+		pageLoad();
+	});
+}, 4000);

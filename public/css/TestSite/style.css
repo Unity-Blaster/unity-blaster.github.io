@@ -178,7 +178,6 @@ img {
 	z-index: 1;
 	margin: auto;
 }
-.heroContent * {cursor: initial;}
 
 .hero .container::before {
 	content: '';
