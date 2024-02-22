@@ -21,22 +21,25 @@
 	<link rel="stylesheet" type="text/css" href="/public/css/TestSite/other/CardHover.css" />
 	<link rel="stylesheet" type="text/css" href="/public/css/TestSite/other/custom-properties.css" />
 	<link rel="stylesheet" type="text/css" href="/public/css/TestSite/Home/style.css" />
+	<link rel="stylesheet" type="text/css" href="/public/css/TestSite/other/newPreloader.css" />
 
 	<!-- * JS -->
-	<script src="/public/js/TestSite/other/Preloader.js"></script>
+	<script src="/public/js/TestSite/other/anime.min.js"></script>
+	<script src="/public/js/TestSite/Home/app.js"></script>
 	<script src="/public/js/TestSite/other/Header.js"></script>
 	<script src="/public/js/TestSite/other/NameGame.js"></script>
 	<script src="/public/js/TestSite/other/CardHover.js"></script>
-	<script src="/public/js/TestSite/Home/app.js"></script>
-	<script src="/public/js/TestSite/other/anime.min.js"></script>
+	<script src="/public/js/TestSite/other/newPreloader.js"></script>
 </head>
 
 <body>
 
-	<div id="loader-wrapper"><!-- * Pre-loader -->
-		<div id="loader">
-
-		</div>
+	<div class="loader-container" id="loader-wrapper"><!-- * Pre-loader -->
+		<svg viewBox="0 0 400 160" class="svg-logo svg-preloader">
+			<path class="svg-path"
+				d="M11 28 39 54Q43 58 44 62L64 126Q66 132 68 126L88 62Q89 58 93 54L120 28Q124 24 124 28V54Q124 58 122 63L88 159Q86 165 82 165L49 165Q45 165 43 158L9 63Q7 58 7 54V28Q7 24 11 28ZM153 126C159 143 181 146 189 133Q191 129 195 129H221Q225 129 223 135C214 156 196 167 173 167S131 152 124 136 116 94 132 75 176 52 198 62 229 96 227 114Q226 120 222 120H156Q151 120 153 126M156 102H189Q192 102 192 98C189 78 157 80 153 98Q153 102 156 102ZM314 68V6Q314 2 318 6L344 32Q348 36 348 40V130Q348 134 344 138L318 164Q314 168 314 164V155Q314 151 311 155C308 158 302 167 286 167S254 160 244 146 231 101 240 84 263 57 280 57 304 62 311 69Q314 72 314 68ZM314 111C314 102 310 93 303 89S284 85 277 91 268 103 268 113 275 132 280 135 296 140 304 134C312 128 314 119 314 111ZM376 167A1 1 0 00375 131 1 1 0 00376 167Z"
+			/>
+		</svg>
 	
 		<div class="loader-section section-left"></div>
 		<div class="loader-section section-right"></div>
@@ -44,8 +47,9 @@
 		<div class="loaderBarWrap">
 			<div class="loaderBar"></div>
 		</div>
-		<div class="loaderPercentage">0%</div>
-	
+		<div class="loaderPercentageWrap">
+			<div class="loaderPercentage">0%</div>
+		</div>
 	</div>
 	
 

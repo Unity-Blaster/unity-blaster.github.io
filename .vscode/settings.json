@@ -24,5 +24,6 @@
   "markdown-checkbox.strikeThroughWhenChecked": true,
   "markdown-checkbox.italicWhenChecked": true,
   "markdown-checkbox.dateFormat": "DD-MM-YYYY",
-  "IDX.aI.enableInlineCompletion": true
+  "IDX.aI.enableInlineCompletion": true,
+  "cloudWorkstations.portsView.ignoredPortNumbers": []
 }

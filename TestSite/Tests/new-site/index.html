@@ -3,16 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="refresh" content="32">
 	<title>New Site Concept for TestSite</title>
 
 	<!-- Reset -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
-
-	<!-- Google Fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 
 	<style>
 		:root {
@@ -49,8 +43,9 @@
 
 		.svg-logo {
             min-width: 10rem;
+			height: 4rem;
 		}
-		.svg-logo text {
+		.svg-logo path {
 			font-size: 5rem;
 			stroke: none;
 			fill: var(--loader-text-color);
@@ -60,9 +55,10 @@
 
         .svg-preloader {
 			width: 100vw;
+			height: 16rem;
 			z-index: 2500;
 		}
-		.svg-preloader text {
+		.svg-preloader path {
 			stroke-width: 2;
 			fill: none;
 			letter-spacing: -2px;
@@ -89,7 +85,7 @@
 				fill: var(--loader-text-color);
 				stroke: transparent;
 				stroke-width: 0;
-				stroke-dashoffset: -25%;
+				stroke-dashoffset: -50%;
 				stroke-dasharray: 32% 0;
 			}
 		}
@@ -635,7 +631,7 @@
 				// console.log("Preloader has now completed animating...");
 			};
 
-			const items = document.querySelectorAll('.svg-preloader text');
+			const items = document.querySelectorAll('.svg-preloader path');
 			const itemWraps = document.querySelectorAll('.loader-section');
 			function svgLogoFin() {
 
@@ -653,7 +649,7 @@
 				}, 4000);
 			};
 			svgLogoFin()			
-		}, 21000);
+		}, 9000);
         // preloader end
 	</script>
 </head>
@@ -664,19 +660,14 @@
         </div>
     </div>
     <div class="loader-container" id="loader-wrapper">
-		<svg viewBox="0 0 400 160" class="svg-logo svg-preloader">
-			<text x="33.75%" y="60%" dy=".32rem" text-anchor="middle" class="svg-text-a">
-				v
-			</text>
-			<text x="45%" y="60%" dy=".32rem" text-anchor="middle" class="svg-text-b">
-				e
-			</text>
-			<text x="57.75%" y="60%" dy=".32rem" text-anchor="middle" class="svg-text-c">
-				d
-			</text>
-			<text x="66.25%" y="60%" dy=".32rem" text-anchor="middle" class="svg-text-d">
-				.
-			</text>
+		<svg viewBox="0 0 400 200" class="svg-logo svg-preloader">
+			<path
+				d="
+					M 11 28 L 39 54 Q 43 58 44 62 L 64 126 Q 66 132 68 126 L 88 62 Q 89 58 93 54 L 120 28 Q 124 24 124 28 V 54 Q 124 58 122 63 L 88 159 Q 86 165 82 165 L 49 165 Q 45 165 43 158 L 9 63 Q 7 58 7 54 V 28 Q 7 24 11 28 Z
+					M 153 126 C 159 143 181 146 189 133 Q 191 129 195 129 H 221 Q 225 129 223 135 C 214 156 196 167 173 167 S 131 152 124 136 S 116 94 132 75 S 176 52 198 62 S 229 96 227 114 Q 226 120 222 120 H 156 Q 151 120 153 126 M 156 102 H 189 Q 192 102 192 98 C 189 78 157 80 153 98 Q 153 102 156 102 Z
+					M 314 68 V 6 Q 314 2 318 6 L 344 32 Q 348 36 348 40 V 130 Q 348 134 344 138 L 318 164 Q 314 168 314 164 V 155 Q 314 151 311 155 C 308 158 302 167 286 167 S 254 160 244 146 S 231 101 240 84 S 263 57 280 57 S 304 62 311 69 Q 314 72 314 68 Z M 314 111 C 314 102 310 93 303 89 S 284 85 277 91 S 268 103 268 113 S 275 132 280 135 S 296 140 304 134 C 312 128 314 119 314 111 Z
+					M 376 167 A 1 1 0 0 0 375 131 A 1 1 0 0 0 376 167 Z"
+			>
 		</svg>
 	
 		<div class="loader-section section-left"></div>
@@ -754,19 +745,15 @@
                         <li>
                             <a href="/" id="svg-logo-a">
                                 <svg viewBox="0 0 400 160" class="svg-logo svg-header">
-                                    <text x="33.75%" y="60%" dy=".32rem" text-anchor="middle" class="svg-text-a">
-                                        v
-                                    </text>
-                                    <text x="45%" y="60%" dy=".32rem" text-anchor="middle" class="svg-text-b">
-                                        e
-                                    </text>
-                                    <text x="57.75%" y="60%" dy=".32rem" text-anchor="middle" class="svg-text-c">
-                                        d
-                                    </text>
-                                    <text x="66.25%" y="56%" dy=".32rem" text-anchor="middle" class="svg-text-d">
-                                        .
-                                    </text>
-                                </svg>
+									<path
+										d="
+											M 11 28 L 39 54 Q 43 58 44 62 L 64 126 Q 66 132 68 126 L 88 62 Q 89 58 93 54 L 120 28 Q 124 24 124 28 V 54 Q 124 58 122 63 L 88 159 Q 86 165 82 165 L 49 165 Q 45 165 43 158 L 9 63 Q 7 58 7 54 V 28 Q 7 24 11 28 Z
+											M 153 126 C 159 143 181 146 189 133 Q 191 129 195 129 H 221 Q 225 129 223 135 C 214 156 196 167 173 167 S 131 152 124 136 S 116 94 132 75 S 176 52 198 62 S 229 96 227 114 Q 226 120 222 120 H 156 Q 151 120 153 126 M 156 102 H 189 Q 192 102 192 98 C 189 78 157 80 153 98 Q 153 102 156 102 Z
+											M 314 68 V 6 Q 314 2 318 6 L 344 32 Q 348 36 348 40 V 130 Q 348 134 344 138 L 318 164 Q 314 168 314 164 V 155 Q 314 151 311 155 C 308 158 302 167 286 167 S 254 160 244 146 S 231 101 240 84 S 263 57 280 57 S 304 62 311 69 Q 314 72 314 68 Z M 314 111 C 314 102 310 93 303 89 S 284 85 277 91 S 268 103 268 113 S 275 132 280 135 S 296 140 304 134 C 312 128 314 119 314 111 Z
+											M 376 167 A 1 1 0 0 0 375 131 A 1 1 0 0 0 376 167 Z"
+										preserveAspectRatio="none"
+									>
+								</svg>
                             </a>
                         </li>
                         <!-- <li><a href="#">Contact</a></li> -->

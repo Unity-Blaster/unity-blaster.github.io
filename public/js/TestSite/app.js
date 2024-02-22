@@ -18,4 +18,4 @@ setTimeout(() => {
 	window.addEventListener("load", () => {
 		pageLoad();
 	});
-}, 4000);
+}, 2000);
